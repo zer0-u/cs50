@@ -11,10 +11,10 @@ int main(void)
     }while(start < 9);
 
     // TODO: Prompt for end size
-    int end = get_int("End size: ");
+    int end = 0;
     do
     {
-
+        end = get_int("End size: ");
     }while(end =< start);
 
     // TODO: Calculate number of years until we reach threshold
