@@ -23,6 +23,11 @@ int main(void)
         {
             printf("#");
         }
+        printf("  ");
+        for(int j = 0;j<blocks;j++)
+        {
+            printf("#");
+        }
         blocks++;
         printf("\n");
     }
