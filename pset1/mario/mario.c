@@ -8,7 +8,7 @@ int main(void)
     {
         height = get_int("height : ");
     }
-    while (height < 0);
+    while (height <= 0 || height > 8);
 
     int blocks = 1;
     for(int i = 0;i < height;i++)
