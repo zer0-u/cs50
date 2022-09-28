@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <cs50.h>
 
-void show(int, string);
+void print(int, string);
 void print_blocks(int);
 void print_spaces(int);
 
@@ -30,15 +30,15 @@ int main(void)
 
 void print_blocks(int blocks)
 {
-    show(blocks, "#");
+    print(blocks, "#");
 }
 
 void print_spaces(int spaces)
 {
-    show(spaces, " ");
+    print(spaces, " ");
 }
 
-void show(int num, string type)
+void print(int num, string type)
 {
     for (int j = 0; j < num; j++)
     {
