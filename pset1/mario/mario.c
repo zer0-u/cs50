@@ -6,18 +6,19 @@ int main(void)
     int height = 0;
     do
     {
-        height = get_int("heights : ");
+        height = get_int("height : ");
     }
     while (height < 0);
 
-    int width = 1;
+    int blocks = 1;
     for(int i = 0;i < height;i++)
     {
-        for(int j =0; j<width;j++)
+
+        int spaces = height-blocks;
+        for(j = 0;j<spaces;j++)
         {
-            printf("#");
+            printf(" ");
         }
         printf("\n");
-        width++;
     }
 }
