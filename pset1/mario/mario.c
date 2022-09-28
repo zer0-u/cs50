@@ -42,6 +42,6 @@ void show(int num, string type)
 {
     for (int j = 0; j < num; j++)
     {
-        printf(type);
+        printf("%s", type);
     }
 }
