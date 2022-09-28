@@ -15,10 +15,15 @@ int main(void)
     {
 
         int spaces = height-blocks;
-        for(j = 0;j<spaces;j++)
+        for(int j = 0;j<spaces;j++)
         {
             printf(" ");
         }
+        for(int j = 0;j<blocks;j++)
+        {
+            printf("#");
+        }
+        blocks++;
         printf("\n");
     }
 }
