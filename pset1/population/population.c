@@ -15,10 +15,16 @@ int main(void)
     do
     {
         end = get_int("End size: ");
-    }while(end =< start);
+    }while(end <= start);
 
     // TODO: Calculate number of years until we reach threshold
     int years = 0;
+    int lamas = start;
+
+    do
+    {
+        lamas = lamas + (lamas / 3) - (lamas / 4);
+    }while(lamas < end);
 
     // TODO: Print number of years
     printf("Years: %i\n",years);
