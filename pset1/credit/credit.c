@@ -5,6 +5,7 @@ int calculate_place(long);
 
 int main(void)
 {
+    // 入力値を得る
     long number = 0;
     do
     {
@@ -13,28 +14,59 @@ int main(void)
     while (number <= 0);
 
     int place = calculate_place(number);
-    printf("place : %i\n", place);
 
-    if(!(place == 13 || place == 15 || place == 16))
+    // 桁数がおかしいものは弾く
+    // if(!(place == 13 || place == 15 || place == 16))
+    // {
+    //     printf("INVALID\n");
+    //     return 0;
+    // }
+
+    // 桁数を指定した操作がやりやすいように配列に変換する
+    // ついでに並び順を変える（後ろからn番目をやめる）
+    long work[place];
+    long digit = 1;
+    for(int i = 0; i < place; i++)
     {
-        printf("INVALID\n");
-        return 0;
+        long elem = (number % (digit * 10)) / digit;
+        work[i] = elem;
+        digit = digit * 10;
+
+    }
+    
+    // デバッグ用
+    // for(int i=0; i<place; i++)
+    // {
+    //     printf("work[%i] : %li\n", i, work[i]);
+    // }
+
+    // チェックデジットの計算
+    // 1. 偶数桁(インデックスは奇数)に2をかける
+    // 2. かけた結果が10より大きい場合は10の位と1の位に分ける
+    // 3. 結果を足し合わせる
+    int even_sum = 0;
+    for(int i = 1; i < place; i +=2)
+    {
+        long elem = work[i] * 2;
+        if ( elem >= 10)
+        {
+            even_sum += elem / 10;
+            even_sum += elem % 10;
+        }
+        else
+        {
+            even_sum += elem;
+        }
     }
 
-    int last_2 = (number % 100) / 10;
-    int last_4 = (number % 10000) / 1000;
-    int last_6 = (number % 1000000) / 100000;
-    int last_8 = (number % 100000000) / 10000000;
-    int last_10 = (number % 10000000000) / 1000000000;
-    int last_12 = (number % 1000000000000) / 100000000000;
-    int last_14 = (number % 100000000000000) / 10000000000000;
-    int last_16 = (number % 10000000000000000) / 1000000000000000;
-    printf("%i, %i, %i, %i, %i, %i, %i, %i\n",last_2, last_4, last_6, last_8, last_10, last_12, last_14, last_16);
+    printf("even_sum : %i\n", even_sum);
 
-    int check1 = last_2 * 2 + last_4 * 2 + last_6 * 2 + last_8 * 2 + last_10 * 2 + last_12 * 2 + last_14 * 2 + last_16 * 2;
-    printf("check1 : %i\n", check1);
+
+
+
 }
 
+// 入力値の桁数を得る
 int calculate_place(long value)
 {
     int place = 0;
@@ -42,7 +74,6 @@ int calculate_place(long value)
     {
         value /= 10;
         place++;
-        // printf("value: %li, place: %i\n", value, place);
     }
     return place;
 }
