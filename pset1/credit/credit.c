@@ -23,7 +23,7 @@ int main(void)
 
     // 桁数を指定した操作がやりやすいように配列に変換する
     // ついでに並び順を変える（後ろからn番目をやめる）
-    long work[place];
+    long work[place]; // intの配列にできないか？
     long digit = 1;
     for (int i = 0; i < place; i++)
     {
