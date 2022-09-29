@@ -15,7 +15,7 @@ int main(void)
     int place = calculate_place(number);
 
     // 桁数がおかしいものは弾く
-    if(!(place == 13 || place == 15 || place == 16))
+    if (!(place == 13 || place == 15 || place == 16))
     {
         printf("INVALID\n");
         return 0;
@@ -58,8 +58,31 @@ int main(void)
         odd_sum += work[i];
     }
 
+    int check_sum = 0;
+    for (int i = 0; i < place; i++)
+    {
+        long elem = work[i];
+        if (i % 2 == 0)
+        {
+            elem *= 2;
+            if (elem >= 10)
+            {
+                check_sum += elem / 10;
+                check_sum += elem % 10;
+            }
+            else
+            {
+                check_sum += elem;
+            }
+        }
+        else
+        {
+            check_sum += elem;
+        }
+    }
+
     // 5. 合計値の最後の桁が0、つまり10で割り切れるなら正しい
-    bool isValid = ((even_sum + odd_sum) % 10) == 0;
+    bool isValid = (check_sum % 10) == 0;
 
     if (!isValid)
     {
