@@ -6,6 +6,8 @@ int main(void)
     long number = 0;
     do
     {
-        
+        number = get_long("Number: ");
     }
+    while (number <= 0);
+    
 }
