@@ -11,7 +11,8 @@ int main(void)
     }
     while (number <= 0);
 
-    string num = atoi(number);
+    char num[256];
+    sprintf(num,"%ld",number);
 
-    printf("%s", num);
+    printf("%s\n", num);
 }
