@@ -13,7 +13,7 @@ int main(void)
 
     char num[16];
     sprintf(num,"%ld",number);
-    int size = sizeof(num);
+    int size = sizeof(num)/sizeof(num[0]);
     printf("%i\n", size);
     printf("%c\n", num[1]);
 }
