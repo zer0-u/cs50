@@ -49,7 +49,7 @@ int main(void)
                 check_sum += elem / 10;
                 check_sum += elem % 10;
             }
-            else
+            else // このへんいい感じにまとめたい気がする
             {
                 check_sum += elem;
             }
