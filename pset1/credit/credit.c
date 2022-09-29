@@ -3,5 +3,9 @@
 
 int main(void)
 {
-    
+    long number = 0;
+    do
+    {
+        
+    }
 }
