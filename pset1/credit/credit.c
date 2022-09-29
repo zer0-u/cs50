@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <cs50.h>
 
-int calculate_place(int);
+int calculate_place(long);
 
 int main(void)
 {
@@ -35,14 +35,14 @@ int main(void)
     printf("check1 : %i\n", check1);
 }
 
-int calculate_place(int value)
+int calculate_place(long value)
 {
     int place = 0;
     while (value != 0)
     {
         value /= 10;
         place++;
-        printf("value: %i, place: %i\n", value, place);
+        // printf("value: %li, place: %i\n", value, place);
     }
     return place;
 }
