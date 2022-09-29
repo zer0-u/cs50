@@ -15,11 +15,11 @@ int main(void)
     int place = calculate_place(number);
 
     // 桁数がおかしいものは弾く
-    // if(!(place == 13 || place == 15 || place == 16))
-    // {
-    //     printf("INVALID\n");
-    //     return 0;
-    // }
+    if(!(place == 13 || place == 15 || place == 16))
+    {
+        printf("INVALID\n");
+        return 0;
+    }
 
     // 桁数を指定した操作がやりやすいように配列に変換する
     // ついでに並び順を変える（後ろからn番目をやめる）
@@ -31,12 +31,6 @@ int main(void)
         work[i] = elem;
         digit = digit * 10;
     }
-
-    // デバッグ用
-    // for(int i=0; i<place; i++)
-    // {
-    //     printf("work[%i] : %li\n", i, work[i]);
-    // }
 
     // チェックデジットの計算
     // 1. 偶数桁(インデックスは奇数)に2をかける
@@ -64,12 +58,8 @@ int main(void)
         odd_sum += work[i];
     }
 
-    // printf("even_sum : %i\n", even_sum);
-    // printf("odd_sum : %i\n", odd_sum);
-
     // 5. 合計値の最後の桁が0、つまり10で割り切れるなら正しい
     bool isValid = ((even_sum + odd_sum) % 10) == 0;
-    // printf("this card number is valid? %d\n", isValid);
 
     if (!isValid)
     {
