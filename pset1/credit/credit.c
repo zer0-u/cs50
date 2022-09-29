@@ -9,5 +9,8 @@ int main(void)
         number = get_long("Number: ");
     }
     while (number <= 0);
-    
+
+    string num = to_string(number);
+
+    printf("%s", num);
 }
