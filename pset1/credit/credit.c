@@ -11,7 +11,7 @@ int main(void)
     }
     while (number <= 0);
 
-    char num[16];
+    char num[];
     sprintf(num,"%ld",number);
     int size = sizeof(num)/sizeof(num[0]);
     printf("%i\n", size);
