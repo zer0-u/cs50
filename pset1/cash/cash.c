@@ -17,7 +17,7 @@ int main(void)
 
     int count_1 = remove_coin(cents, 1);
     int count = count_25 + count_10 + count_5 + count_1;
-    printf("25 * %i + 10 * %i + 5 * %i + %i", count_25, count_10, count_5, count_1);
+    printf("25 * %i + 10 * %i + 5 * %i + %i\n", count_25, count_10, count_5, count_1);
     printf("%i\n",count);
 }
 
