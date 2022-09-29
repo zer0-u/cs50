@@ -36,27 +36,7 @@ int main(void)
     // 1. 偶数桁(インデックスは奇数)に2をかける
     // 2. かけた結果が10より大きい場合は10の位と1の位に分ける
     // 3. 結果を足し合わせる
-    int even_sum = 0;
-    for (int i = 1; i < place; i += 2)
-    {
-        long elem = work[i] * 2;
-        if (elem >= 10)
-        {
-            even_sum += elem / 10;
-            even_sum += elem % 10;
-        }
-        else
-        {
-            even_sum += elem;
-        }
-    }
-
     // 4. 奇数桁(インデックスは偶数)を足し合わせる
-    int odd_sum = 0;
-    for (int i = 0; i < place; i += 2)
-    {
-        odd_sum += work[i];
-    }
 
     int check_sum = 0;
     for (int i = 0; i < place; i++)
@@ -81,7 +61,7 @@ int main(void)
         }
     }
 
-    // 5. 合計値の最後の桁が0、つまり10で割り切れるなら正しい
+    // 合計値の最後の桁が0、つまり10で割り切れるなら正しい
     bool isValid = (check_sum % 10) == 0;
 
     if (!isValid)
