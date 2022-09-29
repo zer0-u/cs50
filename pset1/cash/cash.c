@@ -35,5 +35,5 @@ int main(void)
         count_1++;
     }
     int count = count_25 + count_10 + count_5 + count_1;
-    printf("");
+    printf("%i\n",count);
 }
