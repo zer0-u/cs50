@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <cs50.h>
 
+int calculate_place(int);
+
 int main(void)
 {
     long number = 0;
@@ -9,6 +11,9 @@ int main(void)
         number = get_long("Number: ");
     }
     while (number <= 0);
+
+    int place = calculate_place(number);
+    printf("place : %i\n", place);
 
     int last_2 = (number % 100) / 10;
     int last_4 = (number % 10000) / 1000;
@@ -22,4 +27,15 @@ int main(void)
 
     int check1 = last_2 * 2 + last_4 * 2 + last_6 * 2 + last_8 * 2 + last_10 * 2 + last_12 * 2 + last_14 * 2 + last_16 * 2;
     printf("check1 : %i\n", check1);
+}
+
+int calculate_place(int value)
+{
+    int place = 0;
+    while (value != 0)
+    {
+        value /= 10;
+        place++;
+    }
+    return place;
 }
