@@ -4,7 +4,14 @@
 
 int main(void)
 {
-    float owed = get_float("Change owed : ");
+    float owed = 0;
+    do
+    {
+        owed = get_float("Change owed : ");
+    }
+    while (owed <= 0);
+
+
     int cents = round(owed * 100);
 
     int count_25 = 0;
