@@ -70,6 +70,37 @@ int main(void)
     // 5. 合計値の最後の桁が0、つまり10で割り切れるなら正しい
     bool isValid = ((even_sum + odd_sum) % 10) == 0;
     printf("this card number is valid? %d\n", isValid);
+
+    if (!isValid)
+    {
+        printf("INVALID\n");
+        return 0;
+    }
+
+    // カード会社の確認
+    // AMEX : 34, 37
+    // MASTERCARD : 51, 52, 53, 54, 55
+    // VISA : 4
+    // 配列は逆順に入っていることに注意
+
+    int first_elem = work[place - 1];
+    int second_elem = work[place - 2];
+    if (first_elem == 4)
+    {
+        printf("VISA\n");
+        return 0;
+    }
+    if (first_elem == 3 && (second_elem == 4 || second_elem == 7))
+    {
+        printf("AMEX\n");
+        return 0;
+    }
+    if (first_elem == 5 && second_elem >= 1 && second_elem <= 5)
+    {
+        printf("MASTERCARD\n");
+        return 0;
+    }
+    printf("INVALID\n");
 }
 
 // 入力値の桁数を得る
