@@ -13,7 +13,7 @@ int main(void)
     while (number <= 0);
 
     int place = calculate_place(number);
-    printf("place : %i\n", placec);
+    printf("place : %i\n", place);
 
     if(!(place == 13 || place == 15 || place == 16))
     {
@@ -42,6 +42,7 @@ int calculate_place(int value)
     {
         value /= 10;
         place++;
+        printf("value: %i, place: %i\n", value, place);
     }
     return place;
 }
