@@ -14,5 +14,5 @@ int main(void)
     char num[256];
     sprintf(num,"%ld",number);
 
-    printf("%s\n", num);
+    printf("%c\n", num[1]);
 }
