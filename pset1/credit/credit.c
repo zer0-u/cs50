@@ -15,6 +15,12 @@ int main(void)
     int place = calculate_place(number);
     printf("place : %i\n", place);
 
+    if(!(place == 13 || place == 15 || place == 16))
+    {
+        printf("INVALID\n");
+        return;
+    }
+
     int last_2 = (number % 100) / 10;
     int last_4 = (number % 10000) / 1000;
     int last_6 = (number % 1000000) / 100000;
