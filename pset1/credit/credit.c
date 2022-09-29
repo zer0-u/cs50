@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <cs50.h>
+#include <stdlib.h>
 
 int main(void)
 {
@@ -10,7 +11,7 @@ int main(void)
     }
     while (number <= 0);
 
-    string num = to_string(number);
+    string num = atoi(number);
 
     printf("%s", num);
 }
