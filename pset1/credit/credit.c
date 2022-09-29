@@ -62,7 +62,7 @@ int main(void)
     for (int i = 0; i < place; i++)
     {
         long elem = work[i];
-        if (i % 2 == 0)
+        if (i % 2 == 1)
         {
             elem *= 2;
             if (elem >= 10)
