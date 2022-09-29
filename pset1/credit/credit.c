@@ -61,7 +61,7 @@ int main(void)
 
     // 4. 奇数桁(インデックスは偶数)を足し合わせる
     int odd_sum = 0;
-    for(int i = 0, i < place; i+=2)
+    for(int i = 0; i < place; i+=2)
     {
         odd_sum += work[i];
     }
