@@ -13,12 +13,12 @@ int main(void)
     while (number <= 0);
 
     int place = calculate_place(number);
-    printf("place : %i\n", place);
+    printf("place : %i\n", placec);
 
     if(!(place == 13 || place == 15 || place == 16))
     {
         printf("INVALID\n");
-        return;
+        return 0;
     }
 
     int last_2 = (number % 100) / 10;
