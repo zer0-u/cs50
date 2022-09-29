@@ -19,4 +19,7 @@ int main(void)
     int last_14 = (number % 100000000000000) / 10000000000000;
     int last_16 = (number % 10000000000000000) / 1000000000000000;
     printf("%i, %i, %i, %i, %i, %i, %i, %i\n",last_2, last_4, last_6, last_8, last_10, last_12, last_14, last_16);
+
+    int check1 = last_2 * 2 + last_4 * 2 + last_6 * 2 + last_8 * 2 + last_10 * 2 + last_12 * 2 + last_14 * 2 + last_16 * 2;
+    printf("check1 : %i\n", check1);
 }
