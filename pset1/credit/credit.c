@@ -10,6 +10,6 @@ int main(void)
     }
     while (number <= 0);
 
-    int last_2 = (number % 100) / (number / 100);
+    int last_2 = (number % 100) / 10;
     printf("%i\n", last_2);
 }
