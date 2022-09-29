@@ -10,8 +10,7 @@ int main(void)
     do
     {
         number = get_long("Number: ");
-    }
-    while (number <= 0);
+    } while (number <= 0);
 
     int place = calculate_place(number);
 
@@ -26,12 +25,11 @@ int main(void)
     // ついでに並び順を変える（後ろからn番目をやめる）
     long work[place];
     long digit = 1;
-    for(int i = 0; i < place; i++)
+    for (int i = 0; i < place; i++)
     {
         long elem = (number % (digit * 10)) / digit;
         work[i] = elem;
         digit = digit * 10;
-
     }
 
     // デバッグ用
@@ -45,10 +43,10 @@ int main(void)
     // 2. かけた結果が10より大きい場合は10の位と1の位に分ける
     // 3. 結果を足し合わせる
     int even_sum = 0;
-    for(int i = 1; i < place; i +=2)
+    for (int i = 1; i < place; i += 2)
     {
         long elem = work[i] * 2;
-        if ( elem >= 10)
+        if (elem >= 10)
         {
             even_sum += elem / 10;
             even_sum += elem % 10;
@@ -61,7 +59,7 @@ int main(void)
 
     // 4. 奇数桁(インデックスは偶数)を足し合わせる
     int odd_sum = 0;
-    for(int i = 0; i < place; i+=2)
+    for (int i = 0; i < place; i += 2)
     {
         odd_sum += work[i];
     }
@@ -72,7 +70,6 @@ int main(void)
     // 5. 合計値の最後の桁が0、つまり10で割り切れるなら正しい
     bool isValid = ((even_sum + odd_sum) % 10) == 0;
     printf("this card number is valid? %d\n", isValid);
-
 }
 
 // 入力値の桁数を得る
