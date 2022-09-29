@@ -33,7 +33,7 @@ int main(void)
         digit = digit * 10;
 
     }
-    
+
     // デバッグ用
     // for(int i=0; i<place; i++)
     // {
@@ -59,8 +59,15 @@ int main(void)
         }
     }
 
-    printf("even_sum : %i\n", even_sum);
+    // 4. 奇数桁(インデックスは偶数)を足し合わせる
+    int odd_sum = 0;
+    for(int i = 0, i < place; i+=2)
+    {
+        odd_sum += work[i];
+    }
 
+    printf("even_sum : %i\n", even_sum);
+    printf("odd_sum : %i\n", odd_sum);
 
 
 
