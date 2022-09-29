@@ -71,7 +71,7 @@ int main(void)
 
     // 5. 合計値の最後の桁が0=10で割り切れるなら正しい
     bool isValid = ((even_sum + odd_sum) % 10) == 0;
-    printf("this card number is valid? %b", isValid);
+    printf("this card number is valid? %d\n", isValid);
 
 }
 
