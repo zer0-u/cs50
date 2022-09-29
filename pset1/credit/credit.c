@@ -11,7 +11,7 @@ int main(void)
     }
     while (number <= 0);
 
-    char num[256];
+    char num[16];
     sprintf(num,"%ld",number);
 
     printf("%c\n", num[1]);
