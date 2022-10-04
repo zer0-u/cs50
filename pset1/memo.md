@@ -16,7 +16,7 @@
 - codespaceで使っているCS50拡張がアップデートしたいというので許可したら失敗した
     - 多分時間がかかりすぎて接続が切れた
     - The codespace is currently running in recovery mode...というダイアログが出る
-- コマンドパレットから
+- コマンドパレットから「Rebuild Codespace」を選択したら再度アップデートされて正常に戻った
 
 ## mario
 - とりあえず左寄せになった
