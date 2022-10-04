@@ -12,6 +12,12 @@
     - SSH接続もダメ
 - style50とhelp50は使える
 
+### アップデート
+- codespaceで使っているCS50拡張がアップデートしたいというので許可したら失敗した
+    - 多分時間がかかりすぎて接続が切れた
+    - The codespace is currently running in recovery mode...というダイアログが出る
+- コマンドパレットから
+
 ## mario
 - とりあえず左寄せになった
 - ほぼヒントなしで実装できた
