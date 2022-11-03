@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <cs50.h>
 
+float average(int length, int array[]);
 const int TOTAL = 3;
 
 int main(void)
