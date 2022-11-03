@@ -12,9 +12,15 @@ int main(void)
         scores[i] = get_int("Score : ");
     }
 
-    printf("Average: %d\n", (scores[0] + scores[1] + scores[2]) / TOTAL);
+    printf("Average: %f\n", average(TOTAL, scores));
 }
 
 float average(int length, int array[])
 {
+    int sum = 0;
+    for (int i = 0; i < length; i++)
+    {
+        sum += array[i];
+    }
+    return sum / length;
 }
