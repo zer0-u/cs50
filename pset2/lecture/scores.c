@@ -23,5 +23,5 @@ float average(int length, int array[])
     {
         sum += array[i];
     }
-    return sum / length;
+    return sum / (float)length;
 }
