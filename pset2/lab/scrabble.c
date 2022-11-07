@@ -13,14 +13,19 @@ int main(void)
 {
     // Get input words from both players
     string word1 = get_string("Player 1: ");
-    // string word2 = get_string("Player 2: ");
+    string word2 = get_string("Player 2: ");
 
     // Score both words
     int score1 = compute_score(word1);
-    // int score2 = compute_score(word2);
+    int score2 = compute_score(word2);
 
     // TODO: Print the winner
     printf("score1: %i\n", score1);
+
+    int diff = score1-score2;
+    if(diff>0){
+        printf("Player 1 wins!");
+    }
 }
 
 int compute_score(string word)
