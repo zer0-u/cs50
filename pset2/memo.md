@@ -1,5 +1,10 @@
 # Array
 
+- 便利リファレンス
+    - https://manual.cs50.io/
+- token
+    - とりあえずeditaroにある
+
 ## lab
 
 ### scrabble
