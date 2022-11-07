@@ -28,6 +28,8 @@ int compute_score(string word)
     for (int i = 0, n = strlen(word); i < n; i++)
     {
         int upper = toupper(word[i]);
+        int index = upper - 65;
+        total+=POINTS[index];
     }
     return score;
 }
