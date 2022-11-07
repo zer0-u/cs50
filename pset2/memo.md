@@ -29,5 +29,7 @@ Make sure your username and/or personal access token are valid and check50 is en
     - 再度トークンを使ってアクセス
     - 成功！
     - チェック内容も問題なし
-
+- submit50もできた
+- これらのコマンドはローカルのフォルダ構成に依存しないらしい
+    - カレントに対象ファイルがあればOKっぽい？
 
