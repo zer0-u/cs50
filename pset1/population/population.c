@@ -27,6 +27,7 @@ int main(void)
         years++;
     } while (lamas < end);
 
+    // TODO 2022/11/07 もっといい方法があるはず
     if (start == end)
     {
         years = 0;
