@@ -4,6 +4,8 @@
     - https://manual.cs50.io/
 - token
     - とりあえずeditaroにある
+- 提出した課題一覧
+    - https://submit.cs50.io/users/zer0-u
 
 ## lab
 
@@ -27,7 +29,6 @@
 - check50が使えるようになった
     - https://cs50.readthedocs.io/github/#personal-access-token に従ってトークン生成
     - ↓の警告が出たので指示通り submit.cs50.io にアクセス
-    - https://submit.cs50.io/users/zer0-u
 
 ```
 Make sure your username and/or personal access token are valid and check50 is enabled for your account. To enable check50, please go to https://submit.cs50.io in your web browser and try again. For instructions on how to set up a personal access token, please visit https://cs50.ly/github
@@ -39,3 +40,11 @@ Make sure your username and/or personal access token are valid and check50 is en
 - これらのコマンドはローカルのフォルダ構成に依存しないらしい
     - カレントに対象ファイルがあればOKっぽい？
 - 後で前のファイルもチェックしたい
+
+## 2022/11/07残り
+- week1のpopulationをもっと洗練させる
+    - startとendが同じ時の計算が雑
+- week1のproblem setをcheck&submit
+    - https://cs50.jp/x/2021/week1/problem-set/
+- week2のproblem setに取り組む
+    - https://cs50.jp/x/2021/week2/problem-set/
