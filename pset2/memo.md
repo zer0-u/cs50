@@ -19,3 +19,15 @@
     - デバッグ実行の結果、追加した分岐 index <= 'Z' はよくないとわかった
     - 確かによくないので愚直に0以上25以下とした
         - indexを求めるときに - 'A' とした成功を引きずりすぎた
+- check50が使えるようになった
+    - https://cs50.readthedocs.io/github/#personal-access-token に従ってトークン生成
+    - ↓の警告が出たので指示通り submit.cs50.io にアクセス
+
+```
+Make sure your username and/or personal access token are valid and check50 is enabled for your account. To enable check50, please go to https://submit.cs50.io in your web browser and try again. For instructions on how to set up a personal access token, please visit https://cs50.ly/github
+```
+    - 再度トークンを使ってアクセス
+    - 成功！
+    - チェック内容も問題なし
+
+
