@@ -20,11 +20,18 @@ int main(void)
     int score2 = compute_score(word2);
 
     // TODO: Print the winner
-    printf("score1: %i\n", score1);
-
-    int diff = score1-score2;
-    if(diff>0){
-        printf("Player 1 wins!");
+    int diff = score1 - score2;
+    if (diff > 0)
+    {
+        printf("Player 1 wins!\n");
+    }
+    else if (diff < 0)
+    {
+        printf("Player 2 wins!\n");
+    }
+    else
+    {
+        printf("Tie!\n");
     }
 }
 
