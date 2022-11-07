@@ -8,16 +8,14 @@ int main(void)
     do
     {
         start = get_int("Start size: ");
-    }
-    while (start < 9);
+    } while (start < 9);
 
     // TODO: Prompt for end size
     int end = 0;
     do
     {
         end = get_int("End size: ");
-    }
-    while (end < start);
+    } while (end < start);
 
     // TODO: Calculate number of years until we reach threshold
     int years = 0;
@@ -27,8 +25,12 @@ int main(void)
     {
         lamas = lamas + (lamas / 3) - (lamas / 4);
         years++;
+    } while (lamas < end);
+
+    if (start == end)
+    {
+        years = 0;
     }
-    while (lamas < end);
 
     // TODO: Print number of years
     printf("Years: %i\n", years);
