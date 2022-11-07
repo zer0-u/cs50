@@ -8,4 +8,6 @@ int main(int argc, string argv[])
         printf("missing command-line argument\n");
         return 1;
     }
+    printf("hello, %s\n", argv[1]);
+    return 0;
 }
