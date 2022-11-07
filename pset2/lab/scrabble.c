@@ -42,7 +42,7 @@ int compute_score(string word)
     for (int i = 0, n = strlen(word); i < n; i++)
     {
         int index = toupper(word[i]) - 'A';
-        if (index >= 0 && index <= 26)
+        if (index >= 0 && index <= 25)
         {
             score += POINTS[index];
         }
