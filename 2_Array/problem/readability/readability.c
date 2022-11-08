@@ -96,11 +96,11 @@ int count_sentences(string text)
 int compute_coleman_liau(int letters, int words, int sentences)
 {
     // LとSについてめちゃくちゃ難しく考えすぎてた
-    // wordsで割る＝1単語あたりの数を算出して100倍するだけだった
+    // wordsで割る＝1単語あたりの数を出して100倍するだけだった
     // wikipediaでちょっとカンニングした
     // https://en.wikipedia.org/wiki/Coleman%E2%80%93Liau_index
-    float l = letters / words * 100.0;
-    float s = sentences / words * 100.0;
+    float l = (letters / words) * 100.0;
+    float s = (sentences / words) * 100.0;
     int grade = round(0.0588 * l - 0.296 * s - 15.8);
     return grade;
 }
