@@ -6,6 +6,8 @@
 int count_letters(string text);
 int count_words(string text);
 int count_sentences(string text);
+int compute_l(int words, int letters);
+int compute_s(int words, int sentences);
 
 int main(void)
 {
@@ -77,4 +79,16 @@ int count_sentences(string text)
         }
     }
     return count;
+}
+
+// 100語あたりの平均文字数
+int compute_l(int words, int letters)
+{
+    return 0;
+}
+
+// 100語あたりの平均文章数
+int compute_s(int words, int sentences)
+{
+    return 0;
 }
