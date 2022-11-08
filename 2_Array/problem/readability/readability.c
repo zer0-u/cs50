@@ -12,6 +12,8 @@ int main(void)
     printf("%i\n", letters);
 }
 
+// 文章の字数を数える
+// 句読点、数字、その他の記号は字数に含めない
 int count_letters(string text)
 {
     int count = 0;
