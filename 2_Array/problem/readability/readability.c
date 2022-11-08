@@ -81,6 +81,11 @@ int count_sentences(string text)
     return count;
 }
 
+float compute_coleman_liau(int letters, int words, int sentences)
+{
+    return 0.0;
+}
+
 // 100語あたりの平均文字数
 float compute_l(int words, int letters)
 {
