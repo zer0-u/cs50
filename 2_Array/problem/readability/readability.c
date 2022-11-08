@@ -62,13 +62,17 @@ int count_words(string text)
 
 // 文の数
 // .や ! や ? で終わるものを文章とする
-// 区切りや略称としてのピリオドは気にしなくて良い
+// 略称としてのピリオドは気にしなくて良い
 int count_sentences(string text)
 {
     int count = 0;
     for (int i = 0, length = strlen(text); i < length; i++)
     {
-        
+        char c = text[i];
+        if (c == ',' || c == '!' || c == '?')
+        {
+            count++;
+        }
     }
     return count;
 }
