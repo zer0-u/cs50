@@ -97,12 +97,14 @@ float compute_coleman_liau(int letters, int words, int sentences)
 float compute_l(int words, int letters)
 {
     float f = 100.0 / words;
-    return (letters * f) / 100;
+    float l = (letters * f) / 100;
+    return l;
 }
 
 // 100語あたりの平均文章数
 float compute_s(int words, int sentences)
 {
     float f = 100.0 / words;
-    return (sentences * f) / 100;
+    float s = (sentences * f) / 100;
+    return s;
 }
