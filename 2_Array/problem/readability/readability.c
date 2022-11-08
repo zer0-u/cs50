@@ -6,6 +6,7 @@
 int count_letters(string text);
 int count_words(string text);
 int count_sentences(string text);
+float compute_coleman_liau(int letters, int words, int sentences);
 float compute_l(int words, int letters);
 float compute_s(int words, int sentences);
 
@@ -18,6 +19,7 @@ int main(void)
     printf("%i letter(s)\n", letters);
     printf("%i word(s)\n", words);
     printf("%i sentence(s)\n", sentences);
+    float indext = compute_
 }
 
 // 文字数
@@ -81,21 +83,25 @@ int count_sentences(string text)
     return count;
 }
 
+// Coleman-Liau指数
 float compute_coleman_liau(int letters, int words, int sentences)
 {
-    return 0.0;
+    float l = compute_l(words, letters);
+    float s = compute_s(words, sentences);
+    float index = 0.0588 * l - 0.296 * s - 15.8;
+    return index;
 }
 
 // 100語あたりの平均文字数
 float compute_l(int words, int letters)
 {
     float f = 100.0 / words;
-    return (letters / 100) * f;
+    return (letters * f) / 100;
 }
 
 // 100語あたりの平均文章数
 float compute_s(int words, int sentences)
 {
     float f = 100.0 / words;
-    return (sentences / 100) * f;
+    return (sentences * f) / 100;
 }
