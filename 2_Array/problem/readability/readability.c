@@ -8,8 +8,6 @@ int count_letters(string text);
 int count_words(string text);
 int count_sentences(string text);
 int compute_coleman_liau(int letters, int words, int sentences);
-float compute_l(int words, int letters);
-float compute_s(int words, int sentences);
 
 int main(void)
 {
@@ -88,26 +86,9 @@ int count_sentences(string text)
 // Coleman-Liau指数
 int compute_coleman_liau(int letters, int words, int sentences)
 {
-    float l = compute_l(words, letters);
-    float s = compute_s(words, sentences);
-    int index = round(0.0588 * l - 0.296 * s - 15.8);
-    return index;
-}
-
-// 100語あたりの平均文字数
-float compute_l(int words, int letters)
-{
-    float f = 100.0 / words;
-    float l1 = letters / (float)words;
-    float l2 = (letters * f) / words;
-    float l3 = (letters / f) / words;
-    return l1;
-}
-
-// 100語あたりの平均文章数
-float compute_s(int words, int sentences)
-{
-    float f = 100.0 / words;
-    float s = sentences / (float)words;
-    return s;
+    // LとSについてめちゃくちゃ難しく考えすぎてたらしい
+    float l = letters / words * 100.0;
+    float s = sentences / words * 100.0;
+    int grade = round(0.0588 * l - 0.296 * s - 15.8);
+    return grade;
 }
