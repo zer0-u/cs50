@@ -95,7 +95,7 @@ int count_sentences(string text)
 // Coleman-Liau指数
 int compute_coleman_liau(int letters, int words, int sentences)
 {
-    // LとSについてめちゃくちゃ難しく考えすぎてた
+    // LとSについてめちゃくちゃ難しく考えすぎた
     // wordsで割る＝1単語あたりの数を出して100倍するだけだった
     // wikipediaでちょっとカンニングした
     // https://en.wikipedia.org/wiki/Coleman%E2%80%93Liau_index
