@@ -27,18 +27,6 @@ int main(void)
         years++;
     }
 
-    // do
-    // {
-    //     lamas = lamas + (lamas / 3) - (lamas / 4);
-    //     years++;
-    // } while (lamas < end);
-
-    // // TODO 2022/11/07 もっといい方法があるはず
-    // if (start == end)
-    // {
-    //     years = 0;
-    // }
-
     // TODO: Print number of years
     printf("Years: %i\n", years);
 }
