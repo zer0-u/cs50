@@ -15,11 +15,20 @@ int main(void)
     int letters = count_letters(input);
     int words = count_words(input);
     int sentences = count_sentences(input);
-    printf("%i letter(s)\n", letters);
-    printf("%i word(s)\n", words);
-    printf("%i sentence(s)\n", sentences);
-    int index = compute_coleman_liau(letters, words, sentences);
-    printf("grade : %i\n", index);
+    int grade = compute_coleman_liau(letters, words, sentences);
+
+    if (grade <= 1)
+    {
+        printf("Before Grade 1\n");
+    }
+    else if (grade >= 16)
+    {
+        printf("Grade 16+\n");
+    }
+    else
+    {
+        printf("Grade %i\n", grade);
+    }
 }
 
 // 文字数
@@ -87,7 +96,9 @@ int count_sentences(string text)
 int compute_coleman_liau(int letters, int words, int sentences)
 {
     // LとSについてめちゃくちゃ難しく考えすぎてた
-    // wordsで割る＝1単語あたりの数を算出して100倍
+    // wordsで割る＝1単語あたりの数を算出して100倍するだけだった
+    // wikipediaでちょっとカンニングした
+    // https://en.wikipedia.org/wiki/Coleman%E2%80%93Liau_index
     float l = letters / words * 100.0;
     float s = sentences / words * 100.0;
     int grade = round(0.0588 * l - 0.296 * s - 15.8);
