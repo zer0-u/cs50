@@ -98,7 +98,7 @@ int compute_coleman_liau(int letters, int words, int sentences)
 float compute_l(int words, int letters)
 {
     float f = 100.0 / words;
-    float l = (letters / f) / 100;
+    float l = letters / (float)words;
     return l;
 }
 
