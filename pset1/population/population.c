@@ -21,17 +21,23 @@ int main(void)
     int years = 0;
     int lamas = start;
 
-    do
+    while (lamas < end)
     {
         lamas = lamas + (lamas / 3) - (lamas / 4);
         years++;
-    } while (lamas < end);
-
-    // TODO 2022/11/07 もっといい方法があるはず
-    if (start == end)
-    {
-        years = 0;
     }
+
+    // do
+    // {
+    //     lamas = lamas + (lamas / 3) - (lamas / 4);
+    //     years++;
+    // } while (lamas < end);
+
+    // // TODO 2022/11/07 もっといい方法があるはず
+    // if (start == end)
+    // {
+    //     years = 0;
+    // }
 
     // TODO: Print number of years
     printf("Years: %i\n", years);
