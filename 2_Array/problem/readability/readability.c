@@ -16,7 +16,7 @@ int main(void)
     printf("%i word(s)\n", words);
 }
 
-// 文章の字数を数える
+// 文字数
 // 句読点、数字、その他の記号は字数に含めない
 int count_letters(string text)
 {
@@ -31,7 +31,7 @@ int count_letters(string text)
     return count;
 }
 
-// 文章の単語数を数える
+// 単語数
 // 除外していいパターン
 // (1) 文がスペースで始まる
 // (2) 文がスペースで終わる
@@ -60,9 +60,15 @@ int count_words(string text)
     return count;
 }
 
-// 文章の文数
+// 文の数
+// .や ! や ? で終わるものを文章とする
+// 区切りや略称としてのピリオドは気にしなくて良い
 int count_sentences(string text)
 {
     int count = 0;
+    for (int i = 0, length = strlen(text); i < length; i++)
+    {
+        
+    }
     return count;
 }
