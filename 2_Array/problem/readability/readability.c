@@ -2,11 +2,12 @@
 #include <cs50.h>
 #include <string.h>
 #include <ctype.h>
+#include <math.h>
 
 int count_letters(string text);
 int count_words(string text);
 int count_sentences(string text);
-float compute_coleman_liau(int letters, int words, int sentences);
+int compute_coleman_liau(int letters, int words, int sentences);
 float compute_l(int words, int letters);
 float compute_s(int words, int sentences);
 
@@ -19,8 +20,8 @@ int main(void)
     printf("%i letter(s)\n", letters);
     printf("%i word(s)\n", words);
     printf("%i sentence(s)\n", sentences);
-    float index = compute_coleman_liau(letters, words, sentences);
-    printf("grade : %f\n", index);
+    int index = compute_coleman_liau(letters, words, sentences);
+    printf("grade : %i\n", index);
 }
 
 // 文字数
@@ -85,11 +86,11 @@ int count_sentences(string text)
 }
 
 // Coleman-Liau指数
-float compute_coleman_liau(int letters, int words, int sentences)
+int compute_coleman_liau(int letters, int words, int sentences)
 {
     float l = compute_l(words, letters);
     float s = compute_s(words, sentences);
-    float index = 0.0588 * l - 0.296 * s - 15.8;
+    int index = round(0.0588 * l - 0.296 * s - 15.8);
     return index;
 }
 
