@@ -5,6 +5,7 @@
 
 int count_letters(string text);
 int count_words(string text);
+int count_sentences(string text);
 
 int main(void)
 {
@@ -56,5 +57,12 @@ int count_words(string text)
     // 最後の単語がカウントされない問題に対応
     // TODO もっといい方法があると思う
     count++;
+    return count;
+}
+
+// 文章の文数
+int count_sentences(string text)
+{
+    int count = 0;
     return count;
 }
