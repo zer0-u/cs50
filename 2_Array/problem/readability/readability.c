@@ -10,7 +10,9 @@ int main(void)
 {
     string input = get_string("Text: ");
     int letters = count_letters(input);
-    printf("%i\n", letters);
+    int words = count_words(input);
+    printf("%i letter(s)\n", letters);
+    printf("%i word(s)\n", words);
 }
 
 // 文章の字数を数える
@@ -28,6 +30,8 @@ int count_letters(string text)
     return count;
 }
 
-int count_word(string text){
-    
+int count_word(string text)
+{
+    int count = 0;
+    return count;
 }
