@@ -86,7 +86,8 @@ int count_sentences(string text)
 // Coleman-Liau指数
 int compute_coleman_liau(int letters, int words, int sentences)
 {
-    // LとSについてめちゃくちゃ難しく考えすぎてたらしい
+    // LとSについてめちゃくちゃ難しく考えすぎてた
+    // wordsで割る＝1単語あたりの数を算出して100倍
     float l = letters / words * 100.0;
     float s = sentences / words * 100.0;
     int grade = round(0.0588 * l - 0.296 * s - 15.8);
