@@ -35,7 +35,7 @@ int count_letters(string text)
 // (1) 文がスペースで始まる
 // (2) 文がスペースで終わる
 // (3) スペースが2個以上続く
-int count_word(string text)
+int count_words(string text)
 {
     int count = 0;
     for (int i = 0, length = strlen(text); i < length; i++)
