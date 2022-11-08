@@ -5,5 +5,5 @@
 int main(int argc, string argv[])
 {
     string input_k = argv[1];
-    printf("%i\n", argc);
+    printf("%s\n", input_k);
 }
