@@ -4,4 +4,6 @@
 int main(void)
 {
     string input = get_string("Text: ");
+
+    printf("%s\n", input);
 }
