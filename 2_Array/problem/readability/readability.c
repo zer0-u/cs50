@@ -38,5 +38,12 @@ int count_letters(string text)
 int count_word(string text)
 {
     int count = 0;
+    for (int i = 0, length = strlen(text); i < length; i++)
+    {
+        if (text[i] == ' ')
+        {
+            count++;
+        }
+    }
     return count;
 }
