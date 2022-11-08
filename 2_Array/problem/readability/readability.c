@@ -30,6 +30,11 @@ int count_letters(string text)
     return count;
 }
 
+// 文章の単語数を数える
+// 除外していいパターン
+// (1) 文がスペースで始まる
+// (2) 文がスペースで終わる
+// (3) スペースが2個以上続く
 int count_word(string text)
 {
     int count = 0;
