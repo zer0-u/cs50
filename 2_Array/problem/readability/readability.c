@@ -19,7 +19,8 @@ int main(void)
     printf("%i letter(s)\n", letters);
     printf("%i word(s)\n", words);
     printf("%i sentence(s)\n", sentences);
-    float indext = compute_
+    float index = compute_coleman_liau(letters, words, sentences);
+    printf("grade : %f\n", index);
 }
 
 // 文字数
