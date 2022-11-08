@@ -12,8 +12,10 @@ int main(void)
     string input = get_string("Text: ");
     int letters = count_letters(input);
     int words = count_words(input);
+    int sentences = count_sentences(input);
     printf("%i letter(s)\n", letters);
     printf("%i word(s)\n", words);
+    printf("%i sentence(s)\n", sentences);
 }
 
 // 文字数
