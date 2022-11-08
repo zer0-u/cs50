@@ -106,6 +106,6 @@ float compute_l(int words, int letters)
 float compute_s(int words, int sentences)
 {
     float f = 100.0 / words;
-    float s = (sentences / f) / 100;
+    float s = sentences / (float)words;
     return s;
 }
