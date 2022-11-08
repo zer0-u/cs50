@@ -39,6 +39,9 @@ int count_words(string text)
 {
     int count = 0;
     int length = strlen(text);
+
+    // 長さ0の文章に対応する
+    // TODO もっといい方法があると思う
     if (length <= 0)
     {
         return count;
@@ -50,6 +53,8 @@ int count_words(string text)
             count++;
         }
     }
+    // 最後の単語がカウントされない問題に対応
+    // TODO もっといい方法があると思う
     count++;
     return count;
 }
