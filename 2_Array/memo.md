@@ -43,4 +43,9 @@ Make sure your username and/or personal access token are valid and check50 is en
 
 ### caesar
 - とりあえず指示にある通りkeyを受け取る
-- 入力チェックを1ヶ所にまとめたかったが
+- 入力チェックを1ヶ所にまとめたかったが非負チェックを混ぜられなかった
+- ずらすやつも最初はただずらしただけ
+    - 変数名がわりと適当(cとか)
+    - 大文字と小文字で処理が違うらしいので一応分岐を作っておいたが中身は同じ
+- ここで一度check50を実行
+- 
