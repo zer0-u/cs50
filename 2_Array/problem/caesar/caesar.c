@@ -37,41 +37,29 @@ void crypt(int key, string text)
     printf("ciphertext: ");
     for (int i = 0, length = strlen(text); i < length; i++)
     {
-        char c = text[i];
+        char output;
+
+        char elem = text[i];
         int shift = key % 26;
-        // アルファベット以外はそのまま出力する
-        if (!isalpha(c))
+        char shifted_elem = elem + shift;
+
+        if (isupper(elem) && shifted_elem > 'Z')
         {
-            printf("%c", c);
+            output = 'A' + (shifted_elem - 91);
         }
-        // 大文字は大文字のままシフトして出力する
-        else if (isupper(c))
+        else if (islower(elem) && shifted_elem > 'z')
         {
-            int shifted = c + shift;
-            if (shifted > 'Z')
-            {
-                char backed = 'A' + (shifted - 91);
-                printf("%c", backed);
-            }
-            else
-            {
-                printf("%c", shifted);
-            }
+            output = 'a' + (shifted_elem - 123);
         }
-        // 小文字は小文字のままシフトして出力する
-        else if (islower(c))
+        else if (isalpha(elem))
         {
-            int shifted = c + shift;
-            if (shifted > 'z')
-            {
-                char backed = 'a' + (shifted - 123);
-                printf("%c", backed);
-            }
-            else
-            {
-                printf("%c", shifted);
-            }
+            output = shifted_elem;
         }
+        else
+        {
+            output = elem;
+        }
+        printf("%c", output);
     }
     printf("\n");
 }
