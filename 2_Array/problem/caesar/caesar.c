@@ -40,6 +40,7 @@ void crypt(int key, string text)
     for (int i = 0, length = strlen(text); i < length; i++)
     {
         char c = text[i];
+        int shift = key % 26;
         // アルファベット以外はそのまま出力する
         if (!isalpha(c))
         {
@@ -48,10 +49,12 @@ void crypt(int key, string text)
         // 大文字は大文字のままシフトして出力する
         else if (isupper(c))
         {
+            printf("%c", c + shift);
         }
         // 小文字は小文字のままシフトして出力する
-        else if(islower(c))
+        else if (islower(c))
         {
+            printf("%c", c + shift);
         }
     }
     printf("\n");
