@@ -45,6 +45,14 @@ void crypt(int key, string text)
         {
             printf("%c", c);
         }
+        // 大文字は大文字のままシフトして出力する
+        else if (isupper(c))
+        {
+        }
+        // 小文字は小文字のままシフトして出力する
+        else if(islower(c))
+        {
+        }
     }
     printf("\n");
 }
