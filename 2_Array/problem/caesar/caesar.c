@@ -41,7 +41,7 @@ void crypt(int key, string text)
 
         char elem = text[i];
         int shift = key % 26;
-        char shifted_elem = elem + shift;
+        int shifted_elem = elem + shift;
 
         if (isupper(elem) && shifted_elem > 'Z')
         {
