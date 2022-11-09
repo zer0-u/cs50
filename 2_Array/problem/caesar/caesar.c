@@ -37,6 +37,7 @@ void crypt(int key, string text)
     printf("ciphertext: ");
     for (int i = 0, length = strlen(text); i < length; i++)
     {
+        // 出力する文字
         char output;
 
         char elem = text[i];
