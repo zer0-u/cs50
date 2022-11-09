@@ -48,7 +48,7 @@ void crypt(int key, string text)
         else if (isupper(c))
         {
             int shifted = c + shift;
-            if (shifted > 91)
+            if (shifted > 'Z')
             {
                 char backed = 'A' + (shifted - 91);
                 printf("%c", backed);
@@ -62,7 +62,7 @@ void crypt(int key, string text)
         else if (islower(c))
         {
             int shifted = c + shift;
-            if (shifted > 123)
+            if (shifted > 'z')
             {
                 char backed = 'a' + (shifted - 123);
                 printf("%c", backed);
