@@ -41,11 +41,12 @@ void crypt(int key, string text)
     {
         char c = text[i];
         // アルファベット以外はそのまま出力する
-        if (!isalpha())
+        if (!isalpha(c))
         {
             printf("%c", c);
         }
     }
+    printf("\n");
 }
 
 // コマンドライン引数のチェック
