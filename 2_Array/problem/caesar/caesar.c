@@ -42,6 +42,9 @@ void crypt(int key, string text)
 
         char elem = text[i];
         int shift = key % 26;
+
+        // 何も考えずにずらした文字
+        // asciiの範囲を超える(128以上)とオーバーフローしてしまうためあえてint型で保持
         int shifted_elem = elem + shift;
 
         if (isupper(elem) && shifted_elem > 'Z')
