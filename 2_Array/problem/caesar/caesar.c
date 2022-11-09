@@ -25,7 +25,7 @@ int main(int argc, string argv[])
         return 1;
     }
     // TODO 後で消す
-    printf("%i\n", key);
+    // printf("%i\n", key);
 
     // 平文を受け取る
     string plain = get_string("plaintext: ");
