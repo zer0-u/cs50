@@ -67,4 +67,7 @@ Make sure your username and/or personal access token are valid and check50 is en
     - 大文字かつオーバーフロー/小文字かつオーバーフロー/アルファベット/その他
 - 再度check50→なぜか失敗
     - 解決したはずの問題がまたミスっている
-- 
+- debug50
+    - ずらした後の文字をcharにしておくと、128以上になったときにオーバーフローでマイナスの値が入っている
+    - intに変更
+- check50をクリア＝完成

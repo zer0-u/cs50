@@ -48,11 +48,11 @@ void crypt(int key, string text)
 
         if (isupper(elem) && shifted_elem > 'Z')
         {
-            output = 'A' + (shifted_elem - 91);
+            output = 'A' + (shifted_elem - ('Z' + 1));
         }
         else if (islower(elem) && shifted_elem > 'z')
         {
-            output = 'a' + (shifted_elem - 123);
+            output = 'a' + (shifted_elem - ('z' + 1));
         }
         else if (isalpha(elem))
         {
