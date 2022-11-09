@@ -39,7 +39,12 @@ void crypt(int key, string text)
     printf("ciphertext: ");
     for (int i = 0, length = strlen(text); i < length; i++)
     {
-
+        char c = text[i];
+        // アルファベット以外はそのまま出力する
+        if (!isalpha())
+        {
+            printf("%c", c);
+        }
     }
 }
 
