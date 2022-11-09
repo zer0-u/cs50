@@ -71,3 +71,5 @@ Make sure your username and/or personal access token are valid and check50 is en
     - ずらした後の文字をcharにしておくと、128以上になったときにオーバーフローでマイナスの値が入っている
     - intに変更
 - check50をクリア＝完成
+- マジックナンバーが気になったので、91をZ+1, 123をz+1に置き換える
+    - むき出しよりは多少マシになった……はず
