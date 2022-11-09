@@ -41,10 +41,6 @@ Make sure your username and/or personal access token are valid and check50 is en
     - カレントに対象ファイルがあればOKっぽい？
 - 後で前のファイルもチェックしたい
 
-## 2022/11/07残り
-- week1のpopulationをもっと洗練させる
-    - startとendが同じ時の計算が雑
-- week1のproblem setをcheck&submit
-    - https://cs50.jp/x/2021/week1/problem-set/
-- week2のproblem setに取り組む
-    - https://cs50.jp/x/2021/week2/problem-set/
+### caesar
+- とりあえず指示にある通りkeyを受け取る
+- 入力チェックを1ヶ所にまとめたかったが
