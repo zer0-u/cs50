@@ -24,8 +24,6 @@ int main(int argc, string argv[])
         printf("Usage: ./caesar key\n");
         return 1;
     }
-    // TODO 後で消す
-    // printf("%i\n", key);
 
     // 平文を受け取る
     string plain = get_string("plaintext: ");
