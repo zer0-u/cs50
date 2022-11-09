@@ -47,7 +47,16 @@ void crypt(int key, string text)
         // 大文字は大文字のままシフトして出力する
         else if (isupper(c))
         {
-            printf("%c", c + shift);
+            int shifted = c + shift;
+            if (shifted > 91)
+            {
+                char backed = 'A' + (shifted - 91);
+                printf("%c", backed);
+            }
+            else
+            {
+                printf("%c", shifted);
+            }
         }
         // 小文字は小文字のままシフトして出力する
         else if (islower(c))
