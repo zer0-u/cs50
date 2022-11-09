@@ -1,5 +1,4 @@
-// 2022/11/08 -
-// https://cs50.jp/x/2021/week2/problem-set/caesar-less-comfortable/
+// 2022/11/08 - 09
 #include <stdio.h>
 #include <cs50.h>
 #include <ctype.h>
