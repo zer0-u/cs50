@@ -16,6 +16,8 @@ int main(int argc, string argv[])
         printf("Usage: ./substitution key\n");
         return 1;
     }
+    string input = get_string("plaintext: ");
+    
 }
 
 bool validate_args(int argc, string argv[])
