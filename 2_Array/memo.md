@@ -75,6 +75,7 @@ Make sure your username and/or personal access token are valid and check50 is en
     - むき出しよりは多少マシになった……はず
 
 ### substitution
+- 2022/11/15
 - いまだにstrlenの使い方を覚えられない
     - string型の引数を1つ取る
 - keyの入力チェック部分だけテストしたくてcheck50したが上手く動かない
@@ -91,3 +92,4 @@ Make sure your username and/or personal access token are valid and check50 is en
     - check前には気づけた
 - checkも通ったので提出
     - 思ったよりは簡単だった
+- charをintとみなしたり、その逆を行ったりすることに慣れてきた
