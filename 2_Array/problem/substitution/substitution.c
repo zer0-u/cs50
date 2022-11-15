@@ -5,7 +5,7 @@
 #include <string.h>
 #include <ctype.h>
 
-bool validate_args(int argc, string argv);
+bool validate_args(int argc, string argv[]);
 bool validate_key(string key);
 
 int main(int argc, string argv[])
@@ -18,7 +18,7 @@ int main(int argc, string argv[])
     }
 }
 
-bool validate_args(int argc, string argv)
+bool validate_args(int argc, string argv[])
 {
     if (argc != 2)
     {
@@ -45,5 +45,5 @@ bool validate_key(string key)
         }
         checksum += elem;
     }
-    return true;
+    return checksum == 2847;
 }
