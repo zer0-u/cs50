@@ -17,6 +17,7 @@ int main(int argc, string argv[])
         printf("Usage: ./substitution key\n");
         return 1;
     }
+    string key = argv[1];
     string input = get_string("plaintext: ");
     printf("ciphertext: ");
     for (int i = 0, length = strlen(input); i < length; i++)
