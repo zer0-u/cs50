@@ -13,7 +13,7 @@ int main(int argc, string argv[])
 
     if (validate_args(argc, argv))
     {
-        printf("ERROR\n");
+        printf("Usage: ./substitution key\n");
         return 1;
     }
 }
@@ -43,7 +43,8 @@ bool validate_key(string key)
         {
             return false;
         }
-        checksum += elem;
+        checksum += toupper(elem);
     }
+    // asciicodeでA(97)からZ(122)を足した値が2847
     return checksum == 2847;
 }
