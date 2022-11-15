@@ -18,11 +18,7 @@ int main(int argc, string argv[])
         return 1;
     }
     string input = get_string("plaintext: ");
-    printf("ciphertext: %s\n", encode(input, argv[1]));
-}
-
-string encode(string input, string key)
-{
+    printf("ciphertext: ");
     for (int i = 0, length = strlen(input); i < length; i++)
     {
         char elem = input[i];
@@ -35,7 +31,29 @@ string encode(string input, string key)
         {
             index = elem - 'A';
         }
+        printf("%c", )
     }
+    printf("\n");
+}
+
+string encode(string input, string key)
+{
+    printf("ciphertext: ");
+    for (int i = 0, length = strlen(input); i < length; i++)
+    {
+        char elem = input[i];
+        int index = 0;
+        if (islower(elem))
+        {
+            index = elem - 'a';
+        }
+        if (isupper(elem))
+        {
+            index = elem - 'A';
+        }
+        printf("%c", )
+    }
+    printf("\n");
     return "";
 }
 
