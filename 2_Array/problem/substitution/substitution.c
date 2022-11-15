@@ -51,8 +51,8 @@ bool validate_key(string key)
         {
             return false;
         }
-        checksum += toupper(elem);
+        checksum += tolower(elem);
     }
-    // asciicodeでA(97)からZ(122)を足した値が2847
+    // asciicodeでa(97)からz(122)を足した値が2847
     return checksum == 2847;
 }
