@@ -89,3 +89,5 @@ Make sure your username and/or personal access token are valid and check50 is en
 - 文字結合がもっとスムーズにできたら楽なんだけどなぁ
 - アルファベット以外の場合は変換しない仕様を忘れていた
     - check前には気づけた
+- checkも通ったので提出
+    - 思ったよりは簡単だった
