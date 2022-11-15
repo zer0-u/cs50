@@ -39,10 +39,6 @@ bool validate_key(string key)
     for (int i = 0; i < length; i++)
     {
         char elem = key[i];
-        if (length < 26)
-        {
-            return false;
-        }
         if (!isalpha(elem))
         {
             return false;
