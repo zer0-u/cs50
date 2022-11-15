@@ -7,6 +7,7 @@
 
 bool validate_args(int argc, string argv[]);
 bool validate_key(string key);
+void print_ciphertext(string input, string key);
 
 int main(int argc, string argv[])
 {
@@ -16,9 +17,12 @@ int main(int argc, string argv[])
         printf("Usage: ./substitution key\n");
         return 1;
     }
-    string key = argv[1];
     string input = get_string("plaintext: ");
+    print_ciphertext(input, argv[1]);
+}
 
+void print_ciphertext(string input, string key)
+{
     printf("ciphertext: ");
     for (int i = 0, length = strlen(input); i < length; i++)
     {
