@@ -87,3 +87,5 @@ Make sure your username and/or personal access token are valid and check50 is en
 - Aやaからの距離だと見抜いたのもエラいポイント
 - しかし出力処理の部分を直し忘れてしばらく戸惑っていた
 - 文字結合がもっとスムーズにできたら楽なんだけどなぁ
+- アルファベット以外の場合は変換しない仕様を忘れていた
+    - check前には気づけた

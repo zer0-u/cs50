@@ -27,14 +27,17 @@ void print_ciphertext(string input, string key)
     for (int i = 0, length = strlen(input); i < length; i++)
     {
         char elem = input[i];
-        char output;
-        if (islower(elem))
+        char output = elem;
+        if (isalpha(elem))
         {
-            output = tolower(key[elem - 'a']);
-        }
-        if (isupper(elem))
-        {
-            output = toupper(key[elem - 'A']);
+            if (islower(elem))
+            {
+                output = tolower(key[elem - 'a']);
+            }
+            if (isupper(elem))
+            {
+                output = toupper(key[elem - 'A']);
+            }
         }
         printf("%c", output);
     }
