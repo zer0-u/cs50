@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <cs50.h>
 #include <string.h>
+#include <ctype.h>
 
 int main(int argc, string argv[])
 {
@@ -16,9 +17,16 @@ int main(int argc, string argv[])
 
 bool has_enough_length(string key)
 {
-    if (strlen(key) != 26)
+    for (int i = 0, length = strlen(key); i < length; i++)
     {
-        return false;
+        if (length < 26)
+        {
+            return false;
+        }
+        if (!isalpha(key[i]))
+        {
+            return false;
+        }
     }
-    return false;
+    return true;
 }
