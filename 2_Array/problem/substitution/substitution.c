@@ -18,7 +18,7 @@ int main(int argc, string argv[])
         return 1;
     }
     string input = get_string("plaintext: ");
-    printf("ciphertext: %s", encode(input, argv[1]));
+    printf("ciphertext: %s\n", encode(input, argv[1]));
 }
 
 string encode(string input, string key)
