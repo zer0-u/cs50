@@ -77,3 +77,5 @@ Make sure your username and/or personal access token are valid and check50 is en
 ### substitution
 - いまだにstrlenの使い方を覚えられない
     - string型の引数を1つ取る
+- keyの入力チェック部分だけテストしたくてcheck50したが上手く動かない
+    - テスト項目はなんとなく理解した
