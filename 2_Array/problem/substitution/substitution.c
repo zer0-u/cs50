@@ -6,7 +6,7 @@
 #include <ctype.h>
 
 bool validate_args(int argc, string argv);
-bool has_enough_length(string key);
+bool validate_key(string key);
 
 int main(int argc, string argv[])
 {
@@ -24,12 +24,19 @@ bool validate_args(int argc, string argv)
     {
         return false;
     }
-    return has_enough_length(argv[1]);
+    return validate_key(argv[1]);
 }
 
-bool has_enough_length(string key)
+bool validate_key(string key)
 {
-    for (int i = 0, length = strlen(key); i < length; i++)
+    int length = strlen(key);
+    if (length != 26)
+    {
+        return false;
+    }
+
+    int checksum = 0;
+    for (int i = 0; i < length; i++)
     {
         char elem = key[i];
         if (length < 26)
@@ -40,6 +47,7 @@ bool has_enough_length(string key)
         {
             return false;
         }
+        checksum += elem;
     }
     return true;
 }
