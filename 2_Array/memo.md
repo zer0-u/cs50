@@ -80,3 +80,5 @@ Make sure your username and/or personal access token are valid and check50 is en
 - keyの入力チェック部分だけテストしたくてcheck50したが上手く動かない
     - テスト項目はなんとなく理解した
     - とりあえず先に進もう
+    - と思ったらvalidate関数の結果を反転していないだけだった(ロジックそのものには問題なし)
+    - AからZを足した値というアイディアはなかなか良い
