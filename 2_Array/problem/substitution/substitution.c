@@ -31,11 +31,12 @@ bool has_enough_length(string key)
 {
     for (int i = 0, length = strlen(key); i < length; i++)
     {
+        char elem = key[i];
         if (length < 26)
         {
             return false;
         }
-        if (!isalpha(key[i]))
+        if (!isalpha(elem))
         {
             return false;
         }
