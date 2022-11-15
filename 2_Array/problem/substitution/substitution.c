@@ -11,13 +11,13 @@ bool validate_key(string key);
 int main(int argc, string argv[])
 {
 
-    if (validate_args(argc, argv))
+    if (!validate_args(argc, argv))
     {
         printf("Usage: ./substitution key\n");
         return 1;
     }
     string input = get_string("plaintext: ");
-    
+
 }
 
 bool validate_args(int argc, string argv[])
