@@ -5,14 +5,26 @@
 #include <string.h>
 #include <ctype.h>
 
+bool validate_args(int argc, string argv);
+bool has_enough_length(string key);
+
 int main(int argc, string argv[])
 {
 
-    if (argc != 2)
+    if (validate_args(argc, argv))
     {
         printf("ERROR\n");
         return 1;
     }
+}
+
+bool validate_args(int argc, string argv)
+{
+    if (argc != 2)
+    {
+        return false;
+    }
+    return has_enough_length(argv[1]);
 }
 
 bool has_enough_length(string key)
