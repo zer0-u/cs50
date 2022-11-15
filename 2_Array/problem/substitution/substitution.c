@@ -7,7 +7,6 @@
 
 bool validate_args(int argc, string argv[]);
 bool validate_key(string key);
-string encode(string input, string key);
 
 int main(int argc, string argv[])
 {
@@ -24,24 +23,18 @@ int main(int argc, string argv[])
     for (int i = 0, length = strlen(input); i < length; i++)
     {
         char elem = input[i];
-        int index = 0;
+        char output;
         if (islower(elem))
         {
-            index = elem - 'a';
+            output = tolower(key[elem - 'a']);
         }
         if (isupper(elem))
         {
-            index = elem - 'A';
+            output = toupper(key[elem - 'A']);
         }
-        printf("%c", key[index]);
+        printf("%c", output);
     }
     printf("\n");
-}
-
-string encode(string input, string key)
-{
-
-    return "";
 }
 
 bool validate_args(int argc, string argv[])

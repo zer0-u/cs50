@@ -84,4 +84,6 @@ Make sure your username and/or personal access token are valid and check50 is en
 - AからZを足した値というアイディアはなかなか良い
     - しかし大文字と小文字を見間違えていた
     - なぜ正しく動いたか不明(修正済)
-    
+- Aやaからの距離だと見抜いたのもエラいポイント
+- しかし出力処理の部分を直し忘れてしばらく戸惑っていた
+- 文字結合がもっとスムーズにできたら楽なんだけどなぁ
