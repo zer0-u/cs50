@@ -14,7 +14,7 @@ int main(int argc, string argv[])
     }
 }
 
-bool has_enough_length(string key[])
+bool has_enough_length(string key)
 {
     if (strlen(key) != 26)
     {
