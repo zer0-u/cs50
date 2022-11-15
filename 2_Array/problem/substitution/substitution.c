@@ -7,6 +7,7 @@
 
 bool validate_args(int argc, string argv[]);
 bool validate_key(string key);
+string encode(string input, string key);
 
 int main(int argc, string argv[])
 {
@@ -17,7 +18,12 @@ int main(int argc, string argv[])
         return 1;
     }
     string input = get_string("plaintext: ");
+    printf("ciphertext: %s", encode(input, argv[1]));
+}
 
+string encode(string input, string key)
+{
+    return "";
 }
 
 bool validate_args(int argc, string argv[])
