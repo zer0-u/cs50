@@ -23,6 +23,9 @@ int main(int argc, string argv[])
 
 string encode(string input, string key)
 {
+    for (int i = 0, length = strlen(input); i < length; i++)
+    {
+    }
     return "";
 }
 
