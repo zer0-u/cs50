@@ -26,11 +26,14 @@ string encode(string input, string key)
     for (int i = 0, length = strlen(input); i < length; i++)
     {
         char elem = input[i];
+        int index = 0;
         if (islower(elem))
         {
+            index = elem - 'a';
         }
         if (isupper(elem))
         {
+            index = elem - 'A';
         }
     }
     return "";
