@@ -25,6 +25,13 @@ string encode(string input, string key)
 {
     for (int i = 0, length = strlen(input); i < length; i++)
     {
+        char elem = input[i];
+        if (islower(elem))
+        {
+        }
+        if (isupper(elem))
+        {
+        }
     }
     return "";
 }
