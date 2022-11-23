@@ -5,4 +5,5 @@
 int main(void)
 {
     string names[] = {"Bill", "Charlie", "Fred", "George", "Ginny", "Percy", "Ron"};
+    
 }
