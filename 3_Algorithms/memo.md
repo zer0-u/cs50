@@ -13,3 +13,8 @@
 ### 電話番号をstringとして扱う
 - クレジットカード番号を文字列で扱えばもっと簡単かもしれない話
     - 後でweek1の課題をやり直してみたい
+
+## 1124
+
+### ソートアルゴリズム
+- https://www.cs.usfca.edu/~galles/visualization/ComparisonSort.html
