@@ -35,4 +35,12 @@
     - 1: real 0m7.500s, user 0m6.916s, sys 0m0.269s
     - 2: real 0m0.527s, user 0m0.039s, sys 0m0.201s
     - 3: real 0m3.257s, user 0m2.649s, sys 0m0.220s
-- 
+- 2がマージソートっぽいなーという気がしてくる
+- reversed5000.txt
+    - 1: real 0m0.115s, user 0m0.062s, sys 0m0.028s
+    - 2: real 0m0.057s, user 0m0.006s, sys 0m0.020s
+    - 3: real 0m0.060s, user 0m0.031s, sys 0m0.024s
+- reversed10000.txt
+    - 1: real 0m0.287s, user 0m0.189s, sys 0m0.056s
+    - 2: real 0m0.104s, user 0m0.010s, sys 0m0.041s
+    - 
