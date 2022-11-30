@@ -47,4 +47,10 @@
 - reversed50000.txt
     - 1: real 0m5.775s, user 0m5.095s, sys 0m0.223s
     - 2: real 0m0.584s, user 0m0.039s, sys 0m0.190s
-    - 
+    - 3: real 0m3.256s, user 0m2.783s, sys 0m0.232s
+- 多分3が選択ソートかな
+- sorted5000.txt
+    - 1: real 0m0.038s, user 0m0.000s, sys 0m0.022s
+    - 2: real 0m0.030s, user 0m0.007s, sys 0m0.014s
+    - 3: real 0m0.068s, user 0m0.031s, sys 0m0.022s
+- sorted10000.txt
