@@ -34,4 +34,5 @@
 - random50000.txt
     - 1: real 0m7.500s, user 0m6.916s, sys 0m0.269s
     - 2: real 0m0.527s, user 0m0.039s, sys 0m0.201s
-    - 3: 
+    - 3: real 0m3.257s, user 0m2.649s, sys 0m0.220s
+- 
