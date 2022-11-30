@@ -43,4 +43,8 @@
 - reversed10000.txt
     - 1: real 0m0.287s, user 0m0.189s, sys 0m0.056s
     - 2: real 0m0.104s, user 0m0.010s, sys 0m0.041s
+    - 3: real 0m0.176s, user 0m0.105s, sys 0m0.040s
+- reversed50000.txt
+    - 1: real 0m5.775s, user 0m5.095s, sys 0m0.223s
+    - 2: real 0m0.584s, user 0m0.039s, sys 0m0.190s
     - 
