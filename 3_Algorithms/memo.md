@@ -29,4 +29,9 @@
     - 3: real 0m0.074s, user 0m0.031s, sys 0m0.021s
 - random10000.txt
     - 1: real 0m0.414s, user 0m0.237s, sys 0m0.055s
-    
+    - 2: real 0m0.181s, user 0m0.003s, sys 0m0.047s
+    - 3: real 0m0.191s, user 0m0.100s, sys 0m0.051s
+- random50000.txt
+    - 1: real 0m7.500s, user 0m6.916s, sys 0m0.269s
+    - 2: real 0m0.527s, user 0m0.039s, sys 0m0.201s
+    - 3: 
