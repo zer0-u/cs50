@@ -68,8 +68,10 @@ bool vote(string name)
     // TODO
     for (int i = 0; i < candidate_count; i++)
     {
-        if (strcmp(candidates[i], name))
+        candidate elem = candidates[i];
+        if (strcmp(elem.name, name))
         {
+            elem.votes++;
             return true;
         }
     }
