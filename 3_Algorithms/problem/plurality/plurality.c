@@ -81,6 +81,8 @@ bool vote(string name)
 // Print the winner (or winners) of the election
 void print_winner(void)
 {
+    candidate sorted[candidate_count];
+    
     // TODO
     return;
 }
