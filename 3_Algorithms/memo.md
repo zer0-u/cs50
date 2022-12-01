@@ -58,8 +58,11 @@
     - 2: real 0m0.076s, user 0m0.009s, sys 0m0.041s
     - 3: real 0m0.229s, user 0m0.114s, sys 0m0.043s
 
-### 1201
-- 引き続きlab3
+## 1201
+
+### lab3
 - todoコメントを残したままだとcheck50がうまく動かない
 - 1がバブルソート(bubble sort)・2がマージソート(merge sort)・3が選択ソート(selection sort)で正解
 - windowsのchromeだとなぜかコピペが効かず不便
+
+### plurality
