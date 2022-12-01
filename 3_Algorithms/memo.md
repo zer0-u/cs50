@@ -54,3 +54,6 @@
     - 2: real 0m0.030s, user 0m0.007s, sys 0m0.014s
     - 3: real 0m0.068s, user 0m0.031s, sys 0m0.022s
 - sorted10000.txt
+    - 1: real 0m0.147s, user 0m0.000s, sys 0m0.051s
+    - 2: real 0m0.076s, user 0m0.009s, sys 0m0.041s
+    - 3: real 0m0.229s, user 0m0.114s, sys 0m0.043s
