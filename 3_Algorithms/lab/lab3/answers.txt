@@ -1,11 +1,11 @@
 sort1 uses: bubble sort
 
-How do you know?: TODO
+How do you know?: 最悪と最善のケースで差がある
 
 sort2 uses: merge sort
 
-How do you know?: TODO
+How do you know?: 常に速い
 
 sort3 uses: selection sort
 
-How do you know?: TODO
+How do you know?: 常に遅い
