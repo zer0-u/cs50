@@ -103,7 +103,16 @@ void print_winner(void)
                 j = i + 1;
             }
         }
+        // 出力処理
+        for (int i = 0; i < candidate_count; i++)
+        {
+            candidate elem = candidates[i];
+            if (elem.votes == max_votes)
+            {
+                printf("%s\n", elem.name);
+            }
+        }
     }
-    // TODO
-    return;
+    // 正常終了したとみなし0を返しておく
+    return 0;
 }
