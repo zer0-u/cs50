@@ -88,7 +88,7 @@ void print_winner(void)
         candidate elem1 = candidates[i];
         if (elem1.votes > max_votes)
         {
-            // 複数人が最高得点を持っている可能性を踏まえて
+            // 複数人が最高得点を持っている可能性を踏まえて保持しておく
             max_votes = elem1.votes;
         }
         for (int j = i + 1; j < candidate_count; j++)
@@ -96,6 +96,11 @@ void print_winner(void)
             candidate elem2 = candidates[j];
             if (elem1.votes > elem2.votes)
             {
+                // 中身を入れ換える
+                candidates[i] = elem2;
+                candidates[j] = elem1;
+                // 最初から比較し直す
+                j = i + 1;
             }
         }
     }
