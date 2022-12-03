@@ -86,9 +86,17 @@ void print_winner(void)
     for (int i = 0, index = 0; i < candidate_count; i++)
     {
         candidate elem1 = candidates[i];
+        if (elem1.votes > max_votes)
+        {
+            // 複数人が最高得点を持っている可能性を踏まえて
+            max_votes = elem1.votes;
+        }
         for (int j = i + 1; j < candidate_count; j++)
         {
             candidate elem2 = candidates[j];
+            if (elem1.votes > elem2.votes)
+            {
+            }
         }
     }
     // TODO
