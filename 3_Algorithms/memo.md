@@ -65,4 +65,8 @@
 - 1がバブルソート(bubble sort)・2がマージソート(merge sort)・3が選択ソート(selection sort)で正解
 - windowsのchromeだとなぜかコピペが効かず不便
 
+## 1203
+
 ### plurality
+- ソートアルゴリズムを自分で実装する必要があるらしい
+- とりあえず選択ソートで試してみる
