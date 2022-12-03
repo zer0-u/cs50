@@ -103,14 +103,15 @@ void print_winner(void)
                 j = i + 1;
             }
         }
-        // 出力処理
-        for (int k = 0; k < candidate_count; k++)
+    }
+    printf("max votes: %i\n", max_votes);
+    // 出力処理
+    for (int i = 0; i < candidate_count; i++)
+    {
+        candidate elem = candidates[i];
+        if (elem.votes == max_votes)
         {
-            candidate elem = candidates[k];
-            if (elem.votes == max_votes)
-            {
-                printf("%s\n", elem.name);
-            }
+            printf("%s\n", elem.name);
         }
     }
 }
