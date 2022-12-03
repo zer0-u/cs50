@@ -76,3 +76,4 @@
 - コピペできないの不便だなー
     - open in vscode desktopを試してみた
     - しかしターミナルの出力内容はコピペできない
+    - ctrl+cではなくctrl+shift+cらしい
