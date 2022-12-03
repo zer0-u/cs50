@@ -104,15 +104,13 @@ void print_winner(void)
             }
         }
         // 出力処理
-        for (int i = 0; i < candidate_count; i++)
+        for (int k = 0; k < candidate_count; k++)
         {
-            candidate elem = candidates[i];
+            candidate elem = candidates[k];
             if (elem.votes == max_votes)
             {
                 printf("%s\n", elem.name);
             }
         }
     }
-    // 正常終了したとみなし0を返しておく
-    return 0;
 }
