@@ -82,9 +82,14 @@ bool vote(string name)
 void print_winner(void)
 {
     candidate sorted[candidate_count];
+    int max_votes = 0;
     for (int i = 0, index = 0; i < candidate_count; i++)
     {
-       
+        candidate elem1 = candidates[i];
+        for (int j = i + 1; j < candidate_count; j++)
+        {
+            candidate elem2 = candidates[j];
+        }
     }
     // TODO
     return;
