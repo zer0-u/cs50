@@ -84,11 +84,7 @@ void print_winner(void)
     candidate sorted[candidate_count];
     for (int i = 0, index = 0; i < candidate_count; i++)
     {
-        int max = -1;
-        candidate elem = candidates[i];
-        if(elem.votes>max){
-            
-        }
+       
     }
     // TODO
     return;
