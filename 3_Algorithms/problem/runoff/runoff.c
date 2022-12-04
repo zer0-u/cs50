@@ -149,7 +149,9 @@ void tabulate(void)
         candidate elem = candidates[index];
         // 有効な候補か調べる
         if(!elem.eliminated){
-
+            // 有効な場合は得票数を1増やす
+            candidates[index].votes++;
+            // i番目の候補者の処理終わり
         }
     }
     // まだ落選していない&リストの一番上にいる候補を調べる
