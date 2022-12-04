@@ -166,7 +166,7 @@ bool print_winner(void)
 {
     // 過半数
     int border = voter_count / 2;
-    // 候補者それぞれについて
+    // 候補それぞれについて
     for (int i = 0; i < candidate_count; i++)
     {
         // 得票数と過半数を比較する
@@ -183,8 +183,17 @@ bool print_winner(void)
 // Return the minimum number of votes any remaining candidate has
 int find_min(void)
 {
-    // TODO
-    return 0;
+    // ここでは最小の得票数を探すだけ
+    // eliminatedの操作はeliminate関数で行う
+    int min = voter_count;
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (candidates[i].votes < min)
+        {
+            min = candidates[i].votes;
+        }
+    }
+    return min;
 }
 
 // Return true if the election is tied between all candidates, false otherwise
