@@ -146,20 +146,18 @@ void tabulate(void)
     {
         for (int j = 0; j < candidate_count; j++)
         {
-        }
-        // 一番上の候補を取り出す
-        int index = preferences[i][0];
-        candidate elem = candidates[index];
-        // 有効な候補か調べる
-        if (!elem.eliminated)
-        {
-            // 有効な場合は得票数を1増やす
-            candidates[index].votes++;
-            // i番目の候補者の処理終わり
+            // 一番上の候補を取り出す
+            int index = preferences[i][j];
+            // 有効な候補か調べる
+            if (!candidates[index].eliminated)
+            {
+                // 有効な場合は得票数を1増やす
+                candidates[index].votes++;
+                // i番目の投票者の処理終わり
+                break;
+            }
         }
     }
-    // まだ落選していない&リストの一番上にいる候補を調べる
-    // 候補の得票数を1増やす
     return;
 }
 
