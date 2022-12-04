@@ -125,3 +125,5 @@
 - 面倒になってきたのでtieとeliminateは一気に実装した
 - 例題は問題なく動作する
 - check50
+    - find_min ignores eliminated candidates
+    - 確かにeliminatedによる分岐は行っていなかった
