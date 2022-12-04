@@ -141,7 +141,13 @@ bool vote(int voter, int rank, string name)
 // Tabulate votes for non-eliminated candidates
 void tabulate(void)
 {
-    // TODO
+    // 投票者それぞれについて
+    for (int i = 0; i < voter_count; i++)
+    {
+        
+    }
+    // まだ落選していない&リストの一番上にいる候補を調べる
+    // 候補の得票数を1増やす
     return;
 }
 
