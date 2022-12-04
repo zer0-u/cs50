@@ -144,7 +144,9 @@ void tabulate(void)
     // 投票者それぞれについて
     for (int i = 0; i < voter_count; i++)
     {
-        
+        for (int j = 0; j < candidate_count; j++)
+        {
+        }
     }
     // まだ落選していない&リストの一番上にいる候補を調べる
     // 候補の得票数を1増やす
