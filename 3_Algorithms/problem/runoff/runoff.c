@@ -144,11 +144,15 @@ void tabulate(void)
     // 投票者それぞれについて
     for (int i = 0; i < voter_count; i++)
     {
+        for (int j = 0; j < candidate_count; j++)
+        {
+        }
         // 一番上の候補を取り出す
         int index = preferences[i][0];
         candidate elem = candidates[index];
         // 有効な候補か調べる
-        if(!elem.eliminated){
+        if (!elem.eliminated)
+        {
             // 有効な場合は得票数を1増やす
             candidates[index].votes++;
             // i番目の候補者の処理終わり
