@@ -128,3 +128,8 @@
     - find_min ignores eliminated candidates
     - 確かにeliminatedによる分岐は行っていなかった
 - 修正後check50もクリア
+
+## 1206
+
+### tideman
+- またしてもルールが難しい
