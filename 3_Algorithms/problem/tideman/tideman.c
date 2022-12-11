@@ -161,11 +161,16 @@ void sort_pairs(void)
         {
             pair p1 = pairs[i];
             pair p2 = pairs[j];
-            
-
+            int point1 = preferences[p1.winner][p1.loser];
+            int point2 = preferences[p2.winner][p2.loser];
+            if (point2 > point1)
+            {
+                pairs[i] = p2;
+                pairs[j] = p1;
+                j = i + 1;
+            }
         }
     }
-    return;
 }
 
 // Lock pairs into the candidate graph in order, without creating cycles
