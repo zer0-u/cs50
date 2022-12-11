@@ -164,6 +164,12 @@
 - 配列candidatesの中身
     - 0:A, 1:B, 2:C, 3:D, 4:E
 - ある投票者XはB,E,A,C,Dの順に投票した
-- 関数voteの内部で配列ranksの中身を詰める
+- 関数voteで配列ranksの中身を詰める
     - 0:1(B), 1:4(E), 2:0(A), 3:2(C), 4:3(D)
-- 
+- 関数record_preferencesで配列preferencesの中身を変える
+- 投票者Xは候補者Eより候補者Bの方を好んでいる
+    - preferences[1(B)][4(E)]が1増える
+    - 同じようにして[1(B)][0(A)], [1(B)][2(C)], [1(B)][3(D)]も1増える
+- 投票者Xは候補者Aより候補者Eの方を好んでいる
+    - preferences[4(E)][0(A)]が1増える
+- 一般化するとpreference[i][i+1から上限まで]が1増える
