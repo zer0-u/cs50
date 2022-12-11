@@ -179,9 +179,22 @@ void lock_pairs(void)
 
     for (int i = 0; i < pair_count; i++)
     {
-        
+        int winner = pairs[i].winner;
+        int loser = pairs[i].loser;
+        bool hasArrow = false;
+        for (int j = 0; j < pair_count; j++)
+        {
+            if (locked[loser][j])
+            {
+                hasArrow = true;
+                break;
+            }
+        }
+        if (!hasArrow)
+        {
+            locked[winner][loser] = true;
+        }
     }
-    return;
 }
 
 // Print the winner of the election
