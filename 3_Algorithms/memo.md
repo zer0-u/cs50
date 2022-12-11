@@ -223,7 +223,14 @@
 - string.hをincludeし忘れていた
 - テストするのも大変なのでいきなりcheck50を試す
 - ボロボロだーーーーーーーーーーーーー！！！
-- add_pairにも問題があるらしい
-    - 引き分けが存在する時に2ペアを追加する
+
+### やり直し(add_pair)
+- 引き分けが存在する時に2ペアを追加する……？
+    - add_pairs generates correct pair count when ties exist
+    - add_pairs function did not produce 2 pairs
     - 仕様としてそれで合ってるの……？
-- add_pairで生成した構造体pairの
+- add_pairで生成した構造体pairのプロパティに代入するものが間違っていた
+    - 配列preferencesのインデックス(iとj)ではなく要素を代入していた
+    - point1みたいな変数名にしたら大丈夫だったかもしれない
+    - スコープが小さいときも変数名には十分気をつける
+- 引き分けの存在が謎
