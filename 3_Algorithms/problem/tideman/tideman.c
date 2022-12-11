@@ -133,10 +133,7 @@ void add_pairs(void)
         {
             int p1 = preferences[i][j];
             int p2 = preferences[j][i];
-            if (p1 == p2)
-            {
-                break;
-            }
+     
             if (p1 > p2)
             {
                 pairs[pair_count].winner = p1;
