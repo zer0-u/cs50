@@ -182,4 +182,6 @@
     - 後者のほうが大きい場合はwinnerとloserを入れ替えた処理を行う
     - 同じ場合は何もしない
 - 関数sort_pairsで配列pairsを並べ替える
-- {winner:0(A),loser}
+- たとえば{winner:0(A),loser:1(B)}と{winner:2(C),loser:3(D)}のどちらが強いかを考えると
+    - preferences[0(A)][1(B)]と[2(C)][3(D)]を比較する
+    - 
