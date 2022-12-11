@@ -136,7 +136,17 @@ void add_pairs(void)
             {
                 break;
             }
-            
+            if (p1 > p2)
+            {
+                pairs[pair_count].winner = p1;
+                pairs[pair_count].loser = p2;
+            }
+            else
+            {
+                pairs[pair_count].winner = p2;
+                pairs[pair_count].loser = p1;
+            }
+            pair_count++;
         }
     }
     return;
