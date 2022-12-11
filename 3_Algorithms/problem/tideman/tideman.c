@@ -1,6 +1,6 @@
 #include <cs50.h>
 #include <stdio.h>
-#include<string.h>
+#include <string.h>
 
 // Max number of candidates
 #define MAX 9
@@ -133,18 +133,19 @@ void add_pairs(void)
         {
             int p1 = preferences[i][j];
             int p2 = preferences[j][i];
-     
+
             if (p1 > p2)
             {
                 pairs[pair_count].winner = p1;
                 pairs[pair_count].loser = p2;
+                pair_count++;
             }
-            else
+            else if (p1 < p2)
             {
                 pairs[pair_count].winner = p2;
                 pairs[pair_count].loser = p1;
+                pair_count++;
             }
-            pair_count++;
         }
     }
     return;
