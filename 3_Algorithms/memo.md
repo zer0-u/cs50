@@ -174,4 +174,5 @@
     - preferences[4(E)][0(A)]が1増える
 - 一般化するとpreferences[i][i+1から上限まで]が1増える
 - 関数add_pairsで配列pairsに優先される候補者のペアを記録する
-- preferences[0(A)][1(B)]
+- preferences[0(A)][1(B)]と[1(B)][0(A)]を比べて
+    - 前者の方が大きい=候補者Bより候補者Aを好む人の方が多い=
