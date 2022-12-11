@@ -157,9 +157,11 @@ void sort_pairs(void)
 {
     for (int i = 0; i < pair_count; i++)
     {
-        
         for (int j = i + 1; j < pair_count; j++)
         {
+            pair p1 = pairs[i];
+            pair p2 = pairs[j];
+            
 
         }
     }
