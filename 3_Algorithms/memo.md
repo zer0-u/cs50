@@ -173,6 +173,12 @@
     - 配列locked[winner][loser]をtrueにする
 - いろいろ図を書きながら考えてみた結果、ひとまず「矢印を繋げたい先=loserを起点とする矢印がなければOK」とみなすことにした
 - 本当にどういう理屈で動いてるんだろう
+- るにゃんさんが参考になりそうなページを教えてくれた
+    - https://qiita.com/TrainCofeeBoy/items/0ef316a8dc41d1d2ec5c
+    - https://orsj.org/wp-content/corsj/or62-10/or62_10_641.pdf
+    - Qiitaのページはどうやって見つけたんだろう
+- 薄々分かっていたが再帰を使うらしい
+- 使わないとダメか……？
 
 ### tideman(例)
 - 候補者はA,B,C,D,Eの5人
