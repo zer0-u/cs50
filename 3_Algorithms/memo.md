@@ -170,7 +170,8 @@
 - 「コンドルセ勝者」で調べたらますます難解な説明が出てきた
 - なんなん～～～～～
 - 配列pairsの要素を最初から順番に
-    - 配列locked[winner][loser]
+    - 配列locked[winner][loser]をtrueにする
+    
 
 ### tideman(例)
 - 候補者はA,B,C,D,Eの5人
