@@ -147,5 +147,6 @@
 
 ## 12011
 
- ### tideman(vote関数)
- 
+### tideman(vote関数)
+- 時間が経ちすぎて説明を忘れた
+- desktop版vscodeでも再読み込みは走る
