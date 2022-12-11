@@ -162,7 +162,9 @@
 ### tideman(lock_pairs)
 - ロックってなんだよ
 - 強い順=並べ替えた後の配列pairsの要素順にグラフを作っていく
-- 配列
+- 配列lockedの要素はbool型
+    - 矢印があればtrue、なければfalse？
+    
 
 
 ### tideman(例)
