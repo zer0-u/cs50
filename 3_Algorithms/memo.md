@@ -181,3 +181,5 @@
     - 変数pair_countを1増やす
     - 後者のほうが大きい場合はwinnerとloserを入れ替えた処理を行う
     - 同じ場合は何もしない
+- 関数sort_pairsで配列pairsを並べ替える
+- 
