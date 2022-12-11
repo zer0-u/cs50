@@ -1,5 +1,6 @@
 #include <cs50.h>
 #include <stdio.h>
+#include<string.h>
 
 // Max number of candidates
 #define MAX 9
@@ -100,7 +101,7 @@ bool vote(int rank, string name, int ranks[])
 {
     for (int i = 0; i < candidate_count; i++)
     {
-        if (strcmp(name, candidates[i]) == = 0)
+        if (strcmp(name, candidates[i]) == 0)
         {
             ranks[rank] = i;
             return true;
@@ -200,6 +201,20 @@ void lock_pairs(void)
 // Print the winner of the election
 void print_winner(void)
 {
-    // TODO
-    return;
+    for (int i = 0; i < pair_count; i++)
+    {
+        bool connected = false;
+        for (int j = 0; j < pair_count; j++)
+        {
+            if (locked[j][i])
+            {
+                connected = true;
+                break;
+            }
+        }
+        if (!connected)
+        {
+            printf("%s\n", candidates[i]);
+        }
+    }
 }
