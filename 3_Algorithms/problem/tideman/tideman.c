@@ -221,7 +221,7 @@ void print_winner(void)
             if (locked[j][i])
             {
                 connected = true;
-                break;
+                continue;
             }
         }
         if (!connected)
