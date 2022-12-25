@@ -182,7 +182,7 @@ void lock_pairs(void)
     {
         int winner = pairs[i].winner;
         int loser = pairs[i].loser;
-        bool existCircle = check_circle();
+        bool existCircle = check_circle(winner,loser);
         // これまで追加した矢印でサイクルが作られていないかチェックする
 
         // 作られていない場合は矢印を追加する
@@ -193,8 +193,9 @@ void lock_pairs(void)
     }
 }
 
-bool check_circle()
+bool check_circle(int winner, int loser)
 {
+    
     return false;
 }
 
