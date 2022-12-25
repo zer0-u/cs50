@@ -1,6 +1,9 @@
 # 4 Memory
 
 ## 1225
+- 記憶を失ったのでweek 3のNoteも見直した
+    - https://cs50.jp/x/2021/week3/notes/
+    - n log nとlog nの違いが分からないんだよな　定数倍ではないらしい
 - google spreadsheetへのアクセス
     - cs50.ly/art
     - コピーしたもの　https://docs.google.com/spreadsheets/d/13dkNL613yYbEf8WoRXbdp7QEBYv6iwkLH2DfqyFoGIo/edit#gid=0
