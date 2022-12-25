@@ -4,6 +4,6 @@
 - google spreadsheetへのアクセス
     - cs50.ly/art
     - コピーしたもの　https://docs.google.com/spreadsheets/d/13dkNL613yYbEf8WoRXbdp7QEBYv6iwkLH2DfqyFoGIo/edit#gid=0
-    - いわゆる「excel方眼紙」で特に何か描かれている訳ではなかった
+    - いわゆる「excel方眼紙」で何か描かれている訳ではなかった
 
 
