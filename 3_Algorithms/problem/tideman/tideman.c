@@ -217,7 +217,7 @@ void print_winner(void)
     for (int i = 0; i < pair_count; i++)
     {
         bool connected = false;
-        for (int j = i; j < pair_count; j++)
+        for (int j = 0; j < pair_count; j++)
         {
             if (locked[j][i])
             {
