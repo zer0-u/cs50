@@ -225,9 +225,9 @@ void print_winner(void)
                 connected = true;
             }
         }
-    }
-    if (!connected)
-    {
-        printf("%s\n", candidates[i]);
+        if (!connected)
+        {
+            printf("%s\n", candidates[i]);
+        }
     }
 }
