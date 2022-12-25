@@ -174,6 +174,8 @@ void sort_pairs(void)
     }
 }
 
+bool check_circle(int start, int end);
+
 // Lock pairs into the candidate graph in order, without creating cycles
 void lock_pairs(void)
 {
@@ -182,9 +184,8 @@ void lock_pairs(void)
     {
         int winner = pairs[i].winner;
         int loser = pairs[i].loser;
-        bool existCircle = check_circle(winner,loser);
         // これまで追加した矢印でサイクルが作られていないかチェックする
-
+        bool existCircle = check_circle(winner, loser);
         // 作られていない場合は矢印を追加する
         if (!existCircle)
         {
@@ -193,9 +194,19 @@ void lock_pairs(void)
     }
 }
 
-bool check_circle(int winner, int loser)
+bool check_circle(int start, int end)
 {
-    
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (locked[i][start])
+        {
+            if (i == end)
+            {
+                return true;
+            }
+            return check_circle(i, end);
+        }
+    }
     return false;
 }
 
