@@ -174,6 +174,7 @@ void sort_pairs(void)
     }
 }
 
+// lock_pairsの中からしか参照しないのでここに宣言を置く
 bool check_circle(int start, int end);
 
 // Lock pairs into the candidate graph in order, without creating cycles
@@ -213,9 +214,10 @@ bool check_circle(int start, int end)
 // Print the winner of the election
 void print_winner(void)
 {
+    bool connected = false;
     for (int i = 0; i < pair_count; i++)
     {
-        bool connected = false;
+
         for (int j = 0; j < pair_count; j++)
         {
             if (locked[j][i])
@@ -223,9 +225,9 @@ void print_winner(void)
                 connected = true;
             }
         }
-        if (!connected)
-        {
-            printf("%s\n", candidates[i]);
-        }
+    }
+    if (!connected)
+    {
+        printf("%s\n", candidates[i]);
     }
 }
