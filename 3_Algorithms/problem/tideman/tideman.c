@@ -182,16 +182,11 @@ void lock_pairs(void)
     {
         int winner = pairs[i].winner;
         int loser = pairs[i].loser;
-        bool hasArrow = false;
-        for (int j = 0; j < pair_count; j++)
-        {
-            if (locked[loser][j])
-            {
-                hasArrow = true;
-                break;
-            }
-        }
-        if (!hasArrow)
+        bool existCircle = false;
+        // これまで追加した矢印でサイクルが作られていないかチェックする
+
+        // 作られていない場合は矢印を追加する
+        if (!existCircle)
         {
             locked[winner][loser] = true;
         }
