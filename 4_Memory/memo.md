@@ -9,5 +9,6 @@
     - cs50.ly/art
     - コピーしたもの　https://docs.google.com/spreadsheets/d/13dkNL613yYbEf8WoRXbdp7QEBYv6iwkLH2DfqyFoGIo/edit#gid=0
     - いわゆる「excel方眼紙」で何か描かれている訳ではなかった
-
+- 英語字幕を出す方法がわからなくなった
+    - 「自動翻訳」で日本語から英語に移すしかなくなっている？
 
