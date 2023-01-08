@@ -4,8 +4,8 @@
 
 int main(void)
 {
-    string s = get_string("s: ");
-    string t = get_string("t: ");
+    char *s = get_string("s: ");
+    char *t = get_string("t: ");
     if (s == t)
     {
         printf("Same\n");
