@@ -1,10 +1,10 @@
 // 2023/01/08
 #include <stdio.h>
-#include <cs50.h>
+//#include <cs50.h>
 
 int main(void)
 {
-    string s = "HI!";
+    char *s = "HI!";
     char c = s[0];
     char *p = &s[0];
     printf("%p\n", s);
