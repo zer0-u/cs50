@@ -5,5 +5,7 @@
 int main(void)
 {
     int *x = malloc(sizeof(int) * 3);
-    
+    x[1] = 72;
+    x[2] = 73;
+    x[3] = 33;
 }
