@@ -9,6 +9,7 @@ int main(void)
 {
     char *s = get_string("s: ");
 
+    // 最後の\nもコピーしたいので長さに1を足す
     char *t = malloc(strlen(s) + 1);
     if (t == NULL)
     {
