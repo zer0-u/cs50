@@ -10,6 +10,10 @@ int main(void)
     char *s = get_string("s: ");
 
     char *t = malloc(strlen(s) + 1);
+    if (t == NULL)
+    {
+        return 1;
+    }
 
     // for (int i = 0, n = strlen(s) + 1; i < n; i++)
     // {
@@ -20,8 +24,8 @@ int main(void)
 
     t[0] = toupper(t[0]);
 
-    free(t);
-
     printf("s: %s\n", s);
     printf("t: %s\n", t);
+
+    free(t);
 }
