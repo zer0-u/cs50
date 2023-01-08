@@ -5,7 +5,6 @@
 int main(void)
 {
     char *s = "HI!";
-    char c = s[0];
     char *p = &s[0];
     printf("%p\n", s);
     printf("%p\n", p);
