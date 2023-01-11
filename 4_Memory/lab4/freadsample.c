@@ -2,7 +2,7 @@
 
 int main(void)
 {
-FILE *input = fopen("cs50.txt", "r");
+    FILE *input = fopen("cs50.txt", "r");
     if (input == NULL)
     {
         return 1;
@@ -15,9 +15,10 @@ FILE *input = fopen("cs50.txt", "r");
         return 1;
     }
 
-    char c;
-    while (fread(&c, sizeof(char), 1, input))
+    for (int i = 0; i < 3; i++)
     {
+        char c;
+        fread(&c, sizeof(char), 1, input);
         fwrite(&c, sizeof(char), 1, output);
     }
 
