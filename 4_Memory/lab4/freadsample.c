@@ -2,17 +2,25 @@
 
 int main(void)
 {
-    FILE *file = fopen("cs50.txt", "r");
-    if (file != NULL)
+FILE *input = fopen("cs50.txt", "r");
+    if (input == NULL)
     {
-        char c;
-        fread(&c, sizeof(char), sizeof(char), file);
-        printf("%c", c);
-        // while (fread(&c, sizeof(char), 1, file))
-        // {
-        //     printf("%c", c);
-        // }
-        fclose(file);
-        printf("\n");
+        return 1;
     }
+
+    FILE *output = fopen("output.txt", "w");
+    if (output == NULL)
+    {
+        fclose(input);
+        return 1;
+    }
+
+    char c;
+    while (fread(&c, sizeof(char), 1, input))
+    {
+        fwrite(&c, sizeof(char), 1, output);
+    }
+
+    fclose(input);
+    fclose(output);
 }
