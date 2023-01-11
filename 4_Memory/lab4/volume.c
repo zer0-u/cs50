@@ -34,10 +34,14 @@ int main(int argc, char *argv[])
     float factor = atof(argv[3]);
 
     // TODO: Copy header from input file to output file
-    // uint8_t header[HEADER_SIZE];
-    uint8_t h;
-    fread(&h, sizeof(uint8_t), sizeof(uint8_t), input);
-    printf("%i\n", h);
+    for (int i = 0; i < HEADER_SIZE; i++)
+    {
+        uint8_t h;
+        fread(&h, sizeof(uint8_t), sizeof(uint8_t), input);
+        fwrite(&h, sizeof(uint8_t), sizeof(uint8_t), output);
+        printf("%i", h);
+    }
+    printf("\n");
 
     // TODO: Read samples from input file and write updated data to output file
 
