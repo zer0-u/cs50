@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 
     float factor = atof(argv[3]);
 
-    // TODO: Copy header from input file to output file
+    // Copy header from input file to output file
     for (int i = 0; i < HEADER_SIZE; i++)
     {
         uint8_t h;
@@ -41,18 +41,18 @@ int main(int argc, char *argv[])
         fwrite(&h, sizeof(uint8_t), sizeof(uint8_t), output);
     }
 
+    // Read samples from input file and write updated data to output file
     int16_t b;
     int omit = HEADER_SIZE;
     while (fread(&b, sizeof(int16_t), sizeof(int16_t), input))
     {
         if (omit < 0)
         {
+            b = b * factor;
             fwrite(&b, sizeof(int16_t), sizeof(int16_t), output);
         }
         omit--;
     }
-
-    // TODO: Read samples from input file and write updated data to output file
 
     // Close files
     fclose(input);
