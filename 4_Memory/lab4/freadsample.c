@@ -21,12 +21,12 @@ int main(void)
         fread(&c, sizeof(char), sizeof(char), input);
         if (i < 5)
         {
-            printf("%c", c);
+            c = 'a';
         }
         else
         {
-            fwrite(&c, sizeof(char), sizeof(char), output);
         }
+        fwrite(&c, sizeof(char), sizeof(char), output);
     }
 
     fclose(input);
