@@ -121,6 +121,12 @@
     - 模範解答は本体の読み込み時に「ヘッダー分を除く」的な処理を書いていない
     - ファイルを閉じるまでカーソルの位置は保持される……？
     - 3つ目の引数「1」は結局何を表しているんだろう
+        - 2つ目の引数で表したサイズ「何個分」を読み込むかってことだろうか
 - sample.cでカーソル位置について実験する
     - 維持されているーーーーーーー！！！！！！！
+    - リファレンスにも書いてあった
+    - The opened file “remembers” the number of bytes that were successfully read, such that subsequent calls to this function for stream will return bytes after those already read.
+    - https://manual.cs50.io/3/fread
+
+
 
