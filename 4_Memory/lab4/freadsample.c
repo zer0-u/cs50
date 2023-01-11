@@ -15,7 +15,7 @@ int main(void)
         return 1;
     }
 
-    for (int i = 0; i < 5; i++)
+    for (int i = 3; i < 5; i++)
     {
         char c;
         fread(&c, sizeof(char), sizeof(char), input);
