@@ -41,16 +41,15 @@ int main(int argc, char *argv[])
         fwrite(&h, sizeof(uint8_t), sizeof(uint8_t), output);
     }
 
-        char c;
-    int i = 0;
-    while (fread(&c, sizeof(char), sizeof(char), input))
+    int16_t b;
+    int omit = HEADER_SIZE;
+    while (fread(&b, sizeof(int16_t), sizeof(int16_t), input))
     {
-        if (i > 5)
+        if (omit < 0)
         {
-            c = 'a';
+            fwrite(&b, sizeof(int16_t), sizeof(int16_t), output);
         }
-        fwrite(&c, sizeof(char), sizeof(char), output);
-        i++;
+        omit--;
     }
 
     // TODO: Read samples from input file and write updated data to output file
