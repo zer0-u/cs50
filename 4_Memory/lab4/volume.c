@@ -34,22 +34,24 @@ int main(int argc, char *argv[])
     float factor = atof(argv[3]);
 
     // Copy header from input file to output file
+    int uint8size = sizeof(uint8_t);
     for (int i = 0; i < HEADER_SIZE; i++)
     {
         uint8_t h;
-        fread(&h, sizeof(uint8_t), sizeof(uint8_t), input);
-        fwrite(&h, sizeof(uint8_t), sizeof(uint8_t), output);
+        fread(&h, uint8size, uint8size, input);
+        fwrite(&h, uint8size, uint8size, output);
     }
 
     // Read samples from input file and write updated data to output file
     int16_t b;
     int omit = HEADER_SIZE;
-    while (fread(&b, sizeof(int16_t), sizeof(int16_t), input))
+    int int16size = sizeof(int16_t);
+    while (fread(&b, int16size, int16size, input))
     {
         if (omit < 0)
         {
             b = b * factor;
-            fwrite(&b, sizeof(int16_t), sizeof(int16_t), output);
+            fwrite(&b, int16size, int16size, output);
         }
         omit--;
     }
