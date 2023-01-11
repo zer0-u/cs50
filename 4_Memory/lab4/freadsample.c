@@ -11,5 +11,6 @@ int main(void)
             printf("%c", c);
         }
         fclose(file);
+        printf("\n");
     }
 }
