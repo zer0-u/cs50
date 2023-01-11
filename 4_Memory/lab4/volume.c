@@ -35,6 +35,7 @@ int main(int argc, char *argv[])
 
     // Copy header from input file to output file
     int uint8size = sizeof(uint8_t);
+
     for (int i = 0; i < HEADER_SIZE; i++)
     {
         uint8_t h;
