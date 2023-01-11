@@ -127,6 +127,7 @@
     - リファレンスにも書いてあった
     - The opened file “remembers” the number of bytes that were successfully read, such that subsequent calls to this function for stream will return bytes after those already read.
     - https://manual.cs50.io/3/fread
-
-
+- とりあえずvolume.cからも「ヘッダー部分は無視する」処理を消した
+- check50を実行してみる
+    - うまくいかない
 

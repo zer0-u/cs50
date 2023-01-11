@@ -38,22 +38,17 @@ int main(int argc, char *argv[])
     for (int i = 0; i < HEADER_SIZE; i++)
     {
         uint8_t h;
-        fread(&h, uint8size, uint8size, input);
-        fwrite(&h, uint8size, uint8size, output);
+        fread(&h, uint8size, 1, input);
+        fwrite(&h, uint8size, 1, output);
     }
 
     // Read samples from input file and write updated data to output file
     int16_t b;
-    int omit = HEADER_SIZE;
     int int16size = sizeof(int16_t);
-    while (fread(&b, int16size, int16size, input))
+    while (fread(&b, int16size, 1, input))
     {
-        if (omit < 0)
-        {
-            b = b * factor;
-            fwrite(&b, int16size, int16size, output);
-        }
-        omit--;
+        b = b * factor;
+        fwrite(&b, int16size, 1, output);
     }
 
     // Close files
