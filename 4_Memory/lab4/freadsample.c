@@ -15,11 +15,11 @@ int main(void)
         return 1;
     }
 
-    for (int i = 0; i < 3; i++)
+    for (int i = 0; i < 5; i++)
     {
         char c;
-        fread(&c, sizeof(char), 1, input);
-        fwrite(&c, sizeof(char), 1, output);
+        fread(&c, sizeof(char), sizeof(char), input);
+        fwrite(&c, sizeof(char), sizeof(char), output);
     }
 
     fclose(input);
