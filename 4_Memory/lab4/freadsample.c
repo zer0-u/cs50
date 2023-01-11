@@ -6,10 +6,12 @@ int main(void)
     if (file != NULL)
     {
         char c;
-        while (fread(&c, sizeof(char), 1, file))
-        {
-            printf("%c", c);
-        }
+        fread(&c, sizeof(char), sizeof(char), file);
+        printf("%c", c);
+        // while (fread(&c, sizeof(char), 1, file))
+        // {
+        //     printf("%c", c);
+        // }
         fclose(file);
         printf("\n");
     }
