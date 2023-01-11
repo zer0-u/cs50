@@ -15,11 +15,18 @@ int main(void)
         return 1;
     }
 
-    for (int i = 3; i < 5; i++)
+    for (int i = 0; i < 10; i++)
     {
         char c;
         fread(&c, sizeof(char), sizeof(char), input);
-        fwrite(&c, sizeof(char), sizeof(char), output);
+        if (i < 5)
+        {
+            printf("%c", c);
+        }
+        else
+        {
+            fwrite(&c, sizeof(char), sizeof(char), output);
+        }
     }
 
     fclose(input);
