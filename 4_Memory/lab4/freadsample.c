@@ -15,19 +15,31 @@ int main(void)
         return 1;
     }
 
-    for (int i = 0; i < 10; i++)
+    char c;
+    int i = 0;
+    while (fread(&c, sizeof(char), sizeof(char), input))
     {
-        char c;
-        fread(&c, sizeof(char), sizeof(char), input);
-        if (i < 5)
+        if (i > 5)
         {
             c = 'a';
         }
-        else
-        {
-        }
         fwrite(&c, sizeof(char), sizeof(char), output);
+        i++;
     }
+
+    // for (int i = 0; i < 10; i++)
+    // {
+    //     char c;
+    //     fread(&c, sizeof(char), sizeof(char), input);
+    //     if (i < 5)
+    //     {
+    //         c = 'a';
+    //     }
+    //     else
+    //     {
+    //     }
+    //     fwrite(&c, sizeof(char), sizeof(char), output);
+    // }
 
     fclose(input);
     fclose(output);
