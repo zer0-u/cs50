@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 
     // imageに値を詰める
 
-    // image[0][0]
+    image[0][0] = {rgbtBlue=}
 
     // テスト対象の関数を呼び出す
     switch (filter)
