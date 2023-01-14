@@ -89,3 +89,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         }
     }
 }
+
+bool inside(int h,int w){
+    
+}
