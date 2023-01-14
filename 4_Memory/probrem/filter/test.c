@@ -11,8 +11,8 @@ int main(int argc, char *argv[])
     char filter = 'b';
 
     // (編集) テストする画像の高さと幅
-    int height = 0;
-    int width = 0;
+    int height = 3;
+    int width = 3;
 
     RGBTRIPLE(*image)
     [width] = calloc(height, width * sizeof(RGBTRIPLE));
@@ -54,7 +54,7 @@ int main(int argc, char *argv[])
             BYTE blue = pixel.rgbtBlue;
             BYTE green = pixel.rgbtGreen;
             BYTE red = pixel.rgbtRed;
-            printf(" %i, %i, %i ", blue, green, red);
+            printf(" (%i, %i, %i) ", blue, green, red);
         }
         printf("\n");
     }
