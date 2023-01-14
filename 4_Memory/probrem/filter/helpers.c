@@ -90,6 +90,8 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     }
 }
 
-bool inside(int h,int w){
-    
+bool inside(int h, int w, int height, int width)
+{
+    return (h >= 0 && h <= (height - 1)) &&
+           (w >= 0 && w <= (weight - 1));
 }
