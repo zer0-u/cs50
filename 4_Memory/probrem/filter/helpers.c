@@ -55,7 +55,13 @@ int adjust(int value)
 // Reflect image horizontally
 void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
-    return;
+    for (int h = 0; h < height; h++)
+    {
+        for (int w = 0; w < width; w++)
+        {
+            RGBTRIPLE pixel = image[h][w];
+        }
+    }
 }
 
 // Blur image
