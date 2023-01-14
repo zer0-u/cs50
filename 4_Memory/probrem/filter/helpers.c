@@ -60,8 +60,8 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int w = 0, half = width / 2; w < half; w++)
         {
-            RGBTRIPLE temp = image[h][w];
             int opposite = max_index - w;
+            RGBTRIPLE temp = image[h][w];
             image[h][w] = image[h][opposite];
             image[h][opposite] = temp;
         }
