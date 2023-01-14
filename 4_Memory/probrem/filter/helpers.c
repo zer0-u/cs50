@@ -1,6 +1,7 @@
 #include "helpers.h"
 #include <math.h>
 #include <cs50.h>
+#include <stdlib.h>
 
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
@@ -74,10 +75,24 @@ bool inside(int h, int w, int height, int width);
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
+    RGBTRIPLE(*original)
+    [width] = calloc(height, width * sizeof(RGBTRIPLE));
+
     for (int h = 0; h < height; h++)
     {
         for (int w = 0; w < width; w++)
         {
+            original[h][w].rgbtBlue = image[h][w].rgbtBlue;
+            original[h][w].rgbtGreen = image[h][w].rgbtGreen;
+            original[h][w].rgbtRed = image[h][w].rgbtRed;
+        }
+    }
+
+    for (int h = 0; h < height; h++)
+    {
+        for (int w = 0; w < width; w++)
+        {
+
             int blueSum = 0;
             int greenSum = 0;
             int redSum = 0;
@@ -88,9 +103,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 {
                     if (inside(sh, sw, height, width))
                     {
-                        blueSum += image[sh][sw].rgbtBlue;
-                        greenSum += image[sh][sw].rgbtGreen;
-                        redSum += image[sh][sw].rgbtRed;
+                        blueSum += original[sh][sw].rgbtBlue;
+                        greenSum += original[sh][sw].rgbtGreen;
+                        redSum += original[sh][sw].rgbtRed;
                         count++;
                     }
                 }
@@ -103,6 +118,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             image[h][w].rgbtRed = redAverage;
         }
     }
+    free(original);
 }
 
 bool inside(int h, int w, int height, int width)
