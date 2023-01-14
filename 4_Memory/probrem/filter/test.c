@@ -10,6 +10,9 @@ int main(int argc, char *argv[])
     int height = 0;
     int width = 0;
 
+    RGBTRIPLE(*image)[width] = calloc(height, width * sizeof(RGBTRIPLE));
     
+
+    free(image);
     return 0;
 }
