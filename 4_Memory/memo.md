@@ -200,4 +200,6 @@
 - round関数はmath.hのincludeが必須だった
     - check50は大丈夫だったのにmakeがこける
     - なぜ？
-    
+- check50は一発OKだった
+
+### reflection
