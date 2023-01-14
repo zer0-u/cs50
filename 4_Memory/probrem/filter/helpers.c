@@ -110,9 +110,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     }
                 }
             }
-            int blueAverage = round(blueSum / count * 1.0);
-            int greenAverage = round(greenSum / count * 1.0);
-            int redAverage = round(redSum / count * 1.0);
+            int blueAverage = round(blueSum / (count * 1.0));
+            int greenAverage = round(greenSum / (count * 1.0));
+            int redAverage = round(redSum / (count * 1.0));
             image[h][w].rgbtBlue = blueAverage;
             image[h][w].rgbtGreen = greenAverage;
             image[h][w].rgbtRed = redAverage;
