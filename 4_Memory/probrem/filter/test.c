@@ -1,7 +1,4 @@
-#include <getopt.h>
 #include <stdio.h>
-#include <stdlib.h>
-
 #include "helpers.h"
 
 /* makeは使えないので以下のコマンドでコンパイルを行う
