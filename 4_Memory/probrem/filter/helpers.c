@@ -75,9 +75,6 @@ bool inside(int h, int w, int height, int width);
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
-    // RGBTRIPLE(*original)
-    // [width] = calloc(height, width * sizeof(RGBTRIPLE));
-
     RGBTRIPLE original[height][width];
     for (int h = 0; h < height; h++)
     {
@@ -119,7 +116,6 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             image[h][w].rgbtRed = redAverage;
         }
     }
-    // free(original);
 }
 
 bool inside(int h, int w, int height, int width)
