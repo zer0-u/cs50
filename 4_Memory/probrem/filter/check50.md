@@ -1,3 +1,7 @@
+## grayscale(0114)
+
+初回実施時の結果
+
 :) grayscale correctly filters single pixel with whole number average
 :( grayscale correctly filters single pixel without whole number average
     expected "28 28 28\n", not "27 27 27\n"
