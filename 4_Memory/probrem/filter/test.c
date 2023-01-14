@@ -4,8 +4,15 @@
 
 #include "helpers.h"
 
+/* makeは使えないので以下のコマンドでコンパイルを行う
+
+clang -ggdb3 -O0 -Qunused-arguments -std=c11 -Wall -Werror -Wextra -Wno-sign-compare -Wno-unused-parameter -Wno-unused-variable -Wshadow -lm -o test test.c helpers.c
+
+*/
+
 int main(int argc, char *argv[])
 {
+
     printf("test start\n");
     // (編集) テストしたい関数の種類
     char filter = 'b';
@@ -14,9 +21,8 @@ int main(int argc, char *argv[])
     int height = 3;
     int width = 3;
 
-    // (固定) image配列用のメモリを確保する
-    RGBTRIPLE(*image)
-    [width] = calloc(height, width * sizeof(RGBTRIPLE));
+    // (固定) 画像を模した配列を用意
+    RGBTRIPLE image[height][width];
 
     // (編集)imageに値を詰める
     image[0][0].rgbtBlue = 10;
@@ -79,7 +85,7 @@ int main(int argc, char *argv[])
         break;
     }
 
-    // (固定) imageが想定通りか出力する
+    // (固定) 処理を終えた後のimageを出力する
     for (int h = 0; h < height; h++)
     {
         for (int w = 0; w < width; w++)
@@ -93,8 +99,6 @@ int main(int argc, char *argv[])
         printf("\n");
     }
 
-    // (固定) 後片付け
-    free(image);
     printf("test end\n");
     return 0;
 }

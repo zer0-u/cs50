@@ -4,6 +4,7 @@
         "stdio.h": "c",
         "string": "c",
         "math.h": "c",
-        "cs50.h": "c"
+        "cs50.h": "c",
+        "helpers.h": "c"
     }
 }
