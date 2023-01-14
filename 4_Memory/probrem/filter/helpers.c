@@ -55,12 +55,12 @@ int adjust(int value)
 // Reflect image horizontally
 void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
+    int max_index = width - 1;
     for (int h = 0; h < height; h++)
     {
         for (int w = 0, half = width / 2; w < half; w++)
         {
             RGBTRIPLE temp = image[h][w];
-            int max_index = width - 1;
             int opposite = max_index - w;
             image[h][w] = image[h][opposite];
             image[h][opposite] = temp;
