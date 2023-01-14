@@ -43,3 +43,42 @@
     expected "70 85 95\n80 9...", not "10 20 30\n25 3..."
 :( blur correctly filters 4x4 image
     expected "70 85 95\n80 9...", not "10 20 30\n25 3..."
+
+## blurテスト用
+
+### blur correctly filters middle pixel
+image[0][0].rgbtBlue = 10;
+image[0][0].rgbtGreen = 20;
+image[0][0].rgbtRed = 30;
+
+image[0][1].rgbtBlue = 40;
+image[0][1].rgbtGreen = 50;
+image[0][1].rgbtRed = 60;
+
+image[0][2].rgbtBlue = 70;
+image[0][2].rgbtGreen = 80;
+image[0][2].rgbtRed = 90;
+
+image[1][0].rgbtBlue = 110;
+image[1][0].rgbtGreen = 130;
+image[1][0].rgbtRed = 140;
+
+image[1][1].rgbtBlue = 120;
+image[1][1].rgbtGreen = 140;
+image[1][1].rgbtRed = 150;
+
+image[1][2].rgbtBlue = 130;
+image[1][2].rgbtGreen = 150;
+image[1][2].rgbtRed = 160;
+
+image[2][0].rgbtBlue = 200;
+image[2][0].rgbtGreen = 210;
+image[2][0].rgbtRed = 220;
+
+image[2][1].rgbtBlue = 220;
+image[2][1].rgbtGreen = 230;
+image[2][1].rgbtRed = 240;
+
+image[2][2].rgbtBlue = 240;
+image[2][2].rgbtGreen = 250;
+image[2][2].rgbtRed = 255;
