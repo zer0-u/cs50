@@ -6,6 +6,7 @@
 
 int main(int argc, char *argv[])
 {
+    printf("test start\n");
     // (編集) テストしたい関数の種類
     char filter = 'b';
 
@@ -13,7 +14,8 @@ int main(int argc, char *argv[])
     int height = 0;
     int width = 0;
 
-    RGBTRIPLE(*image)[width] = calloc(height, width * sizeof(RGBTRIPLE));
+    RGBTRIPLE(*image)
+    [width] = calloc(height, width * sizeof(RGBTRIPLE));
 
     // imageに値を詰める
 
@@ -44,9 +46,21 @@ int main(int argc, char *argv[])
     }
 
     // imageが想定通りか出力する
-
+    for (int h = 0; h < height; h++)
+    {
+        for (int w = 0; w < width; w++)
+        {
+            RGBTRIPLE pixel = image[h][w];
+            BYTE blue = pixel.rgbtBlue;
+            BYTE green = pixel.rgbtGreen;
+            BYTE red = pixel.rgbtRed;
+            printf(" %i, %i, %i ", blue, green, red);
+        }
+        printf("\n");
+    }
 
     // 後片付け
     free(image);
+    printf("test end\n");
     return 0;
 }
