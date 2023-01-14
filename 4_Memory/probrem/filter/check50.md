@@ -1,6 +1,6 @@
-## grayscale(0114)
-
 初回実施時の結果
+
+## grayscale(0114)
 
 :) grayscale correctly filters single pixel with whole number average
 :( grayscale correctly filters single pixel without whole number average
@@ -11,3 +11,10 @@
     expected "20 20 20\n50 5...", not "20 20 20\n50 5..."
 :( grayscale correctly filters 4x4 image
     expected "20 20 20\n50 5...", not "20 20 20\n50 5..."
+
+## sepia(0114)
+
+:) sepia correctly filters single pixel
+:) sepia correctly filters simple 3x3 image
+:) sepia correctly filters more complex 3x3 image
+:) sepia correctly filters 4x4 image
