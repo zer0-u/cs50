@@ -31,3 +31,15 @@
     expected "70 80 90\n40 5...", not "110 130 140\n4..."
 :( reflect correctly filters 4x4 image
     expected "100 110 120\n7...", not "110 130 140\n1..."
+
+## blur(0114)
+:( blur correctly filters middle pixel
+    expected "127 140 149\n", not "53 67 77\n"
+:( blur correctly filters pixel on edge
+    expected "80 95 105\n", not "25 35 45\n"
+:( blur correctly filters pixel in corner
+    expected "70 85 95\n", not "10 20 30\n"
+:( blur correctly filters 3x3 image
+    expected "70 85 95\n80 9...", not "10 20 30\n25 3..."
+:( blur correctly filters 4x4 image
+    expected "70 85 95\n80 9...", not "10 20 30\n25 3..."
