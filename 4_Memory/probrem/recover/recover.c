@@ -40,9 +40,15 @@ int main(int argc, char *argv[])
                 fclose(output);
             }
             // 新しいファイルを開く
-            sprintf(filename, "%03i.txt", filenum);
+            sprintf(filename, "%03i.jpg", filenum);
             filenum++;
             output = fopen(filename, "w");
+            if (output == NULL)
+            {
+                fclose(memory);
+                printf("Could not open file.\n");
+                return 1;
+            }
         }
         else if (filenum != 0) // ファイルが開いている場合は書き込む
         {
