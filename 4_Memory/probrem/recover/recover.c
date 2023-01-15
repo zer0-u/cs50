@@ -50,7 +50,7 @@ int main(int argc, char *argv[])
                 return 1;
             }
         }
-        else if (filenum != 0) // ファイルが開いている場合は書き込む
+        if (filenum != 0) // ファイルが開いている場合は書き込む
         {
 
             fwrite(block, BLOCK_SIZE, 1, output);
