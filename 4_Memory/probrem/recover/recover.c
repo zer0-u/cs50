@@ -4,6 +4,7 @@
 #include <stdbool.h>
 
 const int BLOCK_SIZE = 512;
+const int FILENAME_SIZE=8;
 
 bool start_jpeg(uint8_t block[]);
 
@@ -26,10 +27,9 @@ int main(int argc, char *argv[])
 
     uint8_t block[BLOCK_SIZE];
     int filenum = 0;
-    char filename[8];
+    char filename[FILENAME_SIZE];
     while (fread(block, BLOCK_SIZE, 1, memory))
     {
-
         if (start_jpeg(block))
         {
             sprintf(filename, "%03i.jpg", filenum);
@@ -38,7 +38,6 @@ int main(int argc, char *argv[])
         }
     }
 
-    printf("\n");
     // 後片付け
     fclose(memory);
 }

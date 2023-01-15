@@ -380,4 +380,8 @@ filter(more comfortable)は構造的にほぼ同じだと思うので一旦飛�
 - sprintfについてもう少し調べてみた
   - https://monozukuri-c.com/langc-funclist-sprintf/
   - printfのように直接出力するわけではなく、フォーマット後の文字列を第1引数のポインタに代入するらしい
-  - 
+  - だから第1引数はchar *でなければならない
+- 連番3桁＋.jpg(4文字)＋null文字の8桁必要
+  - なんで突然配列になるかわからないしstringで覆ってもいいかもしれない
+  - char filename[8]で動いたので保留
+- 
