@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
                 fclose(output);
             }
             // 新しいファイルを開く
-            sprintf(filename, "%03i.jpg", filenum);
+            sprintf(filename, "%03i.txt", filenum);
             filenum++;
             output = fopen(filename, "w");
         }
