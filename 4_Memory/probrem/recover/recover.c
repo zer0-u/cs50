@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
     }
 
     uint8_t block[BLOCK_SIZE];
-    int filenum = -1;
+    int filenum = 0;
     char filename[FILENAME_SIZE];
     FILE *output;
     while (fread(block, BLOCK_SIZE, 1, memory))
@@ -34,15 +34,17 @@ int main(int argc, char *argv[])
         if (start_jpeg(block))
         {
             // すでに書き込み処理が行われている
-            if (filename[6] == 'g')
+            if (filenum != 0)
             {
                 // 　書き込み中のファイルを閉じる
                 fclose(output);
 
                 // 　新しいファイルを開く
-                filenum++;
+
                 sprintf(filename, "%03i.jpg", filenum);
+                filenum++;
                 output = fopen(filename, "w");
+
             }
 
             // ファイルに内容を書き込む
