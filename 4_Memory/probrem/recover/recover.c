@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
+#include <stdbool.h>
 
 const int BLOCK_SIZE = 512;
 
@@ -42,5 +43,5 @@ bool start_jpeg(uint8_t block[])
     return block[0] == 0xff &&
            block[1] == 0xd8 &&
            block[2] == 0xff &&
-           (buffer[3] & 0xf0) == 0xe0;
+           (block[3] & 0xf0) == 0xe0;
 }
