@@ -29,30 +29,18 @@ int main(int argc, char *argv[])
     int filenum = 0;
     // TODO string型に置き換えるかもしれない
     char filename[FILENAME_SIZE];
-    FILE *output;
-    bool started = false;
+
     while (fread(block, BLOCK_SIZE, 1, memory))
     {
         if (start_jpeg(block))
         {
-            started=true;
-            // すでに書き込み処理が行われている
-            // 　書き込み中のファイルを閉じる
-            fclose(output);
-
-            // 　新しいファイルを開く
 
             sprintf(filename, "%03i.jpg", filenum);
             filenum++;
-            output = fopen(filename, "w");
-
-            // ファイルに内容を書き込む
-            fwrite(block, BLOCK_SIZE, 1, output);
         }
     }
 
     // 後片付け
-    fclose(output);
     fclose(memory);
 }
 
