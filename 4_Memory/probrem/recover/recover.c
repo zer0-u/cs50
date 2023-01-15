@@ -20,12 +20,13 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    byte block[BLOCK_SIZE];
-
-    while (fread(block, int16size, 1, input))
+    BYTE block[BLOCK_SIZE];
+    while (fread(block, BLOCK_SIZE, 1, input))
     {
-        b = b * factor;
-        fwrite(&b, int16size, 1, output);
+
     }
+
+    // 後片付け
+    fclose(memory);
 
 }
