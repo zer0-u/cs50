@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
             // 既にファイルが開いている場合は閉じる
             if (started)
             {
-                printf("file closed.\n");
+                printf("\n file closed.\n");
             }
             // 新しいファイルを開く
             sprintf(filename, "%03i.jpg", filenum);
@@ -55,7 +55,7 @@ int main(int argc, char *argv[])
             else
             {
                 // そうでない場合は何もしない
-                printf("aaaaa");
+                printf("☆");
             }
         }
     }
