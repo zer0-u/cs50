@@ -342,4 +342,5 @@ filter(more comfortable)は構造的にほぼ同じだと思うので一旦飛�
 - fwrite(data,size,number,outptr)
 - Pseudocode
   - open memory card
-  - 
+  - repeat until end of card:
+    - 
