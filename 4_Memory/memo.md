@@ -347,5 +347,7 @@ filter(more comfortable)は構造的にほぼ同じだと思うので一旦飛�
     - if start of new JPEG
       - ...
     - else
-      - ...
-    - 
+      - if already found jpeg
+        - do nothing(keep writing current jpeg)
+      - 
+    -
