@@ -34,18 +34,14 @@ int main(int argc, char *argv[])
         if (start_jpeg(block))
         {
             // すでに書き込み処理が行われている
-            if (filenum != 0)
-            {
-                // 　書き込み中のファイルを閉じる
-                fclose(output);
+            // 　書き込み中のファイルを閉じる
+            fclose(output);
 
-                // 　新しいファイルを開く
+            // 　新しいファイルを開く
 
-                sprintf(filename, "%03i.jpg", filenum);
-                filenum++;
-                output = fopen(filename, "w");
-
-            }
+            sprintf(filename, "%03i.jpg", filenum);
+            filenum++;
+            output = fopen(filename, "w");
 
             // ファイルに内容を書き込む
             fwrite(block, BLOCK_SIZE, 1, output);
