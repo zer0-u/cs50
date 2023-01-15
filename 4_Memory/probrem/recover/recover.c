@@ -45,11 +45,18 @@ int main(int argc, char *argv[])
             printf("%s\n", filename);
             started = true;
         }
-        else if (started)
+        else
         {
-            // ファイルが開いている場合は書き込む
-            printf("*");
-            // そうでない場合は何もしない
+            if (started)
+            {
+                // ファイルが開いている場合は書き込む
+                printf("*");
+            }
+            else
+            {
+                // そうでない場合は何もしない
+                printf("aaaaa");
+            }
         }
     }
     printf("\n");
