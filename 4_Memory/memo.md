@@ -330,6 +330,7 @@ filter(more comfortable)は構造的にほぼ同じだと思うので一旦飛�
   - size: size of each element to read
   - number: number of elements to read
   - inptr: FILE * to read from
+  - Returns number of items of size "size" were read
 - 読み込んだ512バイトがJPEGかどうかを調べる
   - buffer[0]==0xffのように調べる
   - buffer[3]は少し工夫が必要
