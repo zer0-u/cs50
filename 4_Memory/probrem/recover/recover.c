@@ -4,7 +4,7 @@
 #include <stdbool.h>
 
 const int BLOCK_SIZE = 512;
-const int FILENAME_SIZE=8;
+const int FILENAME_SIZE = 8;
 
 bool start_jpeg(uint8_t block[]);
 
@@ -26,24 +26,20 @@ int main(int argc, char *argv[])
     }
 
     uint8_t block[BLOCK_SIZE];
-    int filenum = -1;
+    int filenum = 0;
     char filename[FILENAME_SIZE];
     while (fread(block, BLOCK_SIZE, 1, memory))
     {
         if (start_jpeg(block))
         {
-            filenum++;
-            if(filenum >=0){
-                
-            }
+
             // すでに書き込み処理が行われている
             // 　書き込み中のファイルを閉じる
             // 　新しいファイルを開く
 
             // ファイルに内容を書き込む
             sprintf(filename, "%03i.jpg", filenum);
-
-
+            filenum++;
         }
     }
 
