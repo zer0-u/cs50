@@ -4,6 +4,8 @@
 
 const int BLOCK_SIZE = 512;
 
+bool start_jpeg(uint8_t block[]);
+
 int main(int argc, char *argv[])
 {
     // 引数チェック
@@ -24,7 +26,7 @@ int main(int argc, char *argv[])
     uint8_t block[BLOCK_SIZE];
     while (fread(block, BLOCK_SIZE, 1, memory))
     {
-        if (block[0] == 0xff)
+        if (start_jpeg(block))
         {
             printf("%i ", block[0]);
         }
@@ -33,4 +35,12 @@ int main(int argc, char *argv[])
     printf("\n");
     // 後片付け
     fclose(memory);
+}
+
+bool start_jpeg(uint8_t block[])
+{
+    return block[0] == 0xff &&
+           block[1] == 0xd8 &&
+           block[2] == 0xff &&
+           (buffer[3] & 0xf0) == 0xe0;
 }
