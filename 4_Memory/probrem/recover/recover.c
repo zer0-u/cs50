@@ -41,11 +41,12 @@ int main(int argc, char *argv[])
             // 新しいファイルを開く
             sprintf(filename, "%03i.jpg", filenum);
             filenum++;
+            fopen(filename,"w");
             printf("%s\n", filename);
         }
-        else if (filenum != 0)
+        else if (filenum != 0) // ファイルが開いている場合は書き込む
         {
-            // ファイルが開いている場合は書き込む
+
             printf("*");
         }
     }
