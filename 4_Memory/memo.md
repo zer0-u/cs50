@@ -334,4 +334,7 @@ filter(more comfortable)は構造的にほぼ同じだと思うので一旦飛�
   - buffer[0]==0xffのように調べる
   - buffer[3]は少し工夫が必要
   - (buffer[3] & 0xf0) == 0xe0 (bitwise演算)
-  - 
+- ファイル名は3桁の連番.jpg
+  - sprintf(filename, "%03i.jpg", 2)
+  - filenameは恐らく番号そのもの
+  - 2つ目の引数でフォーマットを行う
