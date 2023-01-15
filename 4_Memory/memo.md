@@ -340,3 +340,6 @@ filter(more comfortable)は構造的にほぼ同じだと思うので一旦飛�
   - filenameは恐らく番号そのもの
   - 2つ目の引数でフォーマットを行う
 - fwrite(data,size,number,outptr)
+- Pseudocode
+  - open memory card
+  - 
