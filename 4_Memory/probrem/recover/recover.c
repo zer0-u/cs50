@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    BYTE block[BLOCK_SIZE];
+    uint8_t block[BLOCK_SIZE];
     while (fread(block, BLOCK_SIZE, 1, input))
     {
 
