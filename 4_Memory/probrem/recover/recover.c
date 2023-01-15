@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    // Open files and determine scaling factor
+    // メモリーカードを開く
     FILE *input = fopen(argv[1], "r");
     if (input == NULL)
     {
