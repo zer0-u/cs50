@@ -34,9 +34,9 @@ int main(int argc, char *argv[])
     {
         if (start_jpeg(block))
         {
-
             sprintf(filename, "%03i.jpg", filenum);
             filenum++;
+            printf("%s\n", filename);
         }
     }
 
