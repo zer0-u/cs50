@@ -26,12 +26,14 @@ int main(int argc, char *argv[])
 
     uint8_t block[BLOCK_SIZE];
     int filenum = 0;
+    char filename[8];
     while (fread(block, BLOCK_SIZE, 1, memory))
     {
 
         if (start_jpeg(block))
         {
-            sprintf(filenum, "%03i.jpg", 2);
+            sprintf(filename, "%03i.jpg", filenum);
+            printf("%s\n",filename);
             filenum++;
         }
     }

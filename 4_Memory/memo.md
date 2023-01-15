@@ -377,3 +377,7 @@ filter(more comfortable)は構造的にほぼ同じだと思うので一旦飛�
   - int型をそのまま渡すことはできない
   - なんか変換する関数があった気がするのでリファレンスを見に行く
   - atoiはstringからintに変えるやつだった
+- sprintfについてもう少し調べてみた
+  - https://monozukuri-c.com/langc-funclist-sprintf/
+  - printfのように直接出力するわけではなく、フォーマット後の文字列を第1引数のポインタに代入するらしい
+  - 
