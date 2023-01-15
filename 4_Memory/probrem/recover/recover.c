@@ -27,6 +27,7 @@ int main(int argc, char *argv[])
 
     uint8_t block[BLOCK_SIZE];
     int filenum = 0;
+    // TODO string型に置き換えるかもしれない
     char filename[FILENAME_SIZE];
     FILE *output;
     while (fread(block, BLOCK_SIZE, 1, memory))
