@@ -30,10 +30,12 @@ int main(int argc, char *argv[])
     // TODO string型に置き換えるかもしれない
     char filename[FILENAME_SIZE];
     FILE *output;
+    bool started = false;
     while (fread(block, BLOCK_SIZE, 1, memory))
     {
         if (start_jpeg(block))
         {
+            started=true;
             // すでに書き込み処理が行われている
             // 　書き込み中のファイルを閉じる
             fclose(output);
