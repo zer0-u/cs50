@@ -55,7 +55,6 @@ int main(int argc, char *argv[])
             fwrite(block, BLOCK_SIZE, 1, output);
         }
     }
-    printf("\n");
 
     // 後片付け
     fclose(output);
