@@ -351,7 +351,7 @@ filter(more comfortable)は構造的にほぼ同じだと思うので一旦飛�
         - do nothing(keep writing current jpeg)
   - close any remaining files
 
-### 引数チェック
+### 引数チェック・fopen
 - まずはrawファイルを開くところを実装する
 - 配列の要素の型が分からない
   - filterのサンプルを漁ったらuint8_tをBYTE型として宣言していた
@@ -360,3 +360,8 @@ filter(more comfortable)は構造的にほぼ同じだと思うので一旦飛�
   - uint8_tの配列を宣言するとセミコロンがないと怒られる
   - uint8_tを使うにはstdintのincludeが必要だった
   - help50でも見つからないし分からなさすぎる
+
+### ヘッダチェック
+- if (block[0] == 0xff)でも問題なく分岐できた
+  - 255が相当するらしい
+- 条件が複雑なので関数に切り分ける

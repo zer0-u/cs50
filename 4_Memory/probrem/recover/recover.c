@@ -24,9 +24,13 @@ int main(int argc, char *argv[])
     uint8_t block[BLOCK_SIZE];
     while (fread(block, BLOCK_SIZE, 1, memory))
     {
-        printf("%i ", block[0]);
+        if (block[0] == 0xff)
+        {
+            printf("%i ", block[0]);
+        }
     }
 
+    printf("\n");
     // 後片付け
     fclose(memory);
 }
