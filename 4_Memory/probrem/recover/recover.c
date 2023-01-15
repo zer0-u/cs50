@@ -29,6 +29,7 @@ int main(int argc, char *argv[])
     int filenum = 0;
     // TODO string型に置き換えるかもしれない
     char filename[FILENAME_SIZE];
+    FILE *output;
     while (fread(block, BLOCK_SIZE, 1, memory))
     {
         if (start_jpeg(block))
@@ -36,23 +37,22 @@ int main(int argc, char *argv[])
             // 既にファイルが開いている場合は閉じる
             if (filenum != 0)
             {
-                printf("\n file closed.\n");
+                fclose(output);
             }
             // 新しいファイルを開く
             sprintf(filename, "%03i.jpg", filenum);
             filenum++;
-            fopen(filename,"w");
-            printf("%s\n", filename);
+            output = fopen(filename, "w");
         }
         else if (filenum != 0) // ファイルが開いている場合は書き込む
         {
-
-            printf("*");
+            fwrite(block, BLOCK_SIZE, 1, output);
         }
     }
     printf("\n");
 
     // 後片付け
+    fclose(output);
     fclose(memory);
 }
 
