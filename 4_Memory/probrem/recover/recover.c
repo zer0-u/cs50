@@ -32,8 +32,13 @@ int main(int argc, char *argv[])
     {
         if (start_jpeg(block))
         {
+            // すでに書き込み処理が行われている
+            // 　書き込み中のファイルを閉じる
+            // 　新しいファイルを開く
+
+            // ファイルに内容を書き込む
             sprintf(filename, "%03i.jpg", filenum);
-            printf("%s\n",filename);
+
             filenum++;
         }
     }
