@@ -326,3 +326,7 @@ filter(more comfortable)は構造的にほぼ同じだと思うので一旦飛�
   - 5 rawファイルが終了するで手順2～4を繰り返す
 - カメラは512バイトを1つの塊として扱うので、JPEGのヘッダーチェックは512バイトごとで大丈夫
 - fread(data,size,number,inptr)
+  - data: pointer to where to store data you're reading
+  - size: size of each element to read
+  - number: number of elements to read
+  - inptr: FILE * to read from
