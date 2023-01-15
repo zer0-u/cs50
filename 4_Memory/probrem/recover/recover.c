@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
                 fclose(output);
             }
             // 新しいファイルを開く
-            sprintf(filename, "%03i.jpg", filenum);
+            sprintf(filename, "%03i.txt", filenum);
             filenum++;
             output = fopen(filename, "w");
             if (output == NULL)
@@ -52,11 +52,7 @@ int main(int argc, char *argv[])
         }
         else if (filenum != 0) // ファイルが開いている場合は書き込む
         {
-            for (int i = 0; i < BLOCK_SIZE; i++)
-            {
-                printf("%i", i);
-            }
-            printf("\n");
+
             fwrite(block, BLOCK_SIZE, 1, output);
         }
     }
