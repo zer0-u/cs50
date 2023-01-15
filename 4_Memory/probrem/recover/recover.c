@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
 
 const int BLOCK_SIZE = 512;
 
@@ -20,11 +21,10 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    int block[BLOCK_SIZE];
-
+    uint8_t block[BLOCK_SIZE];
     while (fread(block, BLOCK_SIZE, 1, memory))
     {
-
+        printf("%i ", block[0]);
     }
 
     // 後片付け
