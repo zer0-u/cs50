@@ -26,24 +26,31 @@ int main(int argc, char *argv[])
     }
 
     uint8_t block[BLOCK_SIZE];
-    int filenum = 0;
+    int filenum = -1;
     char filename[FILENAME_SIZE];
     while (fread(block, BLOCK_SIZE, 1, memory))
     {
         if (start_jpeg(block))
         {
-
             // すでに書き込み処理が行われている
-            // 　書き込み中のファイルを閉じる
-            // 　新しいファイルを開く
+            if (filename[6] == 'g')
+            {
+                // 　書き込み中のファイルを閉じる
+                fclose(filename);
+
+                // 　新しいファイルを開く
+                filenum++;
+                sprintf(filename, "%03i.jpg", filenum);
+                FILE *output = fopen(filename, "w");
+            }
 
             // ファイルに内容を書き込む
-            sprintf(filename, "%03i.jpg", filenum);
-            filenum++;
+            fwrite(block, BLOCK_SIZE, 1, output);
         }
     }
 
     // 後片付け
+    fclose(output);
     fclose(memory);
 }
 
