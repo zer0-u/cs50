@@ -43,6 +43,7 @@ int main(int argc, char *argv[])
             sprintf(filename, "%03i.jpg", filenum);
             filenum++;
             output = fopen(filename, "w");
+            // 安全対策
             if (output == NULL)
             {
                 fclose(memory);
