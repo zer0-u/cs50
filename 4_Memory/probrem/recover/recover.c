@@ -20,9 +20,9 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    byte b;
+    byte block[BLOCK_SIZE];
 
-    while (fread(&b, int16size, 1, input))
+    while (fread(block, int16size, 1, input))
     {
         b = b * factor;
         fwrite(&b, int16size, 1, output);
