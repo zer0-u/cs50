@@ -350,4 +350,7 @@ filter(more comfortable)は構造的にほぼ同じだと思うので一旦飛�
       - if already found jpeg
         - do nothing(keep writing current jpeg)
   - close any remaining files
--
+
+### 引数チェック
+- まずはrawファイルを開くところを実装する
+- 
