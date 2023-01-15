@@ -52,6 +52,11 @@ int main(int argc, char *argv[])
         }
         else if (filenum != 0) // ファイルが開いている場合は書き込む
         {
+            for (int i = 0; i < BLOCK_SIZE; i++)
+            {
+                printf("%i", i);
+            }
+            printf("\n");
             fwrite(block, BLOCK_SIZE, 1, output);
         }
     }
