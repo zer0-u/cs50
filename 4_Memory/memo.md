@@ -343,4 +343,9 @@ filter(more comfortable)は構造的にほぼ同じだと思うので一旦飛�
 - Pseudocode
   - open memory card
   - repeat until end of card:
+    - read 512 bytes into a buffer
+    - if start of new JPEG
+      - ...
+    - else
+      - ...
     - 
