@@ -1,12 +1,13 @@
 // 2023/01/18
 #include <stdio.h>
 #include <cs50.h>
+#include <stdlib.h>
 
 int main(void)
 {
     // ヒープ領域に確保する
     int *list = malloc(3 * sizeof(int));
-    if (list == null)
+    if (list == NULL)
     {
         return 1;
     }
@@ -22,7 +23,7 @@ int main(void)
 
     // 別の変数にポインタを代入する
     int *tmp = malloc(4 * sizeof(int));
-    if (tmp == null)
+    if (tmp == NULL)
     {
         free(list);
         return 1;
@@ -43,7 +44,6 @@ int main(void)
     {
         printf("%i\n", list[i]);
     }
-    free(list);
-    free(tmp);
+
     return 0;
 }
