@@ -49,7 +49,7 @@ int main(void)
         printf("%i\n", list[i]);
     }
 
-    // listとtmpは同じ塊を指しているのでfree(list)でもOK
-    free(tmp);
+    // listとtmpは同じ塊を指しているのでfree(tmp)でもOK
+    free(list);
     return 0;
 }
