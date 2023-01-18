@@ -37,6 +37,10 @@ int main(void)
     // 要素を追加する
     tmp[3] = 4;
 
+    // 要素3個分のメモリの塊は解放する
+    // 解放する前に代入し直すとメモリが確保され続けるので注意
+    free(list);
+
     // ポインタを代入し直す
     list = tmp;
 
@@ -45,5 +49,7 @@ int main(void)
         printf("%i\n", list[i]);
     }
 
+    // listとtmpは同じ塊を指しているのでfree(list)でもOK
+    free(tmp);
     return 0;
 }
