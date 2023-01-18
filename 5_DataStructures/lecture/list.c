@@ -16,8 +16,8 @@ int main(void)
     list[2] = 3;
 
     //要素4個分にリサイズする(第1引数はリサイズしたい塊へのポインタ)
-    list = realloc(list, 4 * sizeof(int));
-    if (list == NULL)
+    int *tmp = realloc(list, 4 * sizeof(int));
+    if (tmp == NULL)
     {
         free(list);
         return 1;
@@ -31,7 +31,7 @@ int main(void)
     // }
 
     // 要素を追加する
-    list[3] = 4;
+    tmp[3] = 4;
 
     // 要素3個分のメモリの塊は解放する
     // 解放する前に代入し直すとメモリが確保され続けるので注意
@@ -39,7 +39,7 @@ int main(void)
     // free(list);
 
     // ポインタを代入し直す
-    // list = tmp;
+    list = tmp;
 
     for (int i = 0; i < 3; i++)
     {
