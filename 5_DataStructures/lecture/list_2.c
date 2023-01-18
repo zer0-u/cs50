@@ -11,9 +11,9 @@ int main(void)
         return 1;
     }
 
-    list[0] = 1;
-    list[1] = 2;
-    list[2] = 3;
+    list[0] = 1; // *list = 1;
+    list[1] = 2; // *(list + 1) = 2;
+    list[2] = 3; // *(list + 2) = 3;
 
     // 配列の要素数を増やしたいので領域を確保し直す
     // list = malloc(4 * sizeof(int));
