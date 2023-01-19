@@ -38,4 +38,18 @@ int main(void)
 
     // 1つ目の要素のnextフィールドに新しいnodeへのポインタを代入する
     list->next = n;
+
+    // さらにもう1つ要素を追加する
+    // 実際の処理はループ等を用いるとよい
+    n = malloc(sizeof(node));
+    if (n == NULL)
+    {
+        // 解放漏れに注意
+        free(list);
+        // listだけを解放しても、2つ目の領域は解放されない
+        free(list->next);
+        return 1;
+    }
+    n->number = 3;
+    n->next = NULL;
 }
