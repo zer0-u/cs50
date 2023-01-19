@@ -75,7 +75,7 @@ int main(void)
         node *tmp = list->next;
         // 「現在の」要素を解放する
         free(list);
-        // 要素を1つ詰める
+        // 「次」を「現在」に置き換える
         list = tmp;
     }
     return 0;
