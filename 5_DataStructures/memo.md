@@ -50,9 +50,8 @@
 - structとtypedefを使ってノードを表現する
 - フィールドは2つ
   - 要素そのもの(int number)
-  - 次のノードへのポイント(node *next)
+  - 次のノードへのポインタ(node *next)
   - nextは慣習的な名前
 - node型の定義の中でnode型を参照しようとするとコンパイルエラーが起きる
   - typedef struct nodeで回避
   - フィールドもstruct nodeと宣言
-- 
