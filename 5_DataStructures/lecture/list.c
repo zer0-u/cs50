@@ -47,9 +47,14 @@ int main(void)
         // listだけを解放しても、2つ目の領域は解放されない
         free(list->next);
         // 先に解放すると2つ目の要素が迷子になるので注意
+        // [重要] 解放済のメモリには触らない
         free(list);
         return 1;
     }
     n->number = 3;
     n->next = NULL;
+    list->next->next = n;
+
+    //内容を表示する
+    //
 }
