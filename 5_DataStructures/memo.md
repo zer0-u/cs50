@@ -58,3 +58,6 @@
 - node型の定義の中でnode型を参照しようとするとコンパイルエラーが起きる
   - typedef struct nodeで回避
   - フィールドもstruct nodeと宣言
+- nodeを使って連結リストを表現する
+  - node *list
+  - 最初のノードへのポインタを代入する
