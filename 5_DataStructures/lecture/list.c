@@ -55,6 +55,12 @@ int main(void)
     n->next = NULL;
     list->next->next = n;
 
-    //内容を表示する
-    //
+    // 内容を表示する
+    // 要素が隣同士だと保証できないのでforループは使えない
+    // 変数tmpにnextフィールドの中身を代入し、NULLになる＝最後の要素に到達するまで繰り返す
+    for (node *tmp = list; tmp != NULL; tmp = tmp->next)
+    {
+        printf("%i\n", tmp->number);
+    }
+
 }
