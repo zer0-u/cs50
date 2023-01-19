@@ -63,8 +63,19 @@ int main(void)
         printf("%i\n", tmp->number);
     }
 
-    // 後片付け
-    free(list->next->next);
-    free(list->next);
-    free(list);
+    // 後片付け(地道)
+    // free(list->next->next);
+    // free(list->next);
+    // free(list);
+
+    // 後片付け(ちょっと複雑)
+    while (list != NULL)
+    {
+        // 「次の」要素を変数tmpに代入する
+        node *tmp = list->next;
+        // 「現在の」要素を解放する
+        free(list);
+        // 要素を1つ詰める
+        list = tmp;
+    }
 }
