@@ -44,10 +44,10 @@ int main(void)
     n = malloc(sizeof(node));
     if (n == NULL)
     {
-        // 解放漏れに注意
-        free(list);
         // listだけを解放しても、2つ目の領域は解放されない
         free(list->next);
+        // 先に解放すると2つ目の要素が迷子になるので注意
+        free(list);
         return 1;
     }
     n->number = 3;
