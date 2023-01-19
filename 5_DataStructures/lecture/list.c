@@ -63,4 +63,8 @@ int main(void)
         printf("%i\n", tmp->number);
     }
 
+    // 後片付け
+    free(list->next->next);
+    free(list->next);
+    free(list);
 }
