@@ -78,4 +78,5 @@ int main(void)
         // 要素を1つ詰める
         list = tmp;
     }
+    return 0;
 }
