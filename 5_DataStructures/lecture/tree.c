@@ -68,8 +68,31 @@ int main(void)
 
 void free_tree(node *root)
 {
+    // ベースケース
+    if (root == NULL)
+    {
+        return;
+    }
+    // 自分が持っているノードを先に解放する
+    free_tree(root->left);
+    free_tree(root->right);
+    // 自分自身を解放する
+    free(root);
 }
 
 void print_tree(node *root)
 {
+    // ベースケース
+    if (root == NULL)
+    {
+        return;
+    }
+    // 再帰を使っている
+    // 左側をprintする
+    print_tree(root->left);
+    // 自分自身が持つnumberを出力する
+    printf("%i\n", root->number);
+    // 右側をprintする
+    print_tree(root->right);
+    // 逆順にprintしたい時はrightとleftを入れ換える
 }
