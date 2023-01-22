@@ -114,4 +114,10 @@ bool search(node *tree, int number)
         // 自分自身より大きい場合は右側を検索する
         return search(tree->right, number);
     }
+    // else if (number == tree->number)
+    else // 他の条件はすべて排除した後なのでelseだけでもよい
+    {
+        // 自分自身の場合はtrueを返す
+        return true;
+    }
 }
