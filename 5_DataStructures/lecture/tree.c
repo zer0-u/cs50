@@ -96,3 +96,16 @@ void print_tree(node *root)
     print_tree(root->right);
     // 逆順にprintしたい時はrightとleftを入れ換える
 }
+
+bool search(node *tree, int number)
+{
+    if (tree == NULL)
+    {
+        // treeがない=numberもない=探しものは見つからない
+        return false;
+    }
+    else if (number < tree->number)
+    {
+        return search(tree->left, number);
+    }
+}
