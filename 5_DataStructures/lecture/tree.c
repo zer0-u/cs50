@@ -106,6 +106,12 @@ bool search(node *tree, int number)
     }
     else if (number < tree->number)
     {
+        // 自分自身より小さい場合は左側を検索する
         return search(tree->left, number);
+    }
+    else if (number > tree->number)
+    {
+        // 自分自身より大きい場合は右側を検索する
+        return search(tree->right, number);
     }
 }
