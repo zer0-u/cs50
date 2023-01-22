@@ -5,6 +5,7 @@
 // 例
 const int LONGEST_WORD = 100;
 
+// ハッシュテーブルで管理する要素
 typedef struct node
 {
     // 納めたい値そのもの
@@ -15,7 +16,7 @@ typedef struct node
     struct node *next;
 }
 
-int
-main(void)
+int main(void)
 {
+    node *hash_table[NUMBER_OF_BUCKETS];
 }
