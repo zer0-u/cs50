@@ -19,5 +19,7 @@ typedef struct node
 int main(void)
 {
     // ハッシュテーブルそのものを表す変数
+    // 連結リストの先頭を集めたもの
+    // NUMBER_OF_BUCKETSは概念的にはハッシュの数を表す
     node *hash_table[NUMBER_OF_BUCKETS];
 }
