@@ -18,5 +18,6 @@ typedef struct node
 
 int main(void)
 {
+    // ハッシュテーブルそのものを表す変数
     node *hash_table[NUMBER_OF_BUCKETS];
 }
