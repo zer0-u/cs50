@@ -58,6 +58,12 @@ int main(void)
 
     // 根の右側に保持
     tree->right = n;
+
+    // 木構造を出力
+    print_tree(tree);
+
+    // 確保したメモリをすべて解放
+    free_tree(tree);
 }
 
 void free_tree(node *root)
