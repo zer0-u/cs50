@@ -32,6 +32,10 @@ bool load(const char *dictionary)
 
     // 次のノードは今のところ未定なのでNULLを入れておく
     n->next = NULL;
+
+    // 作ったnodeのハッシュ値を計算する
+
+    // ハッシュ値に応じた場所に収納する
     return false;
 }
 
