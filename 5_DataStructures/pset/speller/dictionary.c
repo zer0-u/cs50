@@ -60,7 +60,7 @@ bool load(const char *dictionary)
         // すでに要素がある場合は先頭をすげ替える
         if (top != NULL)
         {
-            n->next = &top;
+            n->next = *top;
         }
         table[index] = n;
     }

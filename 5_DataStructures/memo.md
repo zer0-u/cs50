@@ -259,3 +259,5 @@
 - ハッシュ計算の方法は指定されなかった
   - このあたりに高速化の肝があるのだろう
   - 一旦は先頭文字を使うことにする
+- 変数tableが言うことを聞いてくれない
+  - dictionary.c:23:7: error: variable length array folded to constant array as an extension [-Werror,-Wgnu-folding-constant]
