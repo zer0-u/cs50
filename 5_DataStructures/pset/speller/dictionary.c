@@ -23,12 +23,15 @@ node *table[N];
 bool load(const char *dictionary)
 {
     // ファイルを読み込む
-    
+
     // 単語1個分のメモリを確保する
     node *n = malloc(sizeof(node));
 
     // strcpyを使って読み込んだ単語をnodeにコピーする
-    strcpy(n->word,"WORD");
+    strcpy(n->word, "WORD");
+
+    // 次のノードは今のところ未定なのでNULLを入れておく
+    n->next = NULL;
     return false;
 }
 
