@@ -16,7 +16,8 @@ typedef struct node
 } node;
 
 // Number of buckets in hash table
-const unsigned int N = 1;
+// TODO hash関数の内容を変えたらここの値も合わせる
+const unsigned int N = 26;
 
 // Hash table
 node *table[N];
@@ -35,7 +36,7 @@ bool load(const char *dictionary)
 
     // ファイルに載った文字列を読み込む
     char w[LENGTH + 1];
-    while (fscanf(file, "%s", w) != EOF)
+    while (fscanf(dict, "%s", w) != EOF)
     {
         // 単語1個分のメモリを確保する
         node *n = malloc(sizeof(node));
@@ -52,9 +53,16 @@ bool load(const char *dictionary)
         n->next = NULL;
 
         // 読み込んだ単語のハッシュ値を計算する
-        int h = hash(w);
+        int index = hash(w);
 
         // ハッシュ値に応じた場所に収納する
+        node top = table[index];
+        // すでに要素がある場合は先頭をすげ替える
+        if (top != NULL)
+        {
+            n->next = &top;
+        }
+        table[index] = n;
     }
 
     // ファイルを閉じる
@@ -66,7 +74,8 @@ bool load(const char *dictionary)
 // 引数のwordに対応したハッシュ値を返す
 unsigned int hash(const char *word)
 {
-    // TODO
+    // ひとまず先頭の文字(小文字)のASCIICODE値を返す
+    // TODO 後でもっと考える
     char top = tolower(word[0]);
     return top;
 }
