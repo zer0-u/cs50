@@ -4,6 +4,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 #include "dictionary.h"
 
@@ -40,7 +41,7 @@ bool load(const char *dictionary)
         node *n = malloc(sizeof(node));
         if (n == NULL)
         {
-            fclose(dictionary);
+            fclose(dict);
             return false;
         }
 
@@ -50,13 +51,14 @@ bool load(const char *dictionary)
         // 次のノードは今のところ未定なのでNULLを入れておく
         n->next = NULL;
 
-        // 作ったnodeのハッシュ値を計算する
+        // 読み込んだ単語のハッシュ値を計算する
+        int h = hash(w);
 
         // ハッシュ値に応じた場所に収納する
     }
 
     // ファイルを閉じる
-    fclose(dictionary);
+    fclose(dict);
     return true;
 }
 
@@ -65,7 +67,8 @@ bool load(const char *dictionary)
 unsigned int hash(const char *word)
 {
     // TODO
-    return 0;
+    char top = tolower(word[0]);
+    return top;
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
