@@ -8,7 +8,7 @@ int main(void)
         printf("can not read");
         return 1;
     }
-    char *word = NULL;
+    char word[46];
     while (fscanf(file, "%s", word))
     {
         printf("%s", word);
