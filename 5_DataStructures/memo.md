@@ -263,3 +263,5 @@
   - dictionary.c:23:7: error: variable length array folded to constant array as an extension [-Werror,-Wgnu-folding-constant]
 - やはり分からないので動画を見直すことにした
   - shortのhash tablesとか
+- shortのhash tableで実装されているハッシュ関数
+  - すべての文字のASCIICODE値を合計し、収める先の配列の要素数で割った余り
