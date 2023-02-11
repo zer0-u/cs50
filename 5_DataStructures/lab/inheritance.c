@@ -10,8 +10,7 @@ typedef struct person
 {
     struct person *parents[2];
     char alleles[2];
-}
-person;
+} person;
 
 const int GENERATIONS = 3;
 const int INDENT_LENGTH = 4;
@@ -46,16 +45,23 @@ person *create_family(int generations)
     if (generations > 1)
     {
         // TODO: Recursively create blood type histories for parents
-
+        create_family(generations - 1);
         // TODO: Randomly assign child alleles based on parents
+        person parent0 = p.parent[0];
+        person parent1 = p.parent[1];
+        
+
     }
 
     // Generation without parent data
     else
     {
         // TODO: Set parent pointers to NULL
-
+        p->parent[0] = NULL;
+        p->parent[1] = NULL;
         // TODO: Randomly assign alleles
+        p->alleles[0] = random_allele();
+        p->alleles[1] = random_allele();
     }
 
     // TODO: Return newly created person
