@@ -31,12 +31,12 @@ bool load(const char *dictionary)
     {
         return false;
     }
-    
-    // ファイルを読み込む
-    char c;
-    while (fread(&c, sizeof(char), 1, dictionary))
-    {
-        // 単語1個分のメモリを確保する
+
+    // ファイルに載った文字列を読み込む
+    char word;
+    fscanf(dict, "%s",word)
+
+// 単語1個分のメモリを確保する
         node *n = malloc(sizeof(node));
 
         // strcpyを使って読み込んだ単語をnodeにコピーする
@@ -48,8 +48,6 @@ bool load(const char *dictionary)
         // 作ったnodeのハッシュ値を計算する
 
         // ハッシュ値に応じた場所に収納する
-    }
-
     return false;
 }
 
