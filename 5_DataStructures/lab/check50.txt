@@ -1,0 +1,7 @@
+:) inheritance.c exists
+:) inheritance compiles
+:) create_family creates correct size of family
+:) create_family follows inheritance rules 1
+:) create_family follows inheritance rules 2
+:) create_family follows inheritance rules 3
+:) free_family results in no memory leakages
