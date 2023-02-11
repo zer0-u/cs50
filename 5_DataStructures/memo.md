@@ -261,4 +261,5 @@
   - 一旦は先頭文字を使うことにする
 - 変数tableが言うことを聞いてくれない
   - dictionary.c:23:7: error: variable length array folded to constant array as an extension [-Werror,-Wgnu-folding-constant]
-- やはり分から愛
+- やはり分からないので動画を見直すことにした
+  - shortのhash tablesとか
