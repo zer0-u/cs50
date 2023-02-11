@@ -22,8 +22,13 @@ node *table[N];
 // 読み込みに成功したらtrue、失敗したらfalse
 bool load(const char *dictionary)
 {
+    // ファイルを読み込む
+    
     // 単語1個分のメモリを確保する
     node *n = malloc(sizeof(node));
+
+    // strcpyを使って読み込んだ単語をnodeにコピーする
+    strcpy(n->word,"WORD");
     return false;
 }
 
