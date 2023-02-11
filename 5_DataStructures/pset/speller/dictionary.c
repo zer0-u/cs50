@@ -18,7 +18,8 @@ const unsigned int N = 1;
 node *table[N];
 
 // Loads dictionary into memory, returning true if successful, else false
-// 辞書ファイルに載っている単語を全て読み込む
+// 辞書ファイルに載っている単語を全て読み込み、ハッシュテーブル等のデータ構造に収める
+// 読み込みに成功したらtrue、失敗したらfalse
 bool load(const char *dictionary)
 {
     // TODO
@@ -26,6 +27,7 @@ bool load(const char *dictionary)
 }
 
 // Hashes word to a number
+// 引数のwordに対応したハッシュ値を返す
 unsigned int hash(const char *word)
 {
     // TODO
