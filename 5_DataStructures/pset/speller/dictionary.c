@@ -22,20 +22,30 @@ node *table[N];
 // 読み込みに成功したらtrue、失敗したらfalse
 bool load(const char *dictionary)
 {
+    // 
+    if (dictionary == NULL)
+    {
+        return false;
+    }
     // ファイルを読み込む
 
-    // 単語1個分のメモリを確保する
-    node *n = malloc(sizeof(node));
+    char c;
+    while (fread(&c, sizeof(char), 1, dictionary))
+    {
+        // 単語1個分のメモリを確保する
+        node *n = malloc(sizeof(node));
 
-    // strcpyを使って読み込んだ単語をnodeにコピーする
-    strcpy(n->word, "WORD");
+        // strcpyを使って読み込んだ単語をnodeにコピーする
+        strcpy(n->word, "WORD");
 
-    // 次のノードは今のところ未定なのでNULLを入れておく
-    n->next = NULL;
+        // 次のノードは今のところ未定なのでNULLを入れておく
+        n->next = NULL;
 
-    // 作ったnodeのハッシュ値を計算する
+        // 作ったnodeのハッシュ値を計算する
 
-    // ハッシュ値に応じた場所に収納する
+        // ハッシュ値に応じた場所に収納する
+    }
+
     return false;
 }
 
