@@ -35,6 +35,8 @@ unsigned int hash(const char *word)
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
+// 辞書に載っている単語数を返す
+// 読み込みに失敗している場合は0
 unsigned int size(void)
 {
     // TODO
@@ -42,6 +44,7 @@ unsigned int size(void)
 }
 
 // Returns true if word is in dictionary, else false
+// 引数wordが辞書に載っていればtrue、いなければfalse
 bool check(const char *word)
 {
     // TODO
@@ -49,6 +52,7 @@ bool check(const char *word)
 }
 
 // Unloads dictionary from memory, returning true if successful, else false
+// メモリの解放等
 bool unload(void)
 {
     // TODO
