@@ -17,7 +17,8 @@ typedef struct node
 
 // Number of buckets in hash table
 // TODO hash関数の内容を変えたらここの値も合わせる
-const unsigned int N = 26;
+// const unsigned int N = 1;
+#define N 26
 
 // Hash table
 node *table[N];
@@ -57,13 +58,13 @@ bool load(const char *dictionary)
 
         // ハッシュ値に応じた場所に収納する
         // すでに要素がある場合は先頭をすげ替える
-        node top = table[index];
+        // node top = table[index];
 
-        if (top != NULL)
-        {
-            n->next = *top;
-        }
-        table[index] = n;
+        // if (top != NULL)
+        // {
+        //     n->next = *top;
+        // }
+        // table[index] = n;
     }
 
     // ファイルを閉じる

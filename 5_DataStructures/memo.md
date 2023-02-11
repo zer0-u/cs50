@@ -269,3 +269,8 @@
 - と思ったら本編もほぼ概念的な話だった
   - hashtables.cはきちんと保存されていた
 - 困ったなあ
+- エラーメッセージで調べたところ、コンパイル時は定数Nがうまく置き換わらないらしい
+  - https://stackoverflow.com/questions/18435302/variable-length-array-folded-to-constant-array
+  - #defineで置き換えるなどの対処が必要？
+  - 置き換えたらエラーは出なくなったが果たしてこれでいいんだろうか
+- 夜も更けてきたので今日はここまで
