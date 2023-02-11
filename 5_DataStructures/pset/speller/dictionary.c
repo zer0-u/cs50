@@ -56,8 +56,9 @@ bool load(const char *dictionary)
         int index = hash(w);
 
         // ハッシュ値に応じた場所に収納する
-        node top = table[index];
         // すでに要素がある場合は先頭をすげ替える
+        node top = table[index];
+
         if (top != NULL)
         {
             n->next = *top;
