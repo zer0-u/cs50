@@ -1,6 +1,9 @@
 // Implements a dictionary's functionality
 
 #include <stdbool.h>
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 #include "dictionary.h"
 
@@ -22,13 +25,14 @@ node *table[N];
 // 読み込みに成功したらtrue、失敗したらfalse
 bool load(const char *dictionary)
 {
-    // 
-    if (dictionary == NULL)
+    // ファイルを開く
+    FILE *dict = fopen(dictionary, "r");
+    if (dict == NULL)
     {
         return false;
     }
+    
     // ファイルを読み込む
-
     char c;
     while (fread(&c, sizeof(char), 1, dictionary))
     {
