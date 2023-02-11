@@ -22,7 +22,8 @@ node *table[N];
 // 読み込みに成功したらtrue、失敗したらfalse
 bool load(const char *dictionary)
 {
-    // TODO
+    // 単語1個分のメモリを確保する
+    node *n = malloc(sizeof(node));
     return false;
 }
 
