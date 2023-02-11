@@ -265,3 +265,4 @@
   - shortのhash tablesとか
 - shortのhash tableで実装されているハッシュ関数
   - すべての文字のASCIICODE値を合計し、収める先の配列の要素数で割った余り
+- short動画は概念の説明しかなかった
