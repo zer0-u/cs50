@@ -35,6 +35,9 @@ int main(void)
     free_family(p);
 }
 
+// create_family内部でのみ参照するためここに宣言を置く
+char select_allele(person *p);
+
 // Create a new individual with `generations`
 person *create_family(int generations)
 {
@@ -47,10 +50,8 @@ person *create_family(int generations)
         // TODO: Recursively create blood type histories for parents
         create_family(generations - 1);
         // TODO: Randomly assign child alleles based on parents
-        person parent0 = p.parent[0];
-        person parent1 = p.parent[1];
-        
-
+        p->allele[0] = select_allele(p->parent[0]);
+        p->allele[1] = select_allele(p->parent[1]);
     }
 
     // Generation without parent data
@@ -65,7 +66,21 @@ person *create_family(int generations)
     }
 
     // TODO: Return newly created person
-    return NULL;
+    return p;
+}
+
+// どちらか片方の対立遺伝子を返す
+char select_allele(person *p)
+{
+    int r = rand() % 2;
+    if (r == 0)
+    {
+        return p->allele[0];
+    }
+    else
+    {
+        return p->allele[1];
+    }
 }
 
 // Free `p` and all ancestors of `p`.
