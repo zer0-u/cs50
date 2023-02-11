@@ -33,14 +33,19 @@ bool load(const char *dictionary)
     }
 
     // ファイルに載った文字列を読み込む
-    char d[LENGTH + 1];
-    while (fscanf(file, "%s", d) != EOF)
+    char w[LENGTH + 1];
+    while (fscanf(file, "%s", w) != EOF)
     {
         // 単語1個分のメモリを確保する
         node *n = malloc(sizeof(node));
+        if (n == NULL)
+        {
+            fclose(dictionary);
+            return false;
+        }
 
         // strcpyを使って読み込んだ単語をnodeにコピーする
-        strcpy(n->word, d);
+        strcpy(n->word, w);
 
         // 次のノードは今のところ未定なのでNULLを入れておく
         n->next = NULL;
