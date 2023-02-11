@@ -36,7 +36,6 @@ bool load(const char *dictionary)
     char d[LENGTH + 1];
     while (fscanf(file, "%s", d) != EOF)
     {
-        printf("%s\n", d);
         // 単語1個分のメモリを確保する
         node *n = malloc(sizeof(node));
 
@@ -50,8 +49,10 @@ bool load(const char *dictionary)
 
         // ハッシュ値に応じた場所に収納する
     }
+
+    // ファイルを閉じる
     fclose(dictionary);
-    return false;
+    return true;
 }
 
 // Hashes word to a number
