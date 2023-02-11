@@ -9,7 +9,6 @@ int main(void)
         return 1;
     }
     char word[46];
-    printf("%s", fscanf(file, "%s"));
     while (fscanf(file, "%s", word) != EOF)
     {
         printf("%s\n", word);
