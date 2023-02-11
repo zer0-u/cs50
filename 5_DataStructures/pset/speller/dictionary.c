@@ -18,6 +18,7 @@ const unsigned int N = 1;
 node *table[N];
 
 // Loads dictionary into memory, returning true if successful, else false
+// 辞書ファイルに載っている単語を全て読み込む
 bool load(const char *dictionary)
 {
     // TODO
