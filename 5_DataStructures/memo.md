@@ -205,4 +205,6 @@
 - check50も通った
 
 ### lab5 solution
-- 
+- p->alleles[n] = p->parents[n]->alleles[rand()%2] でも対立遺伝子は代入できる
+  - このあたりは好みの問題だろう
+  - どっちでもよさそう
