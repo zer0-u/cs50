@@ -25,8 +25,6 @@ node *table[N];
 
 unsigned int word_count = 0;
 
-
-
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
@@ -83,8 +81,6 @@ unsigned int hash(const char *word)
     // TODO: Improve this hash function
     return toupper(word[0]) - 'A';
 }
-
-
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
