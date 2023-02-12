@@ -396,4 +396,4 @@
   - なんだったんだろう？
 - 模範解答は ./speller50 で確認できる
   - checkにかかる時間がかなり短くなっていた
-  - speller50.txtと
+  - speller50.txtとspeller.txtに結果を保存している
