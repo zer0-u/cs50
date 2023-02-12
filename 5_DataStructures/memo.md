@@ -359,4 +359,4 @@
   - https://www.reddit.com/r/C_Programming/comments/wau4t5/weird_error_when_trying_to_run_valgrind_possibly/
 - help50も匙を投げるので一旦保留
 - 実行そのものは可能だったし、largeを使って大きめのファイルを検索しても案外早かった
-  - ././speller texts/lalaland.txt > student.txt
+  - ./speller texts/lalaland.txt > first.txt
