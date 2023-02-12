@@ -384,3 +384,5 @@
 - 素の状態でもvalgrindは同じエラーを出した
 - 念のためNを定数宣言に戻し、tableはリテラルをベタ書きに変えてもエラーは起きた
 - CS50内だけ有効なstackoverflowみたいなものなかったっけ
+- 最新版の演習ページを見つけた
+  - https://cs50.harvard.edu/x/2023/psets/5/speller/
