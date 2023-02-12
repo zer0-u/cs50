@@ -78,7 +78,6 @@ bool load(const char *dictionary)
 // 引数のwordに対応したハッシュ値を返す
 unsigned int hash(const char *word)
 {
-    // ひとまず先頭の文字(小文字)のASCIICODE値を返す
     // TODO 後でもっと考える
     return tolower(word[0]) - 'a';
 }
