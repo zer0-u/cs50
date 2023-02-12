@@ -104,7 +104,7 @@ bool check(const char *word)
     node *list = table[hash(word)];
     for (node *tmp = list; tmp != NULL; tmp = tmp->next)
     {
-        if (strcmp(word, tmp->word) == 0)
+        if (strcasecmp(word, tmp->word) == 0)
         {
             return true;
         }
