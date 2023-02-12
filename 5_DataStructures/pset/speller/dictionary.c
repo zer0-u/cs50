@@ -100,7 +100,7 @@ unsigned int size(void)
 // 引数wordが辞書に載っていればtrue、いなければfalse
 bool check(const char *word)
 {
-    // TODO
+    
     return false;
 }
 
