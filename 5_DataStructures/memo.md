@@ -338,3 +338,9 @@
 
 ### pset unload関数
 - mallocで確保したメモリを解放する
+- 変数cursorとtempを利用する方法
+  - 1 cursorが先頭nodeを指す
+  - 2 tempがcursorと同じnodeを指す
+  - 3 cursorが1個先のnodeへ移動する
+  - 4 tempが指すnodeを解放する
+  - 5 手順2に戻る
