@@ -308,7 +308,9 @@
   - ./speller dictionaries/small texts/cat.txt
   - check関数が未実装なので結果は正しくない
 - debug50 ./speller dictionaries/small texts/cat.txt
-- 動きはするもののtablesには何も入っていない
+- 動きはするもののtableには何も入っていない
 - hash関数の戻り値が最小でも97(aのASCIICODE)なのでインデックスの外にある
   - それでも例外にならないの困る
-- なｎ
+- 何かの課題でやったとおり、aとの差分を取ってインデックスの代わりにする
+- 後で直すところだから適当に済ませておく
+- tableが想定通りの構造を持つことは確かめられた
