@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
+#include <cs50.h>
 
 #include "dictionary.h"
 
@@ -100,12 +101,14 @@ unsigned int size(void)
 // 引数wordが辞書に載っていればtrue、いなければfalse
 bool check(const char *word)
 {
-    char *w = tolower(word);
-    int index = hash(w);
+    int index = hash(word);
     node *list = table[index];
     for (node *tmp = list; tmp != NULL; tmp = tmp->next)
     {
-        
+        if (strcmp(word, tmp->word) == 0)
+        {
+            return true;
+        }
     }
     return false;
 }
