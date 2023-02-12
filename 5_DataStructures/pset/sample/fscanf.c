@@ -2,7 +2,7 @@
 
 int main(void)
 {
-    FILE *file = fopen("dictionaries/small", "r");
+    FILE *file = fopen("input.txt", "r");
     if (file == NULL)
     {
         printf("can not read");
