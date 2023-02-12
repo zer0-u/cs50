@@ -1,0 +1,14 @@
+:) dictionary.c exists
+:) speller compiles
+:( handles most basic words properly
+    expected "MISSPELLED WOR...", not "MISSPELLED WOR..."
+:) handles min length (1-char) words
+:) handles max length (45-char) words
+:) handles words with apostrophes properly
+:( spell-checking is case-insensitive
+    expected "MISSPELLED WOR...", not "MISSPELLED WOR..."
+:) handles substrings properly
+:( program is free of memory errors
+    expected "MISSPELLED WOR...", not "### unhandled ..."
+To see the results in your browser go to
+ https://submit.cs50.io/check50/220b7a09c9a01f4958221780829c163f32e671e7

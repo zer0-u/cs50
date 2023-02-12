@@ -17,21 +17,17 @@ typedef struct node
     struct node *next;
 } node;
 
-// Number of buckets in hash table
-// TODO hash関数の内容を変えたらここの値も合わせる
-// const unsigned int N = 1;
-// 定数だとコンパイル時に置き換わらない(table[N]がコンパイルできない)のでdefineに変更
-// これでいいのか悩ましい
-#define N 26
+// TODO: Choose number of buckets in hash table
+const unsigned int N = 26;
 
 // Hash table
 node *table[N];
 
 unsigned int word_count = 0;
 
+
+
 // Loads dictionary into memory, returning true if successful, else false
-// 辞書ファイルに載っている単語を全て読み込み、ハッシュテーブル等のデータ構造に収める
-// 読み込みに成功したらtrue、失敗したらfalse
 bool load(const char *dictionary)
 {
     // ファイルを開く
@@ -82,16 +78,15 @@ bool load(const char *dictionary)
 }
 
 // Hashes word to a number
-// 引数のwordに対応したハッシュ値を返す
 unsigned int hash(const char *word)
 {
-    // TODO 後でもっと考える
-    return tolower(word[0]) - 'a';
+    // TODO: Improve this hash function
+    return toupper(word[0]) - 'A';
 }
 
+
+
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
-// 辞書に載っている単語数を返す
-// 読み込みに失敗している場合は0
 unsigned int size(void)
 {
     // load関数の中で数えておいたのでここでの処理は不要
@@ -99,7 +94,6 @@ unsigned int size(void)
 }
 
 // Returns true if word is in dictionary, else false
-// 引数wordが辞書に載っていればtrue、いなければfalse
 bool check(const char *word)
 {
     node *list = table[hash(word)];
@@ -114,18 +108,17 @@ bool check(const char *word)
 }
 
 // Unloads dictionary from memory, returning true if successful, else false
-// メモリの解放等
 bool unload(void)
 {
-    // for (int i = 0; i < N; i++)
-    // {
-    //     node *current = table[i];
-    //     while (current != NULL)
-    //     {
-    //         node *next = current->next;
-    //         free(current);
-    //         current = next;
-    //     }
-    // }
+    for (int i = 0; i < N; i++)
+    {
+        node *current = table[i];
+        while (current != NULL)
+        {
+            node *next = current->next;
+            free(current);
+            current = next;
+        }
+    }
     return true;
 }
