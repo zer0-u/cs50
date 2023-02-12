@@ -89,6 +89,7 @@ unsigned int hash(const char *word)
 unsigned int size(void)
 {
     // TODO
+    printf("size function\n");
     return 0;
 }
 
