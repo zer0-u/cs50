@@ -357,3 +357,5 @@
   - 困ったな
 - -gdwarf-4オプションを付けると動くらしいがオプションが不正だと言われる
   - https://www.reddit.com/r/C_Programming/comments/wau4t5/weird_error_when_trying_to_run_valgrind_possibly/
+- help50も匙を投げるので一旦保留
+- 
