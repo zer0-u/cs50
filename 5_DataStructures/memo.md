@@ -301,10 +301,14 @@
   - 演習に使うファイルと混ぜたくないのでsampleディレクトリを作った
   - hash.cできちんと動くことを検証済
 - ハッシュアルゴリズムは後で差し替えたい
+
+### pset 試運転
 - そもそも現時点でspellerは動かないんだろうか
   - 試しに↓を実行したら動くっぽいことが分かった
   - ./speller dictionaries/small texts/cat.txt
   - check関数が未実装なので結果は正しくない
 - debug50 ./speller dictionaries/small texts/cat.txt
-
-### pset 試運転
+- 動きはするもののtablesには何も入っていない
+- hash関数の戻り値が最小でも97(aのASCIICODE)なのでインデックスの外にある
+  - それでも例外にならないの困る
+- 
