@@ -103,7 +103,10 @@ bool check(const char *word)
     char *w = tolower(word);
     int index = hash(w);
     node *list = table[index];
-    while()
+    for (node *tmp = list; tmp != NULL; tmp = tmp->next)
+    {
+        
+    }
     return false;
 }
 
