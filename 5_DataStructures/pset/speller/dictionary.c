@@ -25,6 +25,8 @@ typedef struct node
 // Hash table
 node *table[N];
 
+unsigned int word_count = 0;
+
 // Loads dictionary into memory, returning true if successful, else false
 // 辞書ファイルに載っている単語を全て読み込み、ハッシュテーブル等のデータ構造に収める
 // 読み込みに成功したらtrue、失敗したらfalse
@@ -48,6 +50,9 @@ bool load(const char *dictionary)
             fclose(dict);
             return false;
         }
+
+        // size関数の戻り値に使うので単語数を数えておく
+        word_count++;
 
         // strcpyを使って読み込んだ単語をnodeにコピーする
         strcpy(n->word, w);
@@ -87,9 +92,8 @@ unsigned int hash(const char *word)
 // 読み込みに失敗している場合は0
 unsigned int size(void)
 {
-    // TODO
-    printf("size function\n");
-    return 0;
+    // load関数の中で数えておいたのでここでの処理は不要
+    return word_count;
 }
 
 // Returns true if word is in dictionary, else false
