@@ -362,4 +362,7 @@
   - ./speller texts/lalaland.txt > first.txt
 - スタッフの解法が見つけられない
   - bash: ~cs50/2019/fall/pset5/speller: No such file or directory
+  - 実行ディレクトリがまずいのかとルートまで戻って実行してみたが変わらず
+  - 2019だと古すぎるのかな
+- 仕方がないのでcheck50を実行
   - 
