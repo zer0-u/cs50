@@ -60,13 +60,13 @@ bool load(const char *dictionary)
 
         // ハッシュ値に応じた場所に収納する
         // すでに要素がある場合は先頭をすげ替える
-        // node top = table[index];
+        node *top = table[index];
 
-        // if (top != NULL)
-        // {
-        //     n->next = *top;
-        // }
-        // table[index] = n;
+        if (top != NULL)
+        {
+            n->next = top;
+        }
+        table[index] = n;
     }
 
     // ファイルを閉じる
