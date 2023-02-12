@@ -80,8 +80,7 @@ unsigned int hash(const char *word)
 {
     // ひとまず先頭の文字(小文字)のASCIICODE値を返す
     // TODO 後でもっと考える
-    char top = tolower(word[0]);
-    return top;
+    return tolower(word[0]);
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
