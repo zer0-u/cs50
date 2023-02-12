@@ -18,6 +18,8 @@ typedef struct node
 // Number of buckets in hash table
 // TODO hash関数の内容を変えたらここの値も合わせる
 // const unsigned int N = 1;
+// 定数だとコンパイル時に置き換わらない(table[N]がコンパイルできない)のでdefineに変更
+// これでいいのか悩ましい
 #define N 26
 
 // Hash table
