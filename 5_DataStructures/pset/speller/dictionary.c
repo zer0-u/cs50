@@ -116,6 +116,5 @@ bool check(const char *word)
 // メモリの解放等
 bool unload(void)
 {
-    // TODO
     return false;
 }
