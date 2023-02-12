@@ -354,3 +354,6 @@
 - largeを使ってみる
 - そのまえにvalgrindを試したが謎のエラーが出る
   - unhandled dwarf2 abbrev form code 0x25
+  - 困ったな
+- -gdwarf-4オプションを付けると動くらしいがオプションが不正だと言われる
+  - https://www.reddit.com/r/C_Programming/comments/wau4t5/weird_error_when_trying_to_run_valgrind_possibly/
