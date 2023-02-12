@@ -116,5 +116,15 @@ bool check(const char *word)
 // メモリの解放等
 bool unload(void)
 {
-    return false;
+    for (int i = 0; i < N; i++)
+    {
+        node *current = table[i];
+        while (current != NULL)
+        {
+            node *next = current->next;
+            free(current);
+            current = next;
+        }
+    }
+    return true;
 }
