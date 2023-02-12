@@ -352,3 +352,5 @@
 
 ### pset 試運転
 - largeを使ってみる
+- そのまえにvalgrindを試したが謎のエラーが出る
+  - unhandled dwarf2 abbrev form code 0x25
