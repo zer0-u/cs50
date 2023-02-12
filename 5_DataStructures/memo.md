@@ -307,5 +307,4 @@
   - check関数が未実装なので結果は正しくない
 - debug50 ./speller dictionaries/small texts/cat.txt
 
-### pset size関数
-- 辞書の中にある単語数を返す
+### pset 試運転
