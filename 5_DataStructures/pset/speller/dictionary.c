@@ -101,8 +101,7 @@ unsigned int size(void)
 // 引数wordが辞書に載っていればtrue、いなければfalse
 bool check(const char *word)
 {
-    int index = hash(word);
-    node *list = table[index];
+    node *list = table[hash(word)];
     for (node *tmp = list; tmp != NULL; tmp = tmp->next)
     {
         if (strcmp(word, tmp->word) == 0)
