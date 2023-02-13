@@ -18,4 +18,5 @@
 - pythonの型
   - bool, float, int ,str(string)
   - range, list, tuple, dict, set,...
-  - 
+- import文の使い方
+  - 関数を限定したimportも可能
