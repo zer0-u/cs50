@@ -16,4 +16,4 @@
 - for文にはrange関数を渡すことが多い
   - 引数を使って細かくカスタマイズできる
 - pythonの型
-  - 
+  - bool, float, int ,str(string)
