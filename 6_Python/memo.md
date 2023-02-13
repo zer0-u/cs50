@@ -17,3 +17,5 @@
   - 引数を使って細かくカスタマイズできる
 - pythonの型
   - bool, float, int ,str(string)
+  - range, list, tuple, dict, set,...
+  - 
