@@ -18,8 +18,10 @@ def load(dictionary):
     file.close()
     return True
 
+
 def size():
     return len(words)
+
 
 def unload():
     return True
