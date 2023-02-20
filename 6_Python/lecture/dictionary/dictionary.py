@@ -1,6 +1,6 @@
 # 2023/02/20
 
-words = dict()
+words = set()
 
 
 def check(word):
