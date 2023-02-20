@@ -66,3 +66,4 @@
 - python hello1.pyをしてからWhat's your nameが出るまでちょっと間がある
   - 入力が割り込んでも結果は正しく出る
 - pythonにはmain関数がない
+- get_stringという補助輪を取り除く(hello2.py)
