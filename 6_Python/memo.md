@@ -153,4 +153,4 @@
 - pythonにはdo-whileがない
   - whileはある
   - while Trueとbreakで擬似的にdo-whileを実装する
-- 
+- cs50ライブラリの補助輪を外す(mario1.py)
