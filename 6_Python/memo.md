@@ -248,3 +248,4 @@
 - Python text to speech(pyttsx3)
   - 読み上げソフト
 - face_recognition(顔認証)
+  - 画像から顔だけを検出するライブラリ
