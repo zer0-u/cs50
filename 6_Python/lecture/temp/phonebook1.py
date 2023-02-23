@@ -5,7 +5,7 @@ name = get_string("Name: ")
 number = get_string("Number: ")
 
 # file = open("phonebook.csv", "a")
-with open("phonebook.csv", "a"):
+with open("phonebook.csv", "a") as file:
 
     writer = csv.writer(file)
     writer.writerow([name, number])
