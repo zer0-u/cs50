@@ -223,3 +223,4 @@
 - なぜかわからないがphonebook.pyが上手く動かない
   - 別のプログラムだと混同されている
   - 直らない
+  - from cs50 import get_stringがあるとなぜかfoundになってしまう
