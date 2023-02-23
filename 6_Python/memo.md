@@ -247,4 +247,4 @@
 - 発展的な機能の紹介
 - Python text to speech(pyttsx3)
   - 読み上げソフト
-- 
+- face_recognition(顔認証)
