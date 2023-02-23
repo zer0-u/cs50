@@ -245,3 +245,4 @@
 
 ### 講義動画(2:16:15)
 - 発展的な機能の紹介
+- Python text to speech(pyttsx3)
