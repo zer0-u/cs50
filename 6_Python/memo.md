@@ -252,3 +252,66 @@
 - 音声認識
 - QRコード生成
 - 動画おわり！
+
+## 0225
+- 演習やろうとしたらcodespaceのURLが無効になっててびっくりした
+  - なんかたまに移動するというかアクセスできない時がある
+  - 中身が消えるのは困るけどどうしたらいいんだろう
+  - codespaceがアクセスできなくなるだけならいいんだが……
+- ついでにフォントを変えようかなと思ったがupdateのたびに入れ直しになると気付いて断念
+
+### lab(準備)
+- lab6フォルダはlabに改名した
+- ダブルクオート3つで囲った文字列は改行を含められる
+  - 今回の例では複数行コメントとして使っている
+- ゲームの勝敗を決める部分は実装済(simulate_game関数)
+- 簡単そうに見えるがそうでもなさそうな……
+
+### lab ファイル読み込み
+- まずはチーム名とレートの読み込み
+  - これはhogwarts.pyを参照すればいけると思う
+  - 合ってるか不安になる
+  - 読み込み部分だけ別のプログラムに切り出してみる(input.py)
+- やっぱり上手く行ってなかった
+- チーム名とレーティングのペアを1つの要素としてリストに詰めたい
+- 入れ方はなんとなくわかったがリストの扱い方が分からない
+- どうやらdictではなくsetとして追加してしまったらしい
+  - 省略記法がいまだピンとこない
+- dictは{キー:値}
+  - キーや値の部分に変数名を書いてもOK
+- とりあえず求めるものは実装できたのでtournament.pyにコピーする
+- ratingをintに変換しそびれていた
+- 問題文を読むに、もしかしたら要素の形は{team: チーム名, rating: レート}なのかもしれない
+- 直しておこう
+- コピペするとインデントがずれるのが気になる
+
+### lab simulate_tournament関数
+- simulate_roundを1回実行すると、同じ階層の対決が行われる
+- 勝ち上がったチームのみを含む配列が返されるから、1回の呼び出しで要素が半分になる
+- 要素が1個なら優勝が決まったことになる
+- 1個になるまでsimulate_roundを呼び出す
+- テストしづらいな……
+- 戻り値の説明を見落としていた
+  - 「この関数は、そのチームの名前を返します。」
+  - ratingはいらないらしい
+- 恐らく大丈夫だと思う
+  - 試合の予想がランダムだから確信が持てない
+
+### lab トーナメントシミュレーション
+- simulate_tournament関数をN回呼び出せばいいはず
+- できたのではないかと思われる
+- countsの初期化をファイル読み込み時に行ったけどこれでも大丈夫だろうか
+  - 0.0%の国も出てくる
+  - Japanがいつまで経っても0%でちょっとしょんぼり
+
+### lab check50
+:) tournament.py exists
+:) tournament.py imports
+:) simulate_tournament handles a bracket of size 2
+:) simulate_tournament handles a bracket of size 4
+:) simulate_tournament handles a bracket of size 8
+:) simulate_tournament handles a bracket of size 16
+:) correctly keeps track of wins
+:) correctly reports team information for Men's World Cup
+:) correctly reports team information for Women's World Cup
+できた！
