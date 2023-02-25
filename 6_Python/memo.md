@@ -315,3 +315,7 @@
 :) correctly reports team information for Men's World Cup
 :) correctly reports team information for Women's World Cup
 できた！
+
+### 解説動画
+- なにもないところから team["team"]=値 としても新たなdictオブジェクトは生成できる
+  - 分かりづらいからあまり使いたくない
