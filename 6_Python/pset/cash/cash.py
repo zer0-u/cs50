@@ -10,7 +10,9 @@ def main():
     # セントに直す
     change = input * 100
 
+    # おつりに使えるコインの種類
     coins = [25, 10, 5, 1]
+    # コインの枚数
     count = 0
 
     for coin in coins:
