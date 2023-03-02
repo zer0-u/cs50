@@ -35,7 +35,7 @@ def main():
 
 def calc(remain, coin):
     count = 0
-    while remain > coin:
+    while remain >= coin:
         count += 1
         remain -= coin
     return {"remain": remain, "count": count}
