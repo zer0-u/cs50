@@ -8,28 +8,16 @@ def main():
             break
 
     # セントに直す
-    input *= 100
+    change = input * 100
 
+    coins = [25, 10, 5, 1]
     count = 0
-    # quarter(25)
-    result = calc(input, 25)
-    input = result["remain"]
-    count += result["count"]
 
-    # dime(10)
-    result = calc(input, 10)
-    input = result["remain"]
-    count += result["count"]
+    for coin in coins:
+        result = calc(change, coin)
+        change = result["remain"]
+        count += result["count"]
 
-    # nickel(5)
-    result = calc(input, 5)
-    input = result["remain"]
-    count += result["count"]
-
-    # penny(1)
-    result = calc(input, 1)
-    input = result["remain"]
-    count += result["count"]
     print(count)
 
 
