@@ -3,13 +3,13 @@ from cs50 import get_string
 
 def main():
     number = get_string("Number :")
-    # if not check_length(number):
-    #     print('INVALID')
-    #     return
+    if not check_length(number):
+        print('INVALID')
+        return
     if not is_valid(number):
         print('INVALID')
         return
-    # print(check_header(number))
+    print(check_header(number))
 
 
 def check_length(number):
@@ -24,7 +24,7 @@ def is_valid(number):
         if i % 2 == 1:
             elem *= 2
             if elem >= 10:
-                sum += elem/10
+                sum += elem//10
                 sum += elem % 10
             else:
                 sum += elem
