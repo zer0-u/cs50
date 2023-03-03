@@ -19,20 +19,18 @@ def check_length(number):
 def is_valid(number):
     reversed = number[::-1]
     sum = 0
-    is_even = False
-    for i in reversed:
-        i = int(i)
-        print(f'i: {i}, is_even: {is_even}')
-        if is_even:
-            elem = i*2
-            if elem > 10:
-                sum += (elem / 10)
-                sum += (elem % 10)
+    for i in range(len(reversed)):
+        elem = int(reversed[i])
+        print(elem)
+        if i % 2 == 1:
+            elem *= 2
+            if elem >= 10:
+                sum += elem/10
+                sum += elem % 10
             else:
                 sum += elem
         else:
-            sum += i
-        is_even = not is_even
+            sum += elem
 
     return sum % 10 == 0
 
