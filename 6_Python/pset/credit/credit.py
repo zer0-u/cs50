@@ -16,7 +16,7 @@ def check_length(number):
 
 def check_header(number):
     header = number[:2]
-    pattern = ''
+    pattern = '(34|37)'
     return re.match(pattern, header)
 
 
