@@ -24,7 +24,7 @@ def is_valid(number):
         if i % 2 == 1:
             elem *= 2
             if elem >= 10:
-                sum += elem//10
+                sum += elem // 10
                 sum += elem % 10
             else:
                 sum += elem
