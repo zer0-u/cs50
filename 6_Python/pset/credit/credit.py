@@ -27,8 +27,17 @@ def check_header(number):
     return False
 
 def checksum(number):
+    even_sum = 0
+    odd_sum = 0
+    is_even = False
     for i in range(len(number),0,-1):
-        print(i)
+        if is_even:
+            even_sum +=i
+        else:
+            odd_sum+=i
+        is_even = not is_even
+    print(even_sum)
+    print(odd_sum)
     return True
 
 main()
