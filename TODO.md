@@ -17,3 +17,7 @@
 ## week5 data structure
 - pset(speller)
 - ハッシュアルゴリズムを洗練させて実行速度を上げる
+
+## week6 python
+- pset(credit)
+- 正規表現をもっと活用したパターンを実装する

@@ -377,3 +377,5 @@
   - https://qiita.com/luohao0404/items/7135b2b96f9b0b196bf3
 - 一応できた(re_credit.py)
 - 余裕があればもっと調整したものを作るかもしれない
+  - TODO.mdにメモした
+- 
