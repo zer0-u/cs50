@@ -3,8 +3,10 @@ from cs50 import get_string
 
 def main():
     number = get_string("Number :")
-    print(check_header(number))
     if not check_length(number):
+        print('INVALID')
+        return
+    if not check_header(number):
         print('INVALID')
         return
 
