@@ -26,18 +26,19 @@ def check_header(number):
         return True
     return False
 
+
 def checksum(number):
     even_sum = 0
     odd_sum = 0
     is_even = False
-    for i in range(len(number),0,-1):
+    for i in range(len(number), 0, -1):
         if is_even:
-            even_sum +=i
+            even_sum += (i*2)
         else:
-            odd_sum+=i
+            odd_sum += i
         is_even = not is_even
-    print(even_sum)
-    print(odd_sum)
+    
     return True
+
 
 main()
