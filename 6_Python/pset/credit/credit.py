@@ -21,7 +21,6 @@ def is_valid(number):
     sum = 0
     for i in range(len(reversed)):
         elem = int(reversed[i])
-        print(elem)
         if i % 2 == 1:
             elem *= 2
             if elem >= 10:
