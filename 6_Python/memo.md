@@ -368,3 +368,6 @@
 ### pset credit
 - アルゴリズムが難しいやつだ
 - 正規表現の使い方も学ばなければならない
+- re(正規表現)の日本語URL
+  - https://docs.python.org/ja/3/library/re.html
+- 
