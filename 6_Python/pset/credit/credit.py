@@ -25,5 +25,8 @@ def check_header(number):
         return True
     return False
 
+def checksum(number):
+    
+    return True
 
 main()
