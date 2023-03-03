@@ -3,7 +3,7 @@ import re
 
 def main():
     number = get_string("Number :" )
-    pattern = '^\d'
+    pattern = '^\d{13,16}'
     result = re.match(pattern,number)
     if result:
         print(f'{number} matched')
