@@ -15,7 +15,7 @@ def check_length(number):
     return len(number) in [13,15,16]
 
 def check_header(number):
-    header = number[0]+number[1]
+    header = number[:2]
     print(header)
 
 main()
