@@ -1,10 +1,9 @@
 from cs50 import get_string
-import re
 
 
 def main():
     number = get_string("Number :")
-    check_header(number)
+    print(check_header(number))
     if not check_length(number):
         print('INVALID')
         return
@@ -16,8 +15,13 @@ def check_length(number):
 
 def check_header(number):
     header = number[:2]
-    pattern = '(34|37)'
-    return re.match(pattern, header)
+    if header in ['34', '37']:
+        return True
+    elif header in ['51', '52', '53', '54', '55']:
+        return True
+    elif header[0] == '4':
+        return True
+    return False
 
 
 main()
