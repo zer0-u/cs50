@@ -21,6 +21,7 @@ def is_valid(number):
     sum = 0
     is_even = False
     for i in reversed:
+        i = int(i)
         print(f'i: {i}, is_even: {is_even}')
         if is_even:
             elem = i*2
