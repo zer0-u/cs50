@@ -17,9 +17,10 @@ def check_length(number):
 
 
 def is_valid(number):
+    reversed = number[::-1]
     sum = 0
     is_even = False
-    for i in range(len(number), 0, -1):
+    for i in reversed:
         print(f'i: {i}, is_even: {is_even}')
         if is_even:
             elem = i*2
