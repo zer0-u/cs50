@@ -19,9 +19,9 @@ def count_letters(text):
 
 def count_words(text):
     count = 0
-   for l in text:
+    for l in text:
         if l.isspace():
-        count += 1
+            count += 1
     return count
 
 
