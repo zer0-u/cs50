@@ -416,3 +416,7 @@
   - https://docs.python.org/ja/3/library/stdtypes.html?highlight=isalpha#str.isalpha
   - 空白もFALSE判定
   - 1文字ずつ取り出して判別するしかない？
+  - ひとまず字数は数えられたっぽい
+- 単語数を数える
+  - 単語はスペースで区切られている
+  - 文はスペースで始まったりしないし、スペースが複数続いたりもしない
