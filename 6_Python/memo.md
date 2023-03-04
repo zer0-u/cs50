@@ -454,3 +454,4 @@
 - small.csvとlarge.csvで使っているSTRが違う
 - こういう時にdictのキー名が変数になったりするんだろうか
 - smallにあるものは全てlargeにもある
+- len(row)で項目数が得られる
