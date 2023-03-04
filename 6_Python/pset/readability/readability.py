@@ -28,4 +28,15 @@ def count_words(text):
     return count
 
 
+def count_sentences(text):
+    # 文はピリオドまたは感嘆符で区切られる
+    # 略称としてのピリオドは考慮しなくてよい
+    ends = [".", "!", "?"]
+    count = 0
+    for l in text:
+        if l in ends:
+            count += 1
+    return count
+
+
 main()
