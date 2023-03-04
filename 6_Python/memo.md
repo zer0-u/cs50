@@ -420,3 +420,5 @@
 - 単語数を数える
   - 単語はスペースで区切られている
   - 文はスペースで始まったりしないし、スペースが複数続いたりもしない
+  - スペースかどうかはisspace()メソッドが使える
+  - https://docs.python.org/ja/3/library/stdtypes.html?highlight=isalpha#str.isspace

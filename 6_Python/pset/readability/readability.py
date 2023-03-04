@@ -14,5 +14,9 @@ def count_letters(text):
             count += 1
     return count
 
+def count_words(text)
+    count=0
+    for l in text:
+        
 
 main()
