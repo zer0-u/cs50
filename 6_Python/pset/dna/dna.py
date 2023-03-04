@@ -33,20 +33,25 @@ def count_str(sequence, str):
     head = str[0]
     str_len = len(str)
     count = 0
+    max_repeat = 0
     for i in range(len(sequence)):
         # STRの1文字目と合致したら
         if sequence[i] == head:
             # 続きも合っているか確かめる
-            if sequence[i:i+str_len] == str:
+            sub = sequence[i:i+str_len]
+            if sub == str:
                 # 繰り返し回数を1増やす
-                count+=1
+                count += 1
                 # インデックスを飛ばす
-                i+=str_len
-        
+                i += str_len
+                # for debug
+                print(f"{i}文字目・{sub}が現れた回数: {count}")
+        else:
+            if count >= max_repeat:
+                max_repeat = count
+            count = 0
 
-
-
-    return count
+    return max_repeat
 
 
 main()
