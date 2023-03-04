@@ -30,6 +30,16 @@ def load_sequence(filename):
 
 
 def count_str(sequence, str):
+    head = str[0]
+    str_len = len(str)
+    count = 0
+    for i in range(len(sequence)):
+        # STRの1文字目と合致したら
+        if sequence[i] == head:
+            # 続きも合っているか確かめる
+            sub = sequence[i::i+str_len]
+            print(sub)
+
     return 0
 
 
