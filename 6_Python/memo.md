@@ -453,3 +453,4 @@
 - DictReaderを使うのは分かる
 - small.csvとlarge.csvで使っているSTRが違う
 - こういう時にdictのキー名が変数になったりするんだろうか
+- smallにあるものは全てlargeにもある
