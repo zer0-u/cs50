@@ -6,15 +6,14 @@ def main():
     if len(argv) != 3:
         print("Usage: python dna.py data.csv sequence.txt")
         return
-    db_filename = argv[1]
-    sequence_filename=argv[2]
+    load_dictionary(argv[1])
 
-    # データベースを読み込む
-    with open(db_filename,"r") as db_file:
-        db_reader = csv.DictReader(db_file):
-        for row in db_reader:
-            name = row["name"]
-            
+
+def load_dictionary(filename):
+    with open(filename,"r") as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            print(len(row))
 
 
 
