@@ -1,11 +1,18 @@
 from cs50 import get_string
 
-text = get_string("Text: ")
 
-letter_count = 0
-for l in text:
-    if l.isalpha():
-        letter_count += 1
+def main():
+    text = get_string("Text: ")
+    letter_count = count_letters(text)
+    print(letter_count)
 
 
-print(letter_count)
+def count_letters(text):
+    count = 0
+    for l in text:
+        if l.isalpha():
+            count += 1
+    return count
+
+
+main()
