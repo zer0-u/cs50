@@ -433,3 +433,7 @@
 - 最も近い整数に丸める(四捨五入)
   - round関数がある
   - https://docs.python.org/ja/3/library/functions.html?highlight=round#round
+- check50も通ったのでよしとする
+
+### pset DNA
+- これはpython独自っぽい
