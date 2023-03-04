@@ -11,9 +11,14 @@ def main():
 
 def load_dictionary(filename):
     with open(filename,"r") as file:
-        reader = csv.DictReader(file)
-        for row in reader:
-            print(len(row))
+        reader = csv.reader(file)
+        # ヘッダを作る
+        next(reader)
+        for i in len(reader):
+            print(row[i])
+        # 中身を詰める
+        # for row in reader:
+        #     print(len(row))
 
 
 
