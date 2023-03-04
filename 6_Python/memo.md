@@ -443,4 +443,6 @@
   - 繰り返される回数は人によって異なる
   - STRごとに繰り返された回数を記録し、合致する人物を探す
 - databasesフォルダのCSVファイルは、人ごとにそれぞれのSTRの繰り返し回数が記録されている
-- 
+- まずはdatabasesとsequensesを読み込む必要がある
+  - コマンドライン引数はどう取るんだったか……
+  - https://cs50.jp/x/2021/week6/notes/#command-line-arguments-exit-codes
