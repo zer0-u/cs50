@@ -46,10 +46,7 @@ def count_str(sequence, str):
                 i += str_len
                 # for debug
                 print(f"{i}文字目・{sub}が現れた回数: {count}")
-        else:
-            if count >= max_repeat:
-                max_repeat = count
-            count = 0
+   
 
     return max_repeat
 
