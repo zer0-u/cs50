@@ -430,3 +430,6 @@
 - 文の数を数える
   - ピリオドまたは感嘆符で区切られる
   - 省略を表すピリオド(No.など)は考慮しなくてよい
+- 最も近い整数に丸める(四捨五入)
+  - round関数がある
+  - https://docs.python.org/ja/3/library/functions.html?highlight=round#round

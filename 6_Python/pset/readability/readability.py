@@ -10,7 +10,7 @@ def main():
     sentence_count = count_sentences(text)
     print(sentence_count)
     grade = calculate_grade(letter_count, word_count, sentence_count)
-    print(f"Grade: {grade}")
+    print(f"Grade {grade}")
 
 
 def count_letters(text):
@@ -48,7 +48,7 @@ def calculate_grade(letters, words, sentences):
     l = (letters/words)*100
     # S 100語あたりの平均文章数
     s = (sentences/words)*100
-    return 0.0588 * l - 0.296 * s - 15.8
+    return round(0.0588 * l - 0.296 * s - 15.8)
 
 
 main()
