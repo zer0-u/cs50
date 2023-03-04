@@ -22,6 +22,9 @@ def count_words(text):
     for l in text:
         if l.isspace():
             count += 1
+    # 最後の単語を数える(TODO もっといい方法がありそう)
+    if count > 0:
+        count += 1
     return count
 
 

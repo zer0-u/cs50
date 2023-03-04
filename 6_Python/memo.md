@@ -423,3 +423,6 @@
   - スペースかどうかはisspace()メソッドが使える
   - https://docs.python.org/ja/3/library/stdtypes.html?highlight=isalpha#str.isspace
 - ifの最後に:を付け忘れる
+- 文中のスペースの数で代用できるかと思ったが最後の1単語が漏れる
+  - 強制的に1増やしていいだろうか？
+  - C言語版でも同じことを考えたしあまりうまい実装ではなかった
