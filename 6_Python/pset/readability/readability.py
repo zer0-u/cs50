@@ -4,13 +4,15 @@ from cs50 import get_string
 def main():
     text = get_string("Text: ")
     letter_count = count_letters(text)
-    print(letter_count)
     word_count = count_words(text)
-    print(word_count)
     sentence_count = count_sentences(text)
-    print(sentence_count)
     grade = calculate_grade(letter_count, word_count, sentence_count)
-    print(f"Grade {grade}")
+    if grade < 1:
+        print("Before Grade 1")
+    elif grade >= 16:
+        print("Grade 16+")
+    else:
+        print(f"Grade {grade}")
 
 
 def count_letters(text):
