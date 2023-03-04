@@ -7,8 +7,7 @@ def main():
         print("Usage: python dna.py data.csv sequence.txt")
         return
     database = load_database(argv[1])
-    for d in database:
-        print(d)
+
 
 
 
