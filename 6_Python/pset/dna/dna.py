@@ -6,14 +6,19 @@ def main():
     if len(argv) != 3:
         print("Usage: python dna.py data.csv sequence.txt")
         return
-    load_dictionary(argv[1])
+    database = load_database(argv[1])
+    for d in database:
+        print(d)
 
 
-def load_dictionary(filename):
+
+def load_database(filename):
+    list =[]
     with open(filename,"r") as file:
         reader = csv.DictReader(file)
         for row in reader:
-            print(row)
+            list.append(row)
+    return list
 
 
 

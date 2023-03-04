@@ -449,7 +449,7 @@
   - argvに「python」は含まれないが「dna.py」は含まれる
   - つまりdatabasesはargv[1]、sequencesはargv[2]に来る
 
-#### dictionary読み込み
+#### database読み込み
 - DictReaderを使うのは分かる
 - small.csvとlarge.csvで使っているSTRが違う
 - こういう時にdictのキー名が変数になったりするんだろうか
@@ -458,3 +458,4 @@
 - DictReaderを使えばヘッダの数の差を気にしなくていいのでは？
   - 大丈夫そう？
   - なんかたまに無意味に深く考えすぎるときがある
+- それぞれの行がdictになったのでlistに詰めておく
