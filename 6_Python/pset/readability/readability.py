@@ -7,6 +7,8 @@ def main():
     print(letter_count)
     word_count = count_words(text)
     print(word_count)
+    sentence_count = count_sentences(text)
+    print(sentence_count)
 
 
 def count_letters(text):
