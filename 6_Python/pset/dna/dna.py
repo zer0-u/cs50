@@ -24,7 +24,7 @@ def load_database(filename):
 
 def load_sequence(filename):
     with open(filename, "r") as file:
-        return file.read()
+        return file.read().rstrip()
 
 
 main()
