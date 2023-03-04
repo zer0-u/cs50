@@ -446,3 +446,5 @@
 - まずはdatabasesとsequensesを読み込む必要がある
   - コマンドライン引数はどう取るんだったか……
   - https://cs50.jp/x/2021/week6/notes/#command-line-arguments-exit-codes
+  - argvに「python」は含まれないが「dna.py」は含まれる
+  - つまりdatabasesはargv[1]、sequencesはargv[2]に来る
