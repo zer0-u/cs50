@@ -412,4 +412,7 @@
 - 文字数はアルファベットのみを含む
   - 句読点・数字・その他記号は無視する
   - pythonだと便利ライブラリは特にないのかな
-  - isalphaメソッド
+- isalphaメソッド
+  - https://docs.python.org/ja/3/library/stdtypes.html?highlight=isalpha#str.isalpha
+  - 空白もFALSE判定
+  - 1文字ずつ取り出して判別するしかない？
