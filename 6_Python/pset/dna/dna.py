@@ -37,10 +37,16 @@ def count_str(sequence, str):
         # STRの1文字目と合致したら
         if sequence[i] == head:
             # 続きも合っているか確かめる
-            sub = sequence[i:(i+str_len)]
-            print(f"{i}文字目に合致 {sub}")
+            if sequence[i:i+str_len] == str:
+                # 繰り返し回数を1増やす
+                count+=1
+                # インデックスを飛ばす
+                i+=str_len
+        
 
-    return 0
+
+
+    return count
 
 
 main()
