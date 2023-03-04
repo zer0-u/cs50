@@ -13,8 +13,8 @@ def load_dictionary(filename):
     with open(filename,"r") as file:
         reader = csv.reader(file)
         # ヘッダを作る
-        next(reader)
-        for i in len(reader):
+        row = next(reader)
+        for i in len(row):
             print(row[i])
         # 中身を詰める
         # for row in reader:
