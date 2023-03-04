@@ -448,3 +448,8 @@
   - https://cs50.jp/x/2021/week6/notes/#command-line-arguments-exit-codes
   - argvに「python」は含まれないが「dna.py」は含まれる
   - つまりdatabasesはargv[1]、sequencesはargv[2]に来る
+
+#### dictionary読み込み
+- DictReaderを使うのは分かる
+- small.csvとlarge.csvで使っているSTRが違う
+- 
