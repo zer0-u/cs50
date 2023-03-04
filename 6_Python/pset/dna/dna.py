@@ -10,6 +10,7 @@ def main():
     # ファイル読み込み
     database = load_database(argv[1])
     sequence = load_sequence(argv[2])
+    print(sequence)
 
 
 def load_database(filename):
@@ -23,8 +24,7 @@ def load_database(filename):
 
 def load_sequence(filename):
     with open(filename, "r") as file:
-        reader = csv.reader(file)
-        return next(reader)[0]
+        return file.read()
 
 
 main()
