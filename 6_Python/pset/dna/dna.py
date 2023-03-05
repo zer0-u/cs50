@@ -19,17 +19,17 @@ def main():
     for str in strs:
         count = count_str(sequence, str)
         target[str] = count
-    print(f"target: {target}")
 
     # databaseと照合する
-    for d in database:
-        if is_same(d, target, strs):
-            print(d['name'])
+    for db in database:
+        if is_same(db, target, strs):
+            print(db['name'])
+            return
 
 
 def is_same(db, target, strs):
     for str in strs:
-        if db[str] != target[str]:
+        if int(db[str]) != target[str]:
             return False
     return True
 
