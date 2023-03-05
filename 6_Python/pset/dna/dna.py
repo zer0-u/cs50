@@ -76,7 +76,9 @@ def count_str(sequence, str):
             # 最大繰り返し回数を更新する
             if count > max_repeat:
                 max_repeat = count
+            # 繰り返し回数をリセットする
             count = 0
+            # 次の文字へ進む
             i += 1
 
     return max_repeat
