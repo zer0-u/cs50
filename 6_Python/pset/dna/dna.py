@@ -30,19 +30,19 @@ def load_sequence(filename):
 
 
 def count_str(sequence, str):
-    seq_len(len(sequence))
+    seq_len = len(sequence)
     str_len = len(str)
     count = 0
     max_repeat = 0
-
+    i = 0
     while i < seq_len:
         # 部分文字列がSTRと一致したら
-        if seq[i:i+str_len] == str:
+        if sequence[i:i+str_len] == str:
             # 繰り返し回数を1増やす
             count += 1
             # iをSTRの文字数の分だけ飛ばす
             i += str_len
-        else: # 一致しない=繰り返しが終了したら
+        else:  # 一致しない=繰り返しが終了したら
             # 最大繰り返し回数を更新する
             if count > max_repeat:
                 max_repeat = count
