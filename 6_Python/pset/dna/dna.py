@@ -10,8 +10,8 @@ def main():
     # ファイル読み込み
     database = load_database(argv[1])
     sequence = load_sequence(argv[2])
-    count_AGATC = count_str(sequence, "AGATC")
-    print(count_AGATC)
+    # count_AGATC = count_str(sequence, "AGATC")
+    # print(count_AGATC)
 
 
 def load_database(filename):
