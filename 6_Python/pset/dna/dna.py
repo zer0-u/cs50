@@ -10,11 +10,16 @@ def main():
     # ファイル読み込み
     database = load_database(argv[1])
     sequence = load_sequence(argv[2])
-    # count_AGATC = count_str(sequence, "AGATC")
-    # print(count_AGATC)
-    for d in database:
-        for s in d:
-            print(s)
+
+    # 今回の検証で用いるSTRの一覧を生成
+    strs = select_str(database)
+
+    # sequenceに含まれるSTRの回数を数える
+    target = {}
+    for str in strs:
+        count = count_str(sequence, str)
+        target[str] = count
+    print(target)
 
 
 def load_database(filename):
@@ -30,6 +35,15 @@ def load_sequence(filename):
     with open(filename, "r") as file:
         # 末尾の改行をrstripで取り除く
         return file.read().rstrip()
+
+
+def select_str(database):
+    # 今回の検証で用いるSTRの一覧を作る
+    sample = database[0]
+    keys = sample.keys()
+    key_list = list(keys)
+    # 先頭はnameなので2番目の要素から返す
+    return key_list[1:]
 
 
 def count_str(sequence, str):
