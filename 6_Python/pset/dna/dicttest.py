@@ -6,7 +6,10 @@ def main():
         "orange": 1,
         "peach": 1
     }
-    print(sample)
+    keys = sample.keys()
+    key_list = list(keys)
+    sliced = key_list[1:]
+    print(sliced)
 
 
 main()
