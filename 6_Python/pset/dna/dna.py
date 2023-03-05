@@ -30,24 +30,23 @@ def load_sequence(filename):
 
 
 def count_str(sequence, str):
-    head = str[0]
+    seq_len(len(sequence))
     str_len = len(str)
     count = 0
     max_repeat = 0
-    for i in range(len(sequence)):
-        # STRの1文字目と合致したら
-        if sequence[i] == head:
-            # 続きも合っているか確かめる
-            sub = sequence[i:i+str_len]
-            if sub == str:
-                # 繰り返し回数を1増やす
-                count += 1
-                # インデックスを飛ばす
-                i += str_len
-                # for debug
-                print(f"{i}文字目・{sub}が現れた回数: {count}")
-   
 
+    while i < seq_len:
+        # 部分文字列がSTRと一致したら
+        if seq[i:i+str_len] == str:
+            # 繰り返し回数を1増やす
+            count += 1
+            # iをSTRの文字数の分だけ飛ばす
+            i += str_len
+        else: # 一致しない=繰り返しが終了したら
+            # 最大繰り返し回数を更新する
+            if count > max_repeat:
+                max_repeat = count
+            i += 1
     return max_repeat
 
 
