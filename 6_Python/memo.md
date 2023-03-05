@@ -521,5 +521,8 @@
 - No matchを出力してなかった
 - small.csvは大丈夫だがlarge.csvを参照すると数え方が変わってしまう
 - python dna.py databases/large.csv sequences/5.txt
-  - target: {'AGATC': 28, 'TTTTTTCT': 33, 'AATG': 69, 'TCTAG': 18, 'GATA': 46, 'TATC': 36, 'GAAA': 67, 'TCTG': 60}
-  - Lavender,22,33,43,12,26,18,47,41
+  - 実測値 {'AGATC': 28, 'TTTTTTCT': 33, 'AATG': 69, 'TCTAG': 18, 'GATA': 46, 'TATC': 36, 'GAAA': 67, 'TCTG': 60}
+  - 期待値 {'AGATC': 22, 'TTTTTTCT': 33, 'AATG': 43, 'TCTAG': 12, 'GATA': 26, 'TATC': 18, 'GAAA': 47, 'TCTG': 41}
+  - 概ね期待値より多く数えられている
+- 1まとまりの繰り返しが終わったらcountをリセットするのを忘れていた
+- 再びテスト

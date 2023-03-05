@@ -23,6 +23,7 @@ def main():
 
     # databaseと照合する
     for db in database:
+        # print(db)
         if is_same(db, target, strs):
             print(db['name'])
             return
@@ -78,6 +79,7 @@ def count_str(sequence, str):
             if count > max_repeat:
                 max_repeat = count
             i += 1
+            count=0
     return max_repeat
 
 
