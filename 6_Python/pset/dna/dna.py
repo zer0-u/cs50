@@ -21,6 +21,12 @@ def main():
         target[str] = count
     print(target)
 
+    # databaseと照合する
+    for d in database:
+        name = d['name']
+        for str in strs:
+            print(f"{name} : STR({str}) * {d[str]} times")
+
 
 def load_database(filename):
     list = []
