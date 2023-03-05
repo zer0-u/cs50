@@ -19,6 +19,7 @@ def main():
     for str in strs:
         count = count_str(sequence, str)
         target[str] = count
+    print(f"target: {target}")
 
     # databaseと照合する
     for db in database:
