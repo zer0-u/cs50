@@ -25,6 +25,7 @@ def main():
         if is_same(db, target, strs):
             print(db['name'])
             return
+    print("No match")
 
 
 def is_same(db, target, strs):
