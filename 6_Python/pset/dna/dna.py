@@ -29,7 +29,9 @@ def main():
 
 
 def is_same(db, target, strs):
+    # 検証に使うSTRごとに
     for str in strs:
+        # databaseと対象のSTR回数が合致するかチェック
         if int(db[str]) != target[str]:
             return False
     return True
