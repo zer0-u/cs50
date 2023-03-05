@@ -520,3 +520,6 @@
 - 説明ページの一覧を試す
 - No matchを出力してなかった
 - small.csvは大丈夫だがlarge.csvを参照すると数え方が変わってしまう
+- python dna.py databases/large.csv sequences/5.txt
+  - target: {'AGATC': 28, 'TTTTTTCT': 33, 'AATG': 69, 'TCTAG': 18, 'GATA': 46, 'TATC': 36, 'GAAA': 67, 'TCTG': 60}
+  - Lavender,22,33,43,12,26,18,47,41
