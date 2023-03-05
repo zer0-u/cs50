@@ -12,6 +12,9 @@ def main():
     sequence = load_sequence(argv[2])
     # count_AGATC = count_str(sequence, "AGATC")
     # print(count_AGATC)
+    for d in database:
+        for s in d:
+            print(s)
 
 
 def load_database(filename):
