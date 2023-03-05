@@ -19,13 +19,19 @@ def main():
     for str in strs:
         count = count_str(sequence, str)
         target[str] = count
-    print(target)
+    print(f"target: {target}")
 
     # databaseと照合する
     for d in database:
-        name = d['name']
-        for str in strs:
-            print(f"{name} : STR({str}) * {d[str]} times")
+        if is_same(d, target, strs):
+            print(d['name'])
+
+
+def is_same(db, target, strs):
+    for str in strs:
+        if db[str] != target[str]:
+            return False
+    return True
 
 
 def load_database(filename):
