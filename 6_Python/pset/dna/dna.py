@@ -19,13 +19,11 @@ def main():
     for str in strs:
         count = count_str(sequence, str)
         target[str] = count
-    print(f"target: {target}")
 
     # databaseと照合する
     for db in database:
-        # print(db)
         if is_same(db, target, strs):
-            print(db['name'])
+            print(db["name"])
             return
     print("No match")
 
@@ -78,8 +76,9 @@ def count_str(sequence, str):
             # 最大繰り返し回数を更新する
             if count > max_repeat:
                 max_repeat = count
+            count = 0
             i += 1
-            count=0
+
     return max_repeat
 
 
