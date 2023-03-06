@@ -9,7 +9,7 @@ with open("sample.csv", "r")as file:
     #     print(row[1])  # タイトルだけ出力する
     reader = csv.DictReader(file)  # DictReaderを使うと堅牢性が増す
     for row in reader:
-        titles.add(row["title"].upper()) # 正規化のためすべて大文字にする
+        titles.add(row["title"].strip().upper())  # 正規化も行う
 
 for title in sorted(titles):
     print(title)
