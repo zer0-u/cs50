@@ -105,4 +105,8 @@
 - 値でソートしたい時はソート用の関数を用意する
   - get_value関数
 - sorted関数のkey引数にキー(を取得する関数そのもの)を渡す
+- reverse=Trueは数値だと大きい順を意味する
+- THE OFFICEってどんな番組なんだろう
+- favorites3.pyをもっと短くしたい
+- 引数keyにget_value関数ではなくラムダ関数を渡す
 - 
