@@ -141,4 +141,5 @@
   - OFFICEまたはTHE OFFICEで始まり、それ以外の内容がない
 - 「^(OFFICE|THE.OFFICE)$」
   - THEの後に任意の1文字を指定できる
-- 
+- THE OFFICE以外の番組名にも対応させる(favorites5.py)
+  - 調べたいタイトルを最初に入力してもらう
