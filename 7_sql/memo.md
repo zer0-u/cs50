@@ -133,3 +133,12 @@
   - 検証に正規表現も使える
   - メールアドレスを表す正規表現は「.+@.+\..+」
 - pythonでも正規表現が使える
+  - reライブラリをimportする
+  - re.search(パターン,対象文字列)
+- re.search("office", title)にしたら何も検出されなかった
+  - ひとまず大文字にしなければならない
+- 「^(OFFICE|THE OFFICE)$」
+  - OFFICEまたはTHE OFFICEで始まり、それ以外の内容がない
+- 「^(OFFICE|THE.OFFICE)$」
+  - THEの後に任意の1文字を指定できる
+- 
