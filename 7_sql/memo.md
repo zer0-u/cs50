@@ -199,4 +199,7 @@
 - 現在のfavoritesテーブルのgenresを見る
 - UPDATEのデモの時にWHEREを指定しそびれて全部が同じ結果になってしまった
   - 取り消せないのでfavorites.dbを消して作り直す
+- comedyを選択した作品を出してみる
+  - WHERE genres = "Comedy" だとComedy「だけ」を指定した作品が出てくる
+  - 複数ジャンルの中にComedyが含まれるものは検出できない
 - 
