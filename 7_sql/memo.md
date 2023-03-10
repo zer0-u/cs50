@@ -203,4 +203,6 @@
   - WHERE genres = "Comedy" だとComedy「だけ」を指定した作品が出てくる
   - 複数ジャンルの中にComedyが含まれるものは検出できない
   - LIKEを使うとComedyを含む作品がすべて表示される
+- LIKEを使うと「Music」と「Musical」が区別できない
+  - MusicにMusicalが含まれてしまう
 - 
