@@ -228,4 +228,5 @@
 - 1対多の関係
   - 1つの番組に対して複数のジャンルを持っていること
 - genresテーブルを使えば「Comedy」にチェックを入れた番組が簡単に抽出できる
-- inner join
+- select title from shows where id in (select show_id from genres where genre = "Comedy");
+- 
