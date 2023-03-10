@@ -229,4 +229,5 @@
   - 1つの番組に対して複数のジャンルを持っていること
 - genresテーブルを使えば「Comedy」にチェックを入れた番組が簡単に抽出できる
 - select title from shows where id in (select show_id from genres where genre = "Comedy");
-- 
+- distinctをつければ重複も排除できる
+- SQLは徐々に作っていく方がよい
