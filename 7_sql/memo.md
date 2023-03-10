@@ -214,4 +214,10 @@
 - CS50ライブラリに含まれるSQL操作関数を呼び出している
 - favorites.csvを読み込み、1行ごとに処理をする
   - 最終的にshowsテーブルとgenresテーブルができる
+- showsテーブル
+  - id列(整数・プライマリキー)
+  - title列(文字列・NOT NULL)
+- genresテーブル
+  - show_id(整数・外部キー)
+  - genre(文字列・NOT NULL)
 - 
