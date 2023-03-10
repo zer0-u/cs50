@@ -231,3 +231,7 @@
 - select title from shows where id in (select show_id from genres where genre = "Comedy");
 - distinctをつければ重複も排除できる
 - SQLは徐々に作っていく方がよい
+- DBをCSVに転送する方法はいくつかある
+  - SQLiteには書き出しコマンドがある
+  - 基本的にはSQLの世界でデータを長期的に保存する
+- 
