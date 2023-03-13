@@ -263,4 +263,12 @@
   - データセットはTSV(タブ区切り)で提供される
 - データセットの中身を確かめる
   - 今回の講義は基本的に見ているだけなのかな？
-- 
+- shows, genres, stars, writers, ratingsなどのテーブルが見える
+- shows
+  - id・タイトル・年・総エピソード数
+- SQLiteで扱うデータ型は全部で5つ
+  - integer(整数)
+  - numeric(日付や時間のための、整数や実数でない数値)
+  - real(実数)
+  - text(字数制限のないテキスト)
+  - blob(binary large object)
