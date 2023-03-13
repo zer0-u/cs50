@@ -1,7 +1,6 @@
-import csv
 from cs50 import SQL
 
-# DBに接続する
+# DBに接続する(引数はURI)
 db = SQL("sqlite:///favorites.db")
 
 # タイトルを入力してもらう
