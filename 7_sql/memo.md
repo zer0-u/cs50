@@ -324,4 +324,15 @@
   - peopleテーブルのname列にもインデックスを張る
   - 0.84秒で作成
   - 0.001秒まで短縮できた
-- 
+- データセットが遅い時は適切なインデックスが存在しない場合が多い
+  - プログラムが採用したアルゴリズムが悪い可能性もある
+- ネストされた＝括弧で括られたクエリが多くなってきた
+- JOINで短縮しよう
+  - SELECT title FROM people JOIN stars ON people.id = stars.person_id;
+  - id列を使ってpeopleテーブルとstarsテーブルを結合する
+  - SELECT title FROM people JOIN stars ON people.id = stars.person_id JOIN shows ON stars.show_id = shows.id
+  - showsテーブルも結合する
+  - SELECT title FROM people JOIN stars ON people.id = stars.person_id JOIN shows ON stars.show_id = shows.id WHERE name = "Steve Carell";
+  - 検索対象を指定する
+  - 1つのクエリで同じ結果が得られるようになった
+- S
