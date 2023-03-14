@@ -335,4 +335,7 @@
   - SELECT title FROM people JOIN stars ON people.id = stars.person_id JOIN shows ON stars.show_id = shows.id WHERE name = "Steve Carell";
   - 検索対象を指定する
   - 1つのクエリで同じ結果が得られるようになった
-- S
+- SELECT title FROM people, stars, shows WHERE people.id = stars.person_id AND stars.show_id = shows.id AND name = "Steve Carell";
+  - 同じ結果を得るためのSQL文は複数ある
+  - 必要なテーブルを列挙してWHEREで絞る
+  - セミコロンをつけなければ文中での改行も可
