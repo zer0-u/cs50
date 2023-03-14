@@ -314,4 +314,14 @@
 - まずはpeopleでIDを取得する
   - 名前と生年は気にしなくて良い
 - starsテーブルを使うと、あるperson_idに紐付けられたshow_idをすべて取得できる
+- SELECT title FROM shows WHERE id IN (SELECT show_id FROM stars WHERE person_id = (SELECT id FROM people WHERE name = "Steve Carell"));
+- 長くなるので要素に分解して考える
+- order by titleをつけるとタイトルのアルファベット順で参照できる
+- 0.094秒で結果が出た
+  - スピードアップできないか？
+  - starsテーブルのperson_id列・show_id列にもインデックスを張る
+  - それぞれ作成に0.89秒・0,64秒かかった
+  - peopleテーブルのname列にもインデックスを張る
+  - 0.84秒で作成
+  - 0.001秒まで短縮できた
 - 
