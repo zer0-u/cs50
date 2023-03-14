@@ -280,3 +280,16 @@
 - showsテーブルの詳細
   - idは自動的に挿入された整数(プライマリキー)
 - genresテーブルはshowsテーブルへの外部キーを持っている
+- stars(出演者)
+  - show_id, person_id
+- writers(脚本家)
+  - show_id, person_id
+- rating(評価？)
+  - show_id
+  - rating(評価の★の数？・実数)
+  - votes(投票数)
+- people(人物)
+  - writersとstarsの親
+  - 氏名と生年月日を持つ
+  - peopleとpersonてニュアンス的にはどう違うんだろう
+- 共通点を取り出して1つのテーブルに定義している
