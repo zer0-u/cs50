@@ -376,3 +376,22 @@ codespacesがアップデートしたのでプラグインを入れ直した
 ## 0317
 
 ### lab
+- 既存のテーブルはsongsとartistsの2つ
+
+CREATE TABLE songs (
+    id INTEGER,
+    name TEXT,
+    artist_id INTEGER,
+    danceability REAL,
+    energy REAL,
+    key INTEGER,
+    loudness REAL,
+    speechiness REAL,
+    valence REAL,
+    tempo REAL,
+    duration_ms INTEGER
+);
+CREATE TABLE artists (
+    id INTEGER,
+    name TEXT
+);
