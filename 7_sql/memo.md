@@ -395,3 +395,5 @@ CREATE TABLE artists (
     id INTEGER,
     name TEXT
 );
+
+- sql文だけでいいのかな？
