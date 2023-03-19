@@ -479,3 +479,10 @@ CREATE TABLE people (
 - 見た感じ正しい結果が出ていそうな気がするんだけどな
 - countを使ったら行数が合致したので恐らく大丈夫だろう
 - expected valueが全てではないらしい
+
+#### pset movies 修正(10)
+- Christopher Nolanがいない
+  - 違った
+  - この演習に関してはexpected valueを信じたら駄目だ
+- 「以上」が「より大きい」になっていた
+- 件数が合っているから大丈夫なはず
