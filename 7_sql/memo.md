@@ -536,4 +536,5 @@ CREATE TABLE crime_scene_reports (
    - answers.txtを上書きしたりすると面倒なのでkeepフォルダへ移動
    - 最後に戻す
 - Theft of the CS50 duck took place at 10:15am at the Chamberlin Street courthouse. Interviews were conducted today with three witnesses who were present at the time — each of their interview transcripts mentions the courthouse.
-  - 盗難事件は午前10時15分にchemberlin通りの裁判所前で起きた
+  - 盗難事件は午前10時15分にchemberlin通りの裁判所で起きた
+  - 同じ日に3人の目撃者
