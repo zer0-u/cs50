@@ -18,11 +18,3 @@ select * from people
         )
 ;
 
--- 協力者を探す
-select * from people
-    where phone_number in
-        (select receiver from phone_calls
-            where year = 2020 and month = 7 and day = 28
-            and caller in ('(130) 555-0289','(499) 555-9472','(367) 555-5533')
-        )
-;
