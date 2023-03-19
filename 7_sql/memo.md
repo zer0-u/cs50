@@ -493,4 +493,4 @@ CREATE TABLE people (
 - Johnnyが61件・Helenaが39件・共演が6件
   - 61+39-6=94
   - 推測通り
--
+- Johnnyが出演した中で、かつHelenaが出演したものっていう絞り方にすればいける？

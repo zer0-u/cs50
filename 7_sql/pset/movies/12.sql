@@ -13,3 +13,10 @@ SELECT m.title FROM movies m WHERE m.id IN
     (SELECT s.movie_id FROM stars s WHERE s.person_id =
         (SELECT p.id FROM people p WHERE name = 'Helena Bonham Carter')
     );
+-- Johnnyが出演した中でHelenaが出演したもの
+SELECT m.title FROM movies m WHERE m.id IN
+    (SELECT m.id FROM movies m WHERE m.id IN
+        (SELECT s.movie_id FROM stars s WHERE s.person_id =
+            (SELECT p.id FROM people p WHERE name = 'Johnny Depp')
+        )
+    )
