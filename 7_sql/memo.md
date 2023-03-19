@@ -459,4 +459,7 @@ CREATE TABLE people (
 - inner join の使い方を忘れる
 - 主演した＝出演した？
   - starsテーブルに主演とそれ以外の区別はないので恐らく誤訳
-  - 後で原文を確かめたい
+  - 原文は「all people who starred in a movie...」
+  - star(動詞)は「主演する」という意味
+  - まぁともかく「starsテーブルに存在する」と読み替えて良いんじゃなかろうか
+- 
