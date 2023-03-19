@@ -561,7 +561,24 @@ CREATE TABLE interviews (
 - 3人に絞り込めた
 - 駐車場の監視カメラ・ATMの利用情報・飛行機の便情報が使えそう
 
-#### fiftywille courthouse_security_logs
+#### fiftyville courthouse_security_logs
 - 恐らくこれが駐車場の監視カメラ情報
 - 2020年7月28日の午前10時15分から25分の情報が知りたい
-- ac
+- activityはentrance(入場)とexit(出場)のどちらか
+- 今回は「出ていった車の情報」がほしいのでexitに絞る
+- 全部で8件
+  - うーん
+- 一旦保留として次の手がかりに移る
+
+#### fiftyville atm_transactions
+CREATE TABLE atm_transactions (
+    id INTEGER,
+    account_number INTEGER,
+    year INTEGER,
+    month INTEGER,
+    day INTEGER,
+    atm_location TEXT,
+    transaction_type TEXT,
+    amount INTEGER,
+    PRIMARY KEY(id)
+);
