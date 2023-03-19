@@ -612,4 +612,5 @@ CREATE TABLE flights (
 
 #### fiftyville phone_calls
 - チケットを取るように電話していた
+- 泥棒が「they」で表されてる＝複数犯？
 - 
