@@ -1,8 +1,0 @@
-Expected Output:
-Christopher Nolan
-Frank Darabont
-Yimou Zhang
-
-Actual Output:
-Frank Darabont
-Yimou Zhang
