@@ -541,7 +541,7 @@ CREATE TABLE crime_scene_reports (
   - それぞれの目撃者は裁判所について言及している
 - 次はinterviewsかな？
 
-#### fiftyville interviews
+#### fiftyville interviews.sql
 CREATE TABLE interviews (
     id INTEGER,
     name TEXT,
@@ -553,3 +553,6 @@ CREATE TABLE interviews (
 );
 - 違うかもしれない
 - 一旦年月日で絞ってみる
+- 6件出てきた
+- 目撃者は3人なのでちょっと多い
+- 突然codespacesが落ちたのでｷｰってなった
