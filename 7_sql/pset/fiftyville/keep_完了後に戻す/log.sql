@@ -30,7 +30,7 @@ select id, hour, minute, license_plate from courthouse_security_logs
     and activity = 'exit'
     order by minute;
 
--- 調査3-2. 調査3-1の結果を使って、車の持ち主の名前を調べる
+-- 調査3-2. 調査3-1の結果を使って、車の持ち主を調べる
 ---- この時点での容疑者は8人
 select * from people
     where license_plate in
@@ -48,3 +48,13 @@ select id, account_number, amount from atm_transactions
     and atm_location = 'Fifer Street'
     and transaction_type = 'withdraw'
     order by id;
+
+-- 調査4-2. 調査4-1の結果を使って、口座の持ち主を調べる
+select * from people
+    where account_number in
+        (select account_number from atm_transactions
+            where year = 2020 and month = 7 and day = 28
+            and atm_location = 'Fifer Street'
+            and transaction_type = 'withdraw'
+        )
+;
