@@ -1,0 +1,3 @@
+The THIEF is: Roger, Evelyn, Ernest
+The thief ESCAPED TO: London
+The ACCOMPLICE is: Larry, Jack, Berthold
