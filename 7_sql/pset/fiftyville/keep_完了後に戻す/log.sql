@@ -18,7 +18,7 @@ select id,name,transcript from interviews
 -- 証言から得られた情報
 ---- 情報A. (Ruth) 泥棒は事件から10分以内に裁判所の駐車場から出ていった
 ---- 情報B. (Eugene) 事件当日、泥棒はFifer StreetのATMで現金を引き出した
----- 情報C. (Raymond) 泥棒は裁判所から出る時誰かに短い(1分以内)の電話をかけた
+---- 情報C. (Raymond) 泥棒は裁判所から出る時、協力者に短い(1分以内)の電話をかけた
 ---- 情報D. (Raymond) 泥棒は協力者に「明日(7/29)一番早くFiftyvilleを出る飛行機」のチケットを買うよう指示した
 
 -- 調査3-1. 情報Aを使って、事件発生から10分以内に駐車場を出た車のナンバーを調べる
@@ -31,7 +31,6 @@ select id, hour, minute, license_plate from courthouse_security_logs
     order by minute;
 
 -- 調査3-2. 調査3-1の結果を使って、車の持ち主を調べる
----- この時点での容疑者は8人
 select * from people
     where license_plate in
         (select license_plate from courthouse_security_logs
@@ -50,13 +49,20 @@ select id, account_number, amount from atm_transactions
     order by id;
 
 -- 調査4-2. 調査4-1の結果を使って、口座の持ち主を調べる
-
-
-select * from bank_accounts
-    where account_number in
+select * from people
+    where id in
+    (select person_id from bank_accounts
+        where account_number in
             (select account_number from atm_transactions
-            where year = 2020 and month = 7 and day = 28
-            and atm_location = 'Fifer Street'
-            and transaction_type = 'withdraw'
-        )
+                where year = 2020 and month = 7 and day = 28
+                and atm_location = 'Fifer Street'
+                and transaction_type = 'withdraw'
+            )
+    )
 ;
+
+-- 調査5-1. 情報Cを使って、2020/07/28に1分以内の通話を行った情報を調べる
+select id, caller, receiver, duration from phone_calls
+    where year = 2020 and month = 7 and day = 28
+    and duration < 60
+    order by id;
