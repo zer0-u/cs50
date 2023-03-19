@@ -562,4 +562,6 @@ CREATE TABLE interviews (
 - 駐車場の監視カメラ・ATMの利用情報・飛行機の便情報が使えそう
 
 #### fiftywille courthouse_security_logs
-- 
+- 恐らくこれが駐車場の監視カメラ情報
+- 2020年7月28日の午前10時15分から25分の情報が知りたい
+- ac
