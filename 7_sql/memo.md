@@ -582,3 +582,9 @@ CREATE TABLE atm_transactions (
     amount INTEGER,
     PRIMARY KEY(id)
 );
+- 朝早くって何時くらいだろう
+  - とりあえず10時より前で出してみる
+  - atm_transactionsテーブルに時刻情報はなかった
+- 「引き出しているところを見た(saw the thief there withdrawing some money.)」だから種類はwithdrawに絞れる
+  - そんな細かいところまで見られるものなのかな
+- これも結果は8件
