@@ -537,4 +537,19 @@ CREATE TABLE crime_scene_reports (
    - 最後に戻す
 - Theft of the CS50 duck took place at 10:15am at the Chamberlin Street courthouse. Interviews were conducted today with three witnesses who were present at the time — each of their interview transcripts mentions the courthouse.
   - 盗難事件は午前10時15分にchemberlin通りの裁判所で起きた
-  - 同じ日に3人の目撃者
+  - 同じ日に3人の目撃者へインタビューが行われた
+  - それぞれの目撃者は裁判所について言及している
+- 次はinterviewsかな？
+
+#### fiftyville interviews
+CREATE TABLE interviews (
+    id INTEGER,
+    name TEXT,
+    year INTEGER,
+    month INTEGER,
+    day INTEGER,
+    transcript TEXT,
+    PRIMARY KEY(id)
+);
+- 違うかもしれない
+- 一旦年月日で絞ってみる
