@@ -556,3 +556,5 @@ CREATE TABLE interviews (
 - 6件出てきた
 - 目撃者は3人なのでちょっと多い
 - 突然codespacesが落ちたのでｷｰってなった
+- crime_reportのときに「目撃者は裁判所について言及している」とあるから、transcriptsに裁判所(courthouse)があるものに絞る
+- 
