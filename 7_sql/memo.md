@@ -621,3 +621,11 @@ CREATE TABLE flights (
   - 8件じゃなかった
 
 #### fiftyville 考える
+- ここまでで使えそうな個人情報
+  - 車のナンバー(security / license_plate)
+  - 口座番号(atm / account_number)
+  - パスポート番号(flight / passport_number)
+  - 電話番号(phone / callerとreceiver)
+- peopleテーブルに一通りまとまっている
+- これまでヒットした情報をすべて持っている人物が泥棒
+  - 泥棒が電話をかけた相手が協力者？
