@@ -5,10 +5,19 @@ select id, description from crime_scene_reports
     where year = 2020 and month = 7 and day = 28
     and street = 'Chamberlin Street';
 
+-- 事件概要
+---- 2020/07/28 AM10:15、Chamberlin Streetの裁判所でCS50 duckが
+
 -- 2020/07/28に行われた証言のうち、裁判所(courthouse)に言及したものを調べる
 select id,name,transcript from interviews
     where year = 2020 and month = 7 and day = 28
     and transcript like '%courthouse%';
+
+-- 証言から得られた情報
+-- 1
+---- 泥棒は事件から10分以内に裁判所の駐車場から出ていった
+-- 2
+---- 事件当日、Eugeneが裁判所に着く前、Fifer StreetのATMで泥棒が現金を引き出しているところを見た
 
 -- 泥棒を探す
 -- ヒント1 監視カメラから分かったナンバープレート
