@@ -624,3 +624,5 @@ CREATE TABLE flights (
   - I saw the thief get into a car in the courthouse parking lot and drive away.
   - 駐車場で車に乗り込み、走り去っていった
   - 車はいつ駐車場に入ったのか？
+  - いやでも「駐車場から出ていった」ことが大事だから関係ないか
+- 
