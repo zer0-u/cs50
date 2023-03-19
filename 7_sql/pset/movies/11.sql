@@ -2,16 +2,15 @@
 SELECT m.title FROM movies m WHERE m.id IN
     (SELECT s.movie_id FROM stars s WHERE s.person_id =
         (SELECT p.id FROM people p WHERE p.name = 'Chadwick Boseman'
-        ));
+        )) ORDER by m.title;
 
+| 21 Bridges               |
 | 42                       |
-| Message from the King    |
-| The Kill Hole            |
 | Black Panther            |
 | Draft Day                |
-| Gods of Egypt            |
 | Get on Up                |
-| Marshall                 |
-| 21 Bridges               |
+| Gods of Egypt            |
 | Ma Rainey's Black Bottom |
-+--------------------------+
+| Marshall                 |
+| Message from the King    |
+| The Kill Hole            |
