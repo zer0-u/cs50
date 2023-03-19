@@ -1,9 +1,9 @@
 -- Keep a log of any SQL queries you execute as you solve the mystery.
 
 -- 2020/07/28にChamberlin Streetで起きた事件を調べる
-SELECT id, description FROM crime_scene_reports
-    WHERE year = 2020 AND month = 7 AND day = 28
-        AND street = 'Chamberlin Street';
+select id, description from crime_scene_reports
+    where year = 2020 and month = 7 and day = 28
+    and street = 'Chamberlin Street';
 
 -- 2020/07/28に行われた証言のうち、裁判所(courthouse)に言及したものを調べる
 select id,name,transcript from interviews
