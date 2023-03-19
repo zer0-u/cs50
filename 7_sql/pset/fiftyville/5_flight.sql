@@ -14,3 +14,6 @@ select f.id, f.hour,f.minute,a.full_name,a.city
     where f.year = 2020 and f.month = 7 and f.day = 29
     and f.origin_airport_id = (select id from airports where city = 'Fiftyville')
     order by f.hour,f.minute;
+
+-- 8時20分発ヒースロー行き(id:36)の乗客一覧
+select * from passengers where flight_id = 36;
