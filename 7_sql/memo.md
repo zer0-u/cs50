@@ -627,9 +627,12 @@ CREATE TABLE flights (
   - パスポート番号(flight / passport_number)
   - 電話番号(phone / callerとreceiver)
 - peopleテーブルに一通りまとまっている
+
+#### fiftyville 泥棒を特定する(7_people)
 - これまでヒットした情報をすべて持っている人物が泥棒
-  - 泥棒が電話をかけた相手が協力者？
 - 3人ヒットした
   - Roger, Evelyn, Ernest
   - theyだし3人でもいいのかなー
-- 協力者を調べる
+
+#### fiftyville 協力者を特定する(8_receiver)
+- 泥棒が電話をかけた相手が協力者のはず
