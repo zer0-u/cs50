@@ -617,3 +617,10 @@ CREATE TABLE flights (
 - answer.txtだと「The THIEF is」なんだよな
 - 違った
 - 3つとも合ってないと駄目らしいのでヒントもなし
+
+#### fiftyville 考え直し
+- これまでの情報を整理してみる
+- interviewの1つ目(駐車場)
+  - I saw the thief get into a car in the courthouse parking lot and drive away.
+  - 駐車場で車に乗り込み、走り去っていった
+  - 車はいつ駐車場に入ったのか？
