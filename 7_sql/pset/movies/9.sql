@@ -1,2 +1,2 @@
 -- 2004年に公開された映画に主演したすべての人の名前を、誕生年順にリストする
-SELECT p.name AS name FROM 
+SELECT DISTINCT p.name AS name FROM people p WHERE id in (SELECT person_id FROM stars WHERE movie_id IN (SELECT id FROM movies WHERE year = 2004)) ORDER BY p.birth;
