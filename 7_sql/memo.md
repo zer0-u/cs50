@@ -528,3 +528,7 @@ CREATE TABLE crime_scene_reports (
     description TEXT,
     PRIMARY KEY(id)
 );
+- 事件は2020年7月28日にチェンバリン通りで起きた
+- cat filename.sql | sqlite3.fiftyville.db > output.txt
+-  Theft of the CS50 duck took place at 10:15am at the Chamberlin Street courthouse. Interviews were conducted today with three witnesses who were present at the time — each of their interview transcripts mentions the courthouse.
+-  ファイル実行用のスクリプトを用意しておこう
