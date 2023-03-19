@@ -636,5 +636,11 @@ CREATE TABLE flights (
 
 #### fiftyville 協力者を特定する(8_receiver)
 - 泥棒が電話をかけた相手が協力者のはず
-- evelynが2回電話をかけている
-  - なんかうまく絞れてないな
+- なんかうまく絞れてないな
+- 手作業でちまちま絞り込んだ
+  - 6_phoneの実行結果から泥棒の通話相手の番号を特定
+  - peopleテーブルで絞り込み
+  - Larry, Jack, Berthold
+
+#### fiftyville テスト
+- answer.txtだと「The THIEF is」なんだよな
