@@ -5,5 +5,6 @@ select id, minute, license_plate from courthouse_security_logs
     order by minute;
 
     select id,hour, minute, activity, license_plate from courthouse_security_logs
-    where year = 2020 and month = 7 and day = 28
+    where year = 2020 and month = 7 and day = 28 and hour = 10
+
     order by hour,minute;
