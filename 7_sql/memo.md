@@ -588,3 +588,19 @@ CREATE TABLE atm_transactions (
 - 「引き出しているところを見た(saw the thief there withdrawing some money.)」だから種類はwithdrawに絞れる
   - そんな細かいところまで見られるものなのかな
 - これも結果は8件
+
+#### fiftyville flight
+CREATE TABLE flights (
+    id INTEGER,
+    origin_airport_id INTEGER,
+    destination_airport_id INTEGER,
+    year INTEGER,
+    month INTEGER,
+    day INTEGER,
+    hour INTEGER,
+    minute INTEGER,
+    PRIMARY KEY(id),
+    FOREIGN KEY(origin_airport_id) REFERENCES airports(id),
+    FOREIGN KEY(destination_airport_id) REFERENCES airports(id)
+);
+- テーブル情報は別のファイルに用意しておこう
