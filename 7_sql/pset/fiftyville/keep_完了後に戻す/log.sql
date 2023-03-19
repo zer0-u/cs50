@@ -21,7 +21,7 @@ select id,name,transcript from interviews
 ---- 情報C. (Raymond) 泥棒は裁判所から出る時誰かに短い(1分以内)の電話をかけた
 ---- 情報D. (Raymond) 泥棒は協力者に「明日(7/29)一番早くFiftyvilleを出る飛行機」のチケットを買うよう指示した
 
--- 調査3-1. 情報Aにもとづき、事件発生から10分以内に駐車場を出た車のナンバーを調べる
+-- 調査3-1. 情報Aを使って、事件発生から10分以内に駐車場を出た車のナンバーを調べる
 ---- 事件発生から10分以内 = 2020/07/28 午前10時15～25分
 select id, hour, minute, license_plate from courthouse_security_logs
     where year = 2020 and month = 7 and day = 28
@@ -41,3 +41,10 @@ select * from people
             and activity = 'exit'
         )
 ;
+
+-- 調査4-1. 情報Bを使って、7/28にFifer StreetのATMで現金を引き出した人を調べる
+select id, account_number, amount from atm_transactions
+    where year = 2020 and month = 7 and day = 28
+    and atm_location = 'Fifer Street'
+    and transaction_type = 'withdraw'
+    order by id;
