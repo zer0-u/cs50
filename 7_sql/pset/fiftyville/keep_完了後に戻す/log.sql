@@ -1,23 +1,24 @@
 -- Keep a log of any SQL queries you execute as you solve the mystery.
 
--- 2020/07/28にChamberlin Streetで起きた事件を調べる
+-- 調査1. 2020/07/28にChamberlin Streetで起きた事件を調べる
 select id, description from crime_scene_reports
     where year = 2020 and month = 7 and day = 28
     and street = 'Chamberlin Street';
 
 -- 事件概要
----- 2020/07/28 AM10:15、Chamberlin Streetの裁判所でCS50 duckが
+---- 2020/07/28 AM10:15、Chamberlin Streetの裁判所でCS50 duckが盗まれた
+---- 事件当日に3人の目撃者に対してインタビューが行われた
+---- 3人の目撃者はそれぞれインタビューの中で裁判所(courthouse)について言及した
 
--- 2020/07/28に行われた証言のうち、裁判所(courthouse)に言及したものを調べる
+-- 調査2. 2020/07/28に行われた証言のうち、裁判所(courthouse)に言及したものを調べる
 select id,name,transcript from interviews
     where year = 2020 and month = 7 and day = 28
     and transcript like '%courthouse%';
 
 -- 証言から得られた情報
--- 1
----- 泥棒は事件から10分以内に裁判所の駐車場から出ていった
--- 2
----- 事件当日、Eugeneが裁判所に着く前、Fifer StreetのATMで泥棒が現金を引き出しているところを見た
+---- 情報1. (Ruth) 泥棒は事件から10分以内に裁判所の駐車場から出ていった
+---- 情報2. (Eugene) 事件当日、泥棒はFifer StreetのATMで現金を引き出した
+---- 情報3. (Raymond)
 
 -- 泥棒を探す
 -- ヒント1 監視カメラから分かったナンバープレート
