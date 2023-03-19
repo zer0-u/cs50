@@ -41,7 +41,7 @@ select * from people
         )
 ;
 
--- 調査4-1. 情報Bを使って、7/28にFifer StreetのATMで現金を引き出した人を調べる
+-- 調査4-1. 情報Bを使って、2020/07/28にFifer StreetのATMで現金を引き出した人を調べる
 select id, account_number, amount from atm_transactions
     where year = 2020 and month = 7 and day = 28
     and atm_location = 'Fifer Street'
@@ -75,3 +75,18 @@ select * from people
         and duration < 60
     )
 ;
+
+-- 調査5-3. 調査5-1を使って、通話を「受けた」人(receiver)の情報を調べる
+select * from people
+    where phone_number in
+    (select receiver from phone_calls
+        where year = 2020 and month = 7 and day = 28
+        and duration < 60
+    )
+;
+
+-- 調査6. 情報Dを使って、2020/07/29に一番早くFiftyvilleを出る便を調べる
+select id, hour,minute,destination_airport_id from flights
+    where year = 2020 and month = 7 and day = 29
+    and origin_airport_id = (select id from airports where city = 'Fiftyville')
+    order by hour,minute;
