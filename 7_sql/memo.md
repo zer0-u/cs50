@@ -629,3 +629,5 @@ CREATE TABLE flights (
 - peopleテーブルに一通りまとまっている
 - これまでヒットした情報をすべて持っている人物が泥棒
   - 泥棒が電話をかけた相手が協力者？
+- 3人ヒットした
+  - Roger, Evelyn, Ernest
