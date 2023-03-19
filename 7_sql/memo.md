@@ -557,4 +557,9 @@ CREATE TABLE interviews (
 - 目撃者は3人なのでちょっと多い
 - 突然codespacesが落ちたのでｷｰってなった
 - crime_reportのときに「目撃者は裁判所について言及している」とあるから、transcriptsに裁判所(courthouse)があるものに絞る
+- いちいち切り替えるのも面倒だしcodespaces上では色付けされるので全部小文字で書くことにした
+- 3人に絞り込めた
+- 駐車場の監視カメラ・ATMの利用情報・飛行機の便情報が使えそう
+
+#### fiftywille courthouse_security_logs
 - 

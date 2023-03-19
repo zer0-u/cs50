@@ -1,0 +1,18 @@
+
+| 161 | Ruth    | Sometime within ten minutes of the theft, I saw the thief get into a car in the courthouse parking lot and drive away. If you have security footage from the courthouse parking lot, you might want to look for cars that left the parking lot in that time frame.
+
+- 泥棒は盗難から10分以内に車で走り去った
+- 車は裁判所の駐車場から出ていった
+- 駐車場の監視カメラ映像(security footage)を参照したら車の情報が分かるかもしれない
+                                                 |
+| 162 | Eugene  | I don't know the thief's name, but it was someone I recognized. Earlier this morning, before I arrived at the courthouse, I was walking by the ATM on Fifer Street and saw the thief there withdrawing some money.                                                                                                      |
+
+- 泥棒の名前は知らない
+- 泥棒に見覚えがある
+- 今朝(7/28)早く、Eugeneが裁判所に着く前、Fifer StreetのATMで泥棒が現金を引き出しているところを見た
+
+| 163 | Raymond | As the thief was leaving the courthouse, they called someone who talked to them for less than a minute. In the call, I heard the thief say that they were planning to take the earliest flight out of Fiftyville tomorrow. The thief then asked the person on the other end of the phone to purchase the flight ticket. |
+
+- 泥棒が裁判所を出る前に誰かと短い(1分以内)電話をしていた
+- 明日、Fiftyvilleから一番はやく出る便に乗る予定
+- 電話した相手に飛行機のチケットを取るよう頼んでいた
