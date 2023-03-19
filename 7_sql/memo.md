@@ -447,3 +447,8 @@ CREATE TABLE people (
                 PRIMARY KEY(id)
             );
 
+- ratingって何かなとデータを覗いてみたがよく分からない
+  - 評価数？
+  - 少なくとも年齢制限ではない
+  - 1.0から10.0
+  - 
