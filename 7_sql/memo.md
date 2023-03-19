@@ -631,3 +631,5 @@ CREATE TABLE flights (
   - 泥棒が電話をかけた相手が協力者？
 - 3人ヒットした
   - Roger, Evelyn, Ernest
+  - theyだし3人でもいいのかなー
+- 協力者を調べる
