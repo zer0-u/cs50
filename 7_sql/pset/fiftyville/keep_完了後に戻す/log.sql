@@ -66,3 +66,12 @@ select id, caller, receiver, duration from phone_calls
     where year = 2020 and month = 7 and day = 28
     and duration < 60
     order by id;
+
+-- 調査5-2. 調査5-1を使って、通話を「かけた」人(caller)の情報を調べる
+select * from people
+    where phone_number in
+    (select caller from phone_calls
+        where year = 2020 and month = 7 and day = 28
+        and duration < 60
+    )
+;
