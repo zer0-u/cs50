@@ -500,3 +500,31 @@ CREATE TABLE people (
 - 10.sqlを件数表示のままにしていた
   - 凡ミス注意
 - できた！
+
+### pset fiftyville
+- 面白そう
+- fiftyville.dbにあるテーブルの一覧
+  - airports
+  - crime_scene_reports
+  - people
+  - atm_transactions
+  - flights
+  - phone_calls
+  - bank_accounts
+  - interviews
+  - courthouse_security_logs
+  - passengers
+- まずはcrime_scene_reportsを参照すると良いらしい
+- テーブルを絞ってCREATE文を見たい時は「.schema TABLE_NAME」
+  - 先頭にドットが必要
+
+#### fiftyville crime_scene_reports
+CREATE TABLE crime_scene_reports (
+    id INTEGER,
+    year INTEGER,
+    month INTEGER,
+    day INTEGER,
+    street TEXT,
+    description TEXT,
+    PRIMARY KEY(id)
+);
