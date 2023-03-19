@@ -519,15 +519,6 @@ CREATE TABLE people (
   - 先頭にドットが必要
 
 #### fiftyville crime_scene_reports
-CREATE TABLE crime_scene_reports (
-    id INTEGER,
-    year INTEGER,
-    month INTEGER,
-    day INTEGER,
-    street TEXT,
-    description TEXT,
-    PRIMARY KEY(id)
-);
 - 事件は2020年7月28日にチェンバリン通りで起きた
 - cat filename.sql | sqlite3.fiftyville.db > output.txt
 - ファイル実行用のスクリプトを用意しておこう
@@ -542,15 +533,6 @@ CREATE TABLE crime_scene_reports (
 - 次はinterviewsかな？
 
 #### fiftyville interviews.sql
-CREATE TABLE interviews (
-    id INTEGER,
-    name TEXT,
-    year INTEGER,
-    month INTEGER,
-    day INTEGER,
-    transcript TEXT,
-    PRIMARY KEY(id)
-);
 - 違うかもしれない
 - 一旦年月日で絞ってみる
 - 6件出てきた
@@ -571,17 +553,6 @@ CREATE TABLE interviews (
 - 一旦保留として次の手がかりに移る
 
 #### fiftyville atm_transactions
-CREATE TABLE atm_transactions (
-    id INTEGER,
-    account_number INTEGER,
-    year INTEGER,
-    month INTEGER,
-    day INTEGER,
-    atm_location TEXT,
-    transaction_type TEXT,
-    amount INTEGER,
-    PRIMARY KEY(id)
-);
 - 朝早くって何時くらいだろう
   - とりあえず10時より前で出してみる
   - atm_transactionsテーブルに時刻情報はなかった
@@ -644,3 +615,5 @@ CREATE TABLE flights (
 
 #### fiftyville テスト
 - answer.txtだと「The THIEF is」なんだよな
+- 違った
+- 3つとも合ってないと駄目らしいのでヒントもなし
