@@ -462,4 +462,4 @@ CREATE TABLE people (
   - 原文は「all people who starred in a movie...」
   - star(動詞)は「主演する」という意味
   - まぁともかく「starsテーブルに存在する」と読み替えて良いんじゃなかろうか
-- 
+- テーブルが増えてくると大変
