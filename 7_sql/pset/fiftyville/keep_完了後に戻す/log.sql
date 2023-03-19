@@ -18,27 +18,5 @@ select id,name,transcript from interviews
 -- 証言から得られた情報
 ---- 情報1. (Ruth) 泥棒は事件から10分以内に裁判所の駐車場から出ていった
 ---- 情報2. (Eugene) 事件当日、泥棒はFifer StreetのATMで現金を引き出した
----- 情報3. (Raymond)
-
--- 泥棒を探す
--- ヒント1 監視カメラから分かったナンバープレート
--- ヒント2 事件翌日にヒースローへ移動した乗客のパスポート番号
--- ヒント3 逃走直前にかけていた電話の記録
-select * from people
-    where license_plate in
-        (select license_plate from courthouse_security_logs
-            where year = 2020 and month = 7 and day = 28 and hour = 10
-            and minute between 10 and 25
-            and activity = 'exit'
-        )
-    and passport_number in
-        (select passport_number from passengers where flight_id = 36)
-    and phone_number in
-        (select caller from phone_calls
-            where year = 2020 and month = 7 and day = 28
-            and duration < 60
-        )
-;
-
-select * from people
-    where phone_number in ('(996) 555-8899','(892) 555-8872','(375) 555-8161');
+---- 情報3. (Raymond) 泥棒は裁判所から出る時誰かに短い(1分以内)の電話をかけた
+---- 情報4. (Raymond) 泥棒は協力者に「明日(7/29)一番早くFiftyvilleを出る飛行機」のチケットを買うよう指示した
