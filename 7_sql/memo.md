@@ -613,4 +613,11 @@ CREATE TABLE flights (
 #### fiftyville phone_calls
 - チケットを取るように電話していた
 - 泥棒が「they」で表されてる＝複数犯？
-- 
+  - これ日本語だとニュアンスが落ちるやつでは
+- このテーブルにも時刻情報はない
+- durationは電話をかけていた秒数？
+  - less than a minute = 60秒以下
+- 9件ヒット
+  - 8件じゃなかった
+
+#### fiftyville 考える
