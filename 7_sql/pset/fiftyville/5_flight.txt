@@ -1,0 +1,10 @@
+2020/07/29にFiftyville空港を出発する便
++----+------+--------+-------------------------------------+---------------+
+| id | hour | minute |              full_name              |     city      |
++----+------+--------+-------------------------------------+---------------+
+| 36 | 8    | 20     | Heathrow Airport                    | London        |
+| 43 | 9    | 30     | O'Hare International Airport        | Chicago       |
+| 23 | 12   | 15     | San Francisco International Airport | San Francisco |
+| 53 | 15   | 20     | Tokyo International Airport         | Tokyo         |
+| 18 | 16   | 0      | Logan International Airport         | Boston        |
++----+------+--------+-------------------------------------+---------------+

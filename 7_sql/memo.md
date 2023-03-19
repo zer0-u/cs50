@@ -603,4 +603,7 @@ CREATE TABLE flights (
     FOREIGN KEY(origin_airport_id) REFERENCES airports(id),
     FOREIGN KEY(destination_airport_id) REFERENCES airports(id)
 );
-- テーブル情報は別のファイルに用意しておこう
+- テーブル情報は別のファイルに用意しておこう(0_schema.txt)
+- 「2020年7月29日(事件の翌日)、Fiftyvilleの空港を一番はやく出発する便」が知りたい
+- Fiftyvilleの空港の略称はCSF・idは8
+- 恐らく8時20分発のヒースロー(ロンドン)行きに乗ったと思われる
