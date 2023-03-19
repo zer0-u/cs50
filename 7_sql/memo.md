@@ -636,3 +636,4 @@ CREATE TABLE flights (
 
 #### fiftyville 協力者を特定する(8_receiver)
 - 泥棒が電話をかけた相手が協力者のはず
+- evelynが2回電話をかけている
