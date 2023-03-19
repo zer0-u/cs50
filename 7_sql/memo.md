@@ -498,4 +498,5 @@ CREATE TABLE people (
 
 #### pset movies 再チェック
 - 10.sqlを件数表示のままにしていた
-- 凡ミス注意
+  - 凡ミス注意
+- できた！
