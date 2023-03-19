@@ -101,3 +101,44 @@ select passport_number, seat from passengers where flight_id = 36;
 select * from people
     where passport_number in
     (select passport_number from passengers where flight_id = 36);
+
+-- 調査8. 調査3-2, 4-2, 5-2, 7-2の積集合を取る
+select * from people
+    where license_plate in
+        (select license_plate from courthouse_security_logs
+            where year = 2020 and month = 7 and day = 28
+            and hour = 10
+            and minute between 15 and 25
+            and activity = 'exit'
+        )
+    and id in
+    (select person_id from bank_accounts
+        where account_number in
+            (select account_number from atm_transactions
+                where year = 2020 and month = 7 and day = 28
+                and atm_location = 'Fifer Street'
+                and transaction_type = 'withdraw'
+            )
+    )
+    and phone_number in
+    (select caller from phone_calls
+        where year = 2020 and month = 7 and day = 28
+        and duration < 60
+    )
+    and passport_number in
+    (select passport_number from passengers where flight_id = 36)
+;
+
+-- 情報F. CS50 duckを盗んだのはErnest
+
+-- 調査9. 情報Fと調査5-3を使って、Ernestが電話をかけた相手＝協力者を調べる
+select * from people
+    where phone_number in
+    (select receiver from phone_calls
+        where year = 2020 and month = 7 and day = 28
+        and duration < 60
+        and caller = '(367) 555-5533'
+    )
+;
+
+-- 情報G. 協力者はBerthold
