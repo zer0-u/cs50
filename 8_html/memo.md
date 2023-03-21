@@ -62,5 +62,4 @@ HTML, CSS, JavaScript
   - harvard.edu→https://www.harvard.edu とか
 - devtoolを使って詳細な情報を見る
   - ネットワークタブ
-  - HTTPリクエストが111回送られている
 - 
