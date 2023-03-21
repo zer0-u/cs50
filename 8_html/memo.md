@@ -65,3 +65,6 @@ HTML, CSS, JavaScript
 - https://harvard.eduにGETリクエストを送ると、www……に転送される(301)
 - ターミナルウィンドウでHTTPリクエストを送信する
   - curlを使う
+- curl -I -X GET http://harvard.edu
+  - レスポンスヘッダだけを参照する
+- curl -I -X GET https://www.harvard.edu
