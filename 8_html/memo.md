@@ -62,4 +62,6 @@ HTML, CSS, JavaScript
   - harvard.edu→https://www.harvard.edu とか
 - devtoolを使って詳細な情報を見る
   - ネットワークタブ
-- 
+- https://harvard.eduにGETリクエストを送ると、www……に転送される(301)
+- ターミナルウィンドウでHTTPリクエストを送信する
+  - curlを使う
