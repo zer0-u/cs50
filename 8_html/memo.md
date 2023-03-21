@@ -58,3 +58,5 @@ HTML, CSS, JavaScript
 - リクエストメソッド
   - GET/POST他
 - リクエストとレスポンスは常に1対1
+- ブラウザはリクエストに対していろいろなものを追加している時がある
+  - harvard.edu→https://www.harvard.edu とか
