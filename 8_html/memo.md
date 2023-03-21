@@ -77,3 +77,4 @@ HTML, CSS, JavaScript
   - ここでも301が使われている
 - harvardsucks.org(失効済)
   - yaleからの仕返し
+- 
