@@ -67,4 +67,8 @@ HTML, CSS, JavaScript
   - curlを使う
 - curl -I -X GET http://harvard.edu
   - レスポンスヘッダだけを参照する
+  - レスポンスステータスは301
 - curl -I -X GET https://www.harvard.edu
+  - 200 OKが返ってくる
+- 存在しないURLにアクセスすると404
+- ステータスコードにはいろいろな種類がある
