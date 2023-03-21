@@ -60,3 +60,7 @@ HTML, CSS, JavaScript
 - リクエストとレスポンスは常に1対1
 - ブラウザはリクエストに対していろいろなものを追加している時がある
   - harvard.edu→https://www.harvard.edu とか
+- devtoolを使って詳細な情報を見る
+  - ネットワークタブ
+  - HTTPリクエストが111回送られている
+- 
