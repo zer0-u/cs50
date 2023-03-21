@@ -57,3 +57,4 @@ HTML, CSS, JavaScript
 - HTTPリクエストの中身を見る
 - リクエストメソッド
   - GET/POST他
+- リクエストとレスポンスは常に1対1
