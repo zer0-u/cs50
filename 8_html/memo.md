@@ -75,4 +75,5 @@ HTML, CSS, JavaScript
 - safetyschool.org(滑り止めの学校.org)はyale.org(イェール大学)にリダイレクトされる
   - 誰かがこの冗談のためにドメイン名を維持し続けている
   - ここでも301が使われている
-- harvardsucks.org
+- harvardsucks.org(失効済)
+  - yaleからの仕返し
