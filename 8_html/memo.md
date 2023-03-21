@@ -72,3 +72,7 @@ HTML, CSS, JavaScript
   - 200 OKが返ってくる
 - 存在しないURLにアクセスすると404
 - ステータスコードにはいろいろな種類がある
+- safetyschool.org(滑り止めの学校.org)はyale.org(イェール大学)にリダイレクトされる
+  - 誰かがこの冗談のためにドメイン名を維持し続けている
+  - ここでも301が使われている
+- harvardducks.org
