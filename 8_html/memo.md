@@ -155,4 +155,9 @@ HTML, CSS, JavaScript
   - phishing(フィッシング)対策
 - レスポンシブ＝ユーザのデバイスのサイズに対応すること
   - responsive.html
-- devtoolで
+- devtoolで様々なデバイスをシミュレーションしてみる
+- headタグの中にmetaタグを追加する
+  - `<meta name="viewport" content="initial-scale=1,width=device-width">`
+  - viewportは閲覧しているページそのもの
+  - initial-scale=1は拡大・縮小を行わない
+  - device-widthは閲覧しているデバイスの画面幅
