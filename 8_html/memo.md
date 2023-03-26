@@ -122,3 +122,6 @@ HTML, CSS, JavaScript
 - この時点では段落が反映されていない
 - 段落はpタグで囲う
 - 見出しをつける(headings.html)
+  - 見出しはhタグを使う
+  - h1～h6
+- リストを使う(list.html)
