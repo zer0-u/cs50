@@ -145,3 +145,5 @@ HTML, CSS, JavaScript
   - srcで指定するURLは、Youtubeの場合一定のルールがある
   - https://www.youtube.com/embed/動画ID
   - 動画IDはブラウザで視聴する時のURLに含まれている
+- iframeタグは他のwebページを埋め込むときに使う
+- リンクはaタグ(link.html)
