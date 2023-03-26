@@ -125,3 +125,5 @@ HTML, CSS, JavaScript
   - 見出しはhタグを使う
   - h1～h6
 - リストを使う(list.html)
+  - foo bar bazだけを書いたらChromeがlang属性を無視してアラビア語だと判断しようとした
+- ulとli、またはolとliを使う
