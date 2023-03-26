@@ -115,3 +115,10 @@ HTML, CSS, JavaScript
   - HTMLは割と寛大なので、間違えていてもエラーとして明示されるケースは少ない
 - https://validator.w3.org/ で検証できる
 - タグを増やしてみる(paragraphs.html)
+  - 外骨格はhello.htmlからコピペ
+  - titleタグは適当な文字列に変更
+  - lipsumから適当な分量をbodyタグにコピペ
+- http-serverはライブリロードに対応している
+- この時点では段落が反映されていない
+- 段落はpタグで囲う
+- 見出しをつける(headings.html)
