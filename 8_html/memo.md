@@ -141,4 +141,4 @@ HTML, CSS, JavaScript
   - autoplay(自動再生), loop(繰り返し), muted(ミュート)などの属性がある
   - ↑は真偽値を取る属性
   - 属性が書かれたらtrueが代入されたものとみなす
-- フレーム(iframe.html)
+- インラインフレーム(iframe.html)
