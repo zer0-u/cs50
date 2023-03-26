@@ -128,3 +128,4 @@ HTML, CSS, JavaScript
   - foo bar bazだけを書いたらChromeがlang属性を無視してアラビア語だと判断しようとした
 - ulとli、またはolとliを使う
 - 表を使う(table.html)
+- インデントに使う空白の文字数はプログラ内で統一できていればよい
