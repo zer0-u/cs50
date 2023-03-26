@@ -161,3 +161,5 @@ HTML, CSS, JavaScript
   - viewportは閲覧しているページそのもの
   - initial-scale=1は拡大・縮小を行わない意味
   - device-widthは閲覧しているデバイスの画面幅
+  - なんか最初から対応してたようにしか見えないがどうなんだろう
+- HTMLタグの属性に記述順は決められていない
