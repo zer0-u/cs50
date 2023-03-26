@@ -91,3 +91,11 @@ HTML, CSS, JavaScript
 - VSCode等で使うWebサイトはポート80(HTTP)と443(HTTPS)を使っている
   - デフォルト値
 - http-serverコマンドで小さなWebサーバを起動できる
+  - 80や443が使われている時、8080ポートがよく選択される
+  - VSCodeに予め組み込まれているコマンド
+- 講義内ではVSCodeにポップアップが出て8080ポートを起動するか尋ねられるが、手元で試すと新たなURLが発行される
+  - https://zer0-u-fictional-potato-667r75rj5jcx65v-8080.preview.app.github.dev/
+  - アクセスするとローカルからでもlocalhost:8080と同じ内容が参照できる？
+- ↑のURLにアクセスすると、hello.htmlへのリンクが表示される
+  - VSCodeそのものに属するファイルは表示されない
+  - hello.htmlにアクセスすると記述した内容が表示される
