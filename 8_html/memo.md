@@ -159,5 +159,5 @@ HTML, CSS, JavaScript
 - headタグの中にmetaタグを追加する
   - `<meta name="viewport" content="initial-scale=1,width=device-width">`
   - viewportは閲覧しているページそのもの
-  - initial-scale=1は拡大・縮小を行わない
+  - initial-scale=1は拡大・縮小を行わない意味
   - device-widthは閲覧しているデバイスの画面幅
