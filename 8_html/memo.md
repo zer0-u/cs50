@@ -155,3 +155,4 @@ HTML, CSS, JavaScript
   - phishing(フィッシング)対策
 - レスポンシブ＝ユーザのデバイスのサイズに対応すること
   - responsive.html
+- devtoolで
