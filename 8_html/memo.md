@@ -142,3 +142,6 @@ HTML, CSS, JavaScript
   - ↑は真偽値を取る属性
   - 属性が書かれたらtrueが代入されたものとみなす
 - インラインフレーム(iframe.html)
+  - srcで指定するURLは、Youtubeの場合一定のルールがある
+  - https://www.youtube.com/embed/動画ID
+  - 動画IDはブラウザで視聴する時のURLに含まれている
