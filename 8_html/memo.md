@@ -88,3 +88,6 @@ HTML, CSS, JavaScript
   - ウェブページの骨格を構成するもの
 - まずはHTMLから
   - hello.html
+- VSCode等で使うWebサイトはポート80(HTTP)と443(HTTPS)を使っている
+  - デフォルト値
+- http-serverコマンドで小さなWebサーバを起動できる
