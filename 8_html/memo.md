@@ -127,3 +127,4 @@ HTML, CSS, JavaScript
 - リストを使う(list.html)
   - foo bar bazだけを書いたらChromeがlang属性を無視してアラビア語だと判断しようとした
 - ulとli、またはolとliを使う
+- 表を使う(table.html)
