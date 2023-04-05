@@ -206,3 +206,5 @@ HTML, CSS, JavaScript
   - headタグの中にstyleタグを置く
 - CSSにはいくつかの指定方法(セレクタ)がある
 - クラスを使う(home2.html)
+- CSSを別のファイルに書く(home3.htmlとhome3.css)
+  - linkタグで参照する
