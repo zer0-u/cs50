@@ -204,3 +204,6 @@ HTML, CSS, JavaScript
 - HTMLとCSSを分離する(home1.html)
   - HTMLファイルにあるCSSを一旦削除する
   - headタグの中にstyleタグを置く
+- CSSにはいくつかの指定方法(セレクタ)がある
+- 複数ファイルで同じスタイルを適用したい
+  - クラスを使う(home2.html)
