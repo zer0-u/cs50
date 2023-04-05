@@ -201,3 +201,6 @@ HTML, CSS, JavaScript
 - 同じコードを何度もコピペしている
 - CSSは継承をサポートしているので、これを使えばコピペを減らせる
   - bodyタグにtext-alignを指定すると、内部のタグは自動的にそれを継承する
+- HTMLとCSSを分離する(home1.html)
+  - HTMLファイルにあるCSSを一旦削除する
+  - headタグの中にstyleタグを置く
