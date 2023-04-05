@@ -205,5 +205,4 @@ HTML, CSS, JavaScript
   - HTMLファイルにあるCSSを一旦削除する
   - headタグの中にstyleタグを置く
 - CSSにはいくつかの指定方法(セレクタ)がある
-- 複数ファイルで同じスタイルを適用したい
-  - クラスを使う(home2.html)
+- クラスを使う(home2.html)
