@@ -192,3 +192,6 @@ HTML, CSS, JavaScript
   - 見えない四角が生まれる
 - divをheader, main, footerに置き換える
   - アクセシビリティが向上する
+- style属性を使う
+  - cssを直接記述する
+- cssはキーと値のペアで表す
