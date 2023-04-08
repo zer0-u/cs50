@@ -255,4 +255,5 @@ HTML, CSS, JavaScript
   - 変数宣言(let)と代入
   - 条件分岐
   - 繰り返し(while, for)
-- 
+- 休憩中にファイルを変更していたらしい
+  - 画面をもとに追いつこうとする(hello1.html)
