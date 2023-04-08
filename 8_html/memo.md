@@ -243,4 +243,5 @@ HTML, CSS, JavaScript
   - https://getbootstrap.com/docs/5.3/content/tables/
 - 同じ感じでsearch.htmlも変更してみる(search1.html)
   - https://getbootstrap.com/docs/5.3/components/navs-tabs/
-- マージン幅も適当な選択肢がいくつか用意されている
+- マージン幅も適当な選択肢がいくつか用意されている(m-1~m-5)
+  - m-3をつけてみたけどなんか微妙に右が切れる 謎
