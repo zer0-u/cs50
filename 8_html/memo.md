@@ -221,4 +221,4 @@ HTML, CSS, JavaScript
 - 開発者ツールでHTMLを参照する
   - Elementsタブ
 - IDセレクタの挙動を見る
-- 
+- カラーコードの例
