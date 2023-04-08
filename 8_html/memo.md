@@ -269,4 +269,8 @@ HTML, CSS, JavaScript
 - formのイベントリスナにgreetを登録する
 - scratchの例えが出てくるけど正直ほとんど覚えていない……
 - cssのセレクタと同じ感じで書けるからquerySelectorを使っているのかもしれない
-- greetの中でreturn falseしなくていいのかな
+- greetの中でreturn falseしなくていいのかな(TODO あとで調べる)
+  - e.preventDefaultは必要だった(2:18:32)
+  - 「送信される」って現象ではどこで何が発生しているんだろう
+- JSでもラムダ関数を使える
+  - pythonと違って複数行書ける
