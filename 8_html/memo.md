@@ -257,3 +257,5 @@ HTML, CSS, JavaScript
   - 繰り返し(while, for)
 - 休憩中にファイルを変更していたらしい
   - 画面をもとに追いつこうとする(hello1.html)
+- submitイベントはデフォルトでサーバにデータを送信しようとする
+  - onsubmitイベントの戻り値をfalseにすると防止できる
