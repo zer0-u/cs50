@@ -269,3 +269,4 @@ HTML, CSS, JavaScript
 - formのイベントリスナにgreetを登録する
 - scratchの例えが出てくるけど正直ほとんど覚えていない……
 - cssのセレクタと同じ感じで書けるからquerySelectorを使っているのかもしれない
+- greetの中でreturn falseしなくていいのかな
