@@ -2,12 +2,7 @@
 <html lang="en">
 
 <head>
-    <script>
-        function greet() {
-            let name = document.querySelector('#name').value;
-            alert(`hello, ${name}`);
-        }
-    </script>
+
     <title>hello with js</title>
 </head>
 
@@ -16,6 +11,14 @@
         <input autocomplete="off" autofocus id="name" placeholder="Name" type="text" />
         <input type="submit" />
     </form>
+    <script>
+        function greet() {
+            let name = document.querySelector('#name').value;
+            alert(`hello, ${name}`);
+        }
+
+        document.quernSelector('form').addEventListner('submit', greet);
+    </script>
 </body>
 
 </html>

@@ -262,5 +262,10 @@ HTML, CSS, JavaScript
 - querySelector使うんだ……
   - 実際に入力された値を取得するときはvalueプロパティを参照する
   - getElementByIdじゃ駄目なのかな？ どっちが主流？(TODO あとで調べる)
-- CSSと同様に、Javascriptも別のファイルに切り出した方がよい
-  - 1ファイルには1言語と考える
+- CSSと同様に、JavascriptもHTMLタグの中に書くべきではない
+  - onsubmit属性を使うのは止める(hello2.html)
+- scriptタグをbodyタグの一番下に持ってくる
+  - 上から順に読み込まれることを意識
+- formのイベントリスナにgreetを登録する
+- scratchの例えが出てくるけど正直ほとんど覚えていない……
+- cssのセレクタと同じ感じで書けるからquerySelectorを使っているのかもしれない
