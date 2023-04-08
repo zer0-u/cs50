@@ -218,4 +218,6 @@ HTML, CSS, JavaScript
 ## 講義動画(1:39:18)
 - セレクタの種類
   - 属性、class、id、他
+- 開発者ツールでHTMLを参照する
+  - Elementsタブ
 - 
