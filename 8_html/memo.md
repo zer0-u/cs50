@@ -245,3 +245,4 @@ HTML, CSS, JavaScript
   - https://getbootstrap.com/docs/5.3/components/navs-tabs/
 - マージン幅も適当な選択肢がいくつか用意されている(m-1~m-5)
   - m-3をつけてみたけどなんか微妙に右が切れる 謎
+- 完成形はあらかじめ用意されていた
