@@ -228,3 +228,4 @@ HTML, CSS, JavaScript
 - HTMLとCSSの使い方に正解はない
 - p:first_child(pタグの最初の要素)
 - 要素を右クリックしてInspect(検証)で該当の要素がすぐに検証できる
+- 
