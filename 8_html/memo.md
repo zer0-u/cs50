@@ -278,3 +278,5 @@ HTML, CSS, JavaScript
 - blinkやmarqeeの話
   - HTMLからは削除されている
   - jsで再現できる
+- DOMの理解については次の週
+- おわり！
