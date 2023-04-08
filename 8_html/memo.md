@@ -220,4 +220,5 @@ HTML, CSS, JavaScript
   - 属性、class、id、他
 - 開発者ツールでHTMLを参照する
   - Elementsタブ
+- IDセレクタの挙動を見る
 - 
