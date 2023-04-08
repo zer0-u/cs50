@@ -241,4 +241,4 @@ HTML, CSS, JavaScript
     - Chromeのデフォルトが適用されなくなる(複数のブラウザで見た目を統一するため)
   - いい感じの見た目にしたい
     - https://getbootstrap.com/docs/5.3/content/tables/
-    - 
+  - 同じ感じでsearch.htmlも変更してみる(search1.html)
