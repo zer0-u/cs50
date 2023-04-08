@@ -237,8 +237,10 @@ HTML, CSS, JavaScript
 - table.htmlにbootstrapを適用してみる(table1.html)
   - 公式サイトにあるlinkタグをheadタグの中に貼り付ける
   - scriptタグは今は使わない
-  - linkタグをつけただけでも変化が起きる
-    - Chromeのデフォルトが適用されなくなる(複数のブラウザで見た目を統一するため)
-  - いい感じの見た目にしたい
-    - https://getbootstrap.com/docs/5.3/content/tables/
-  - 同じ感じでsearch.htmlも変更してみる(search1.html)
+- linkタグをつけただけでも変化が起きる
+  - Chromeのデフォルトが適用されなくなる(複数のブラウザで見た目を統一するため)
+- いい感じの見た目にしたい
+  - https://getbootstrap.com/docs/5.3/content/tables/
+- 同じ感じでsearch.htmlも変更してみる(search1.html)
+  - https://getbootstrap.com/docs/5.3/components/navs-tabs/
+- マージン幅も適当な選択肢がいくつか用意されている
