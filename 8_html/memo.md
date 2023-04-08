@@ -235,3 +235,6 @@ HTML, CSS, JavaScript
 - やり方がたくさんあるので、統一のためにframeworkを導入することが多い
   - Bootstrapなど https://getbootstrap.com/
 - table.htmlにbootstrapを適用してみる(table1.html)
+  - 公式サイトにあるlinkタグをheadタグの中に貼り付ける
+  - scriptタグは今は使わない
+  - 
