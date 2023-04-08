@@ -275,3 +275,6 @@ HTML, CSS, JavaScript
 - JSでもラムダ関数を使える
   - pythonと違って複数行書ける
 - jsでcssを制御できる
+- blinkやmarqeeの話
+  - HTMLからは削除されている
+  - jsで再現できる
