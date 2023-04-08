@@ -259,3 +259,5 @@ HTML, CSS, JavaScript
   - 画面をもとに追いつこうとする(hello1.html)
 - submitイベントはデフォルトでサーバにデータを送信しようとする
   - onsubmitイベントの戻り値をfalseにすると防止できる
+- querySelector使うんだ……
+  - 実際に入力された値を取得するときはvalueプロパティを参照する
