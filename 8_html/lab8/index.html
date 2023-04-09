@@ -20,7 +20,7 @@
             <h2>Part 1: Multiple Choice </h2>
             <hr>
             <h3>問題文のサンプル(1)</h3>
-            <div id="answer-area">
+            <div class="answer-area">
                 <span id="correct-answer">Correct!</span>
                 <span id="incorrect-answer">Incorrect</span>
             </div>
@@ -44,7 +44,7 @@
     </div>
     <script>
 
-        // part1
+
         const hideAnswers = () => {
             const answers = document.getElementById('answer-area').children;
             for (answer of answers) {
@@ -53,6 +53,7 @@
         }
         hideAnswers();
 
+        // part1
         const showAnswer = isCorrect => {
             const id = isCorrect ? 'correct-answer' : 'incorrect-answer';
             const elem = document.getElementById(id);
