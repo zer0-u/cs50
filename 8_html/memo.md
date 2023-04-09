@@ -303,4 +303,5 @@ HTML, CSS, JavaScript
   - ならん
 - 何らかのCSSで上書きされているような気がする
   - style.cssの40行目にbuttonタグへのCSSがある
-- 
+- background-colorでボタンの色が変えられた
+- 正解/不正解を表示する必要がある
