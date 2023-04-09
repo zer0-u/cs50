@@ -1,46 +1,54 @@
 <!DOCTYPE html>
 
 <html lang="en">
-    <head>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
-        <link href="styles.css" rel="stylesheet">
-        <title>Trivia!</title>
 
-        <script>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <title>Trivia!</title>
+</head>
 
-            // TODO: Add code to check answers to questions
+<body>
 
-        </script>
+    <div class="jumbotron">
+        <h1>Trivia!</h1>
+    </div>
 
-    </head>
-    <body>
+    <div class="container">
 
-        <div class="jumbotron">
-            <h1>Trivia!</h1>
-        </div>
+        <div class="section">
+            <h2>Part 1: Multiple Choice </h2>
+            <hr>
 
-        <div class="container">
-
-            <div class="section">
-                <h2>Part 1: Multiple Choice </h2>
-                <hr>
-
-                <!-- TODO: Add multiple choice question here -->
-                <h3>問題文</h3>
-                <button>選択肢1</button>
-                <button>選択肢2</button>
-                <button>選択肢3</button>
-
-            </div>
-
-            <div class="section">
-                <h2>Part 2: Free Response</h2>
-                <hr>
-
-                <!-- TODO: Add free response question here -->
-
-            </div>
+            <!-- TODO: Add multiple choice question here -->
+            <h3>問題文</h3>
+            <button class="choice" id="choice1" value="1">選択肢1</button>
+            <button class="choice" id="choice2" value="2">選択肢2</button>
+            <button class="choice" id="choice3" value="3">選択肢3</button>
 
         </div>
-    </body>
+
+        <div class="section">
+            <h2>Part 2: Free Response</h2>
+            <hr>
+
+            <!-- TODO: Add free response question here -->
+
+        </div>
+
+    </div>
+    <script>
+
+        // TODO: Add code to check answers to questions
+        const checkChooseAnswer = choose => {
+            return choose === 1;
+        };
+
+        const buttonClicked = () => {
+            return true;
+        };
+
+    </script>
+</body>
+
 </html>
