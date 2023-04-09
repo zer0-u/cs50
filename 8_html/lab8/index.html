@@ -82,13 +82,13 @@
             hideAnswers(1);
         }
 
-        const checkChooseAnswer1 = choose => {
+        const checkAnswer1 = choose => {
             return choose === '1';
         };
 
         const buttonClicked1 = e => {
             resetPart1();
-            const isCorrect = checkAnswer1(input.value);
+            const isCorrect = checkAnswer1(e.target.value);
             addAnswerClass(e.target, isCorrect);
             showAnswer(1, isCorrect);
         };
@@ -96,7 +96,6 @@
         for (button of choiceButtons) {
             button.addEventListener('click', buttonClicked1);
         }
-
 
         // part2
         hideAnswers(2);
@@ -118,6 +117,7 @@
             addAnswerClass(input, isCorrect);
             showAnswer(2, isCorrect);
         });
+        
     </script>
 </body>
 
