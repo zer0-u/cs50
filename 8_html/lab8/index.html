@@ -58,8 +58,8 @@
 
         const showAnswer = (areaNum, isCorrect) => {
             const id = isCorrect ? 'correct' : 'incorrect';
-            const elem = document.getElementById(`${id}-answer-${areaNum}`);
-            elem.classList.replace('hide', 'show');
+            const dom = document.getElementById(`${id}-answer-${areaNum}`);
+            dom.classList.replace('hide', 'show');
         };
 
         const removeAnswerClass = dom => {
