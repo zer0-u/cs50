@@ -42,6 +42,15 @@
     <script>
 
         // part1
+        const choiceButtons = document.querySelectorAll('.choice');
+        const resetPart1 = () => {
+            for (button of choiceButton) {
+                button.classList.remove('correct', 'incorrect');
+            }
+            
+
+        }
+
         const checkChooseAnswer = choose => {
             return choose === '1';
         };
@@ -59,7 +68,6 @@
             showAnswer(isCorrect);
         };
 
-        const choiceButtons = document.querySelectorAll('.choice');
         for (button of choiceButtons) {
             button.addEventListener('click', buttonClicked);
         }
