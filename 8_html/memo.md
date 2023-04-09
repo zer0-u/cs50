@@ -340,3 +340,5 @@ HTML, CSS, JavaScript
   - 引数2つまでならセーフ
 - VSCodeが突然止まるなどしたがリファクタリングに成功
 - 正解はCorrect/IncorrectをInnerTextで行っているっぽい
+- 突然のDOMContentLoaded
+  - 恐らくscriptタグをhead内に置いたからこれが必要になった
