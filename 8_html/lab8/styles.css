@@ -75,3 +75,7 @@ input[type="text"]:hover {
 .yet {
     display: none;
 }
+
+.done {
+    display: block;
+}
