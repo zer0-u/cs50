@@ -20,9 +20,9 @@
             <h2>Part 1: Multiple Choice </h2>
             <hr>
             <h3>問題文のサンプル(1)</h3>
-            <div class="answer-area">
-                <span id="correct-answer">Correct!</span>
-                <span id="incorrect-answer">Incorrect</span>
+            <div id="answer-area-1">
+                <span id="correct-answer-1">Correct!</span>
+                <span id="incorrect-answer-1">Incorrect</span>
             </div>
 
             <button class="choice" value="1">選択肢1</button>
@@ -44,19 +44,19 @@
     </div>
     <script>
 
-
-        const hideAnswers = () => {
-            const answers = document.getElementById('answer-area').children;
+       // part1
+        const hideAnswers1 = () => {
+            const answers = document.getElementById('answer-area-1').children;
             for (answer of answers) {
                 answer.style.display = 'none';
             }
         }
-        hideAnswers();
+        hideAnswers1();
 
-        // part1
-        const showAnswer = isCorrect => {
-            const id = isCorrect ? 'correct-answer' : 'incorrect-answer';
-            const elem = document.getElementById(id);
+
+        const showAnswer1 = isCorrect => {
+            const id = isCorrect ? 'correct' : 'incorrect';
+            const elem = document.getElementById(`${id}-answer-1`);
             elem.style.display = 'block';
         };
 
@@ -65,23 +65,23 @@
             for (button of choiceButtons) {
                 button.classList.remove('correct', 'incorrect');
             }
-            hideAnswers();
+            hideAnswers1();
         }
 
-        const checkChooseAnswer = choose => {
+        const checkChooseAnswer1 = choose => {
             return choose === '1';
         };
 
-        const buttonClicked = e => {
+        const buttonClicked1 = e => {
             resetPart1();
-            const isCorrect = checkChooseAnswer(e.target.value);
+            const isCorrect = checkChooseAnswer1(e.target.value);
             const answerClass = isCorrect ? 'correct' : 'incorrect';
             e.target.classList.add(answerClass);
-            showAnswer(isCorrect);
+            showAnswer1(isCorrect);
         };
 
         for (button of choiceButtons) {
-            button.addEventListener('click', buttonClicked);
+            button.addEventListener('click', buttonClicked1);
         }
 
     </script>
