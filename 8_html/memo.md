@@ -321,3 +321,8 @@ HTML, CSS, JavaScript
   - 子要素そのものを取る時はchildNodesではなくchildren
 - CorrectとIncorrectの表示がズレる
   - display要素の切り替えではなくappendとかinnerTextとかでやるべきかな
+  - ChatGPTくんはelem.style.displayをnoneとblockにするのが好みらしいので倣った
+- 一応完成したということにしよう
+
+## lab part2
+- 思ったより時間がかかっている
