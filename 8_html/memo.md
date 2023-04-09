@@ -327,3 +327,4 @@ HTML, CSS, JavaScript
 ## lab part2
 - 思ったより時間がかかっている
 - part1と干渉するのでpart1で作った関数などには1とつけておいた
+- すごください

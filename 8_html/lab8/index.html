@@ -70,7 +70,8 @@
         document.querySelector('form').addEventListener('submit', e => {
             e.preventDefault();
             const input = document.getElementById('input');
-            const isCorrect = checkAnswer2(input);
+            console.log(input);
+            const isCorrect = checkAnswer2(input.value);
             showAnswer2(isCorrect);
         });
 
