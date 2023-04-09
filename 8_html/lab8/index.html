@@ -45,9 +45,12 @@
         };
 
         const buttonClicked = e => {
-            const isCorrect = checkChooseAnswer(e.target.value);
+            const target = e.target;
+            const isCorrect = checkChooseAnswer(target.value);
             if(isCorrect){
-                e.target.classList.toggle('correct');
+                target.classList.add('correct');
+            }else{
+                target.classList.add('incorrect');
             }
             console.log(e.target);
             return true;
