@@ -49,7 +49,7 @@
             const target = e.target;
             const isCorrect = checkChooseAnswer(target.value);
             if(isCorrect){
-                e.target.class +='shshshs';
+                e.target.style.visibility = 'hidden';
             }
             console.log(e.target);
             return true;
