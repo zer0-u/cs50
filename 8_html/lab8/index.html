@@ -20,9 +20,9 @@
             <h2>Part 1: Multiple Choice </h2>
             <hr>
             <h3>問題文</h3>
-            <p class="answer yet">
-                <span>Correct!</span>
-                <span>Incorrect</span>
+            <p class="answer">
+                <span id="correct-answer">Correct!</span>
+                <span id="incorrect-answer">Incorrect</span>
             </p>
             <button class="choice" value="1">選択肢1</button>
             <button class="choice" value="2">選択肢2</button>
@@ -46,20 +46,18 @@
             return choose === '1';
         };
 
-        const showAnswer = () => {
-            const elem = document.querySelector('.answer');
-            elem.classList.replace('yet', 'done');
-        }
-
-        const buttonClicked = e => {
-            const target = e.target;
-            const isCorrect = checkChooseAnswer(target.value);
-            const answerClass = isCorrect ? 'correct' : 'incorrect';
-            target.classList.add(answerClass);
-            showAnswer();
+        const showAnswer = isCorrect => {
+            const id = isCorrect ? 'correct-answer' : 'incorrect-answer';
+            const elem = document.getElementById(id);
+            elem.classList.add('show');
         };
 
-
+        const buttonClicked = e => {
+            const isCorrect = checkChooseAnswer(e.target.value);
+            const answerClass = isCorrect ? 'correct' : 'incorrect';
+            e.target.classList.add(answerClass);
+            showAnswer(isCorrect);
+        };
 
         const choiceButtons = document.querySelectorAll('.choice');
         for (button of choiceButtons) {

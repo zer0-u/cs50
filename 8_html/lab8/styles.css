@@ -72,10 +72,10 @@ input[type="text"]:hover {
     color: white;
 }
 
-.yet {
-    display: none;
+.answer {
+    visibility: hidden;
 }
 
-.done {
-    display: block;
+.show {
+    visibility: visible;
 }
