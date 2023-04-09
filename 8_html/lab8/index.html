@@ -41,15 +41,13 @@
 
         // TODO: Add code to check answers to questions
         const checkChooseAnswer = choose => {
-            return choose === 1;
+            return choose === '1';
         };
 
         const buttonClicked = e => {
-            console.log(e.target);
-            const target = e.target;
-            const isCorrect = checkChooseAnswer(target.value);
+            const isCorrect = checkChooseAnswer(e.target.value);
             if(isCorrect){
-                e.target.style.visibility = 'hidden';
+                console.log(e.target.style);
             }
             console.log(e.target);
             return true;
