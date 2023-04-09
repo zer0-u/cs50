@@ -44,11 +44,13 @@
         // part1
         const choiceButtons = document.querySelectorAll('.choice');
         const resetPart1 = () => {
-            for (button of choiceButton) {
+            for (button of choiceButtons) {
                 button.classList.remove('correct', 'incorrect');
             }
-            
-
+            const answers = document.querySelector('.answer').childNodes;
+            for (answer of answers) {
+                answer.classList.remove('show');
+            }
         }
 
         const checkChooseAnswer = choose => {
@@ -62,6 +64,7 @@
         };
 
         const buttonClicked = e => {
+            resetPart1();
             const isCorrect = checkChooseAnswer(e.target.value);
             const answerClass = isCorrect ? 'correct' : 'incorrect';
             e.target.classList.add(answerClass);
