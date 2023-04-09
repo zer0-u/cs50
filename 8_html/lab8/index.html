@@ -44,18 +44,21 @@
             return choose === 1;
         };
 
-        const buttonClicked = () => {
+        const buttonClicked = e => {
+            console.log(e.target);
+            const target = e.target;
+            const isCorrect = checkChooseAnswer(target.value);
+            if(isCorrect){
+                e.target.class +='shshshs';
+            }
+            console.log(e.target);
             return true;
         };
 
         const choiceButtons = document.querySelectorAll('.choice');
         for (button of choiceButtons) {
-            button.addEventListener('click', e => {
-                alert(e.target.value);
-            })
+            button.addEventListener('click', buttonClicked);
         }
-
-
 
     </script>
 </body>
