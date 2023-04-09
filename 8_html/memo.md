@@ -302,3 +302,5 @@ HTML, CSS, JavaScript
 - btn-successをつければ緑色になる
   - ならん
 - 何らかのCSSで上書きされているような気がする
+  - style.cssの40行目にbuttonタグへのCSSがある
+- 

@@ -20,6 +20,10 @@
             <h2>Part 1: Multiple Choice </h2>
             <hr>
             <h3>問題文</h3>
+            <p>
+                <span>Correct!</span>
+                <span>Incorrect</span>
+            </p>
             <button class="choice" id="choice1" value="1">選択肢1</button>
             <button class="choice" id="choice2" value="2">選択肢2</button>
             <button class="choice" id="choice3" value="3">選択肢3</button>
@@ -45,7 +49,7 @@
         const buttonClicked = e => {
             const target = e.target;
             const isCorrect = checkChooseAnswer(target.value);
-            const answerClass = isCorrect ? 'btn-success' : 'btn-danger';
+            const answerClass = isCorrect ? 'correct' : 'incorrect';
             target.classList.add(answerClass);
             console.log(target);
         };

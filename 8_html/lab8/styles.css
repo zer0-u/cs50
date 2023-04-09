@@ -37,7 +37,8 @@ h1 {
     font-size: 48px;
 }
 
-button, input[type="submit"] {
+button,
+input[type="submit"] {
     background-color: #d9edff;
     border: 1px solid transparent;
     border-radius: 0.25rem;
@@ -61,6 +62,12 @@ input[type="text"]:hover {
     transition: color 2s ease-in-out, background-color 0.15s ease-in-out;
 }
 
-.correct{
-    color:green;
+.correct {
+    background-color: green;
+    color: white;
+}
+
+.incorrect {
+    background-color: red;
+    color: white;
 }
