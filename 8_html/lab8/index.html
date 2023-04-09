@@ -47,10 +47,9 @@
             for (button of choiceButtons) {
                 button.classList.remove('correct', 'incorrect');
             }
-            const answers = document.querySelector('.answer').childNodes;
+            const answers = document.querySelector('.answer').children;
             for (answer of answers) {
-                console.log(answer.classList);
-                // answer.classList.remove('show');
+                answer.classList.remove('show');
             }
         }
 
