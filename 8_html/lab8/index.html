@@ -20,7 +20,7 @@
             <h2>Part 1: Multiple Choice </h2>
             <hr>
             <h3>問題文のサンプル</h3>
-            <div>
+            <div id="answer-area">
                 <span id="correct-answer">Correct!</span>
                 <span id="incorrect-answer">Incorrect</span>
             </div>
@@ -50,7 +50,7 @@
             }
             const answers = document.querySelector('.answer').children;
             for (answer of answers) {
-                answer.classList.remove('show');
+                answer.style.display = 'none';
             }
         }
 
@@ -61,7 +61,7 @@
         const showAnswer = isCorrect => {
             const id = isCorrect ? 'correct-answer' : 'incorrect-answer';
             const elem = document.getElementById(id);
-            elem.classList.add('show');
+            elem.style.display = 'block';
         };
 
         const buttonClicked = e => {
