@@ -79,10 +79,6 @@
             removeAnswerClass(document.getElementById('input'));
         }
 
-        const showAnswer2 = isCorrect => {
-            showAnswer(2, isCorrect);
-        };
-
         const checkAnswer2 = input => {
             return input === '2';
         };
@@ -93,15 +89,11 @@
             const input = document.getElementById('input');
             const isCorrect = checkAnswer2(input.value);
             addAnswerClass(input, isCorrect);
-            showAnswer2(isCorrect);
+            showAnswer(2, isCorrect);
         });
 
         // part1
         hideAnswers(1);
-
-        const showAnswer1 = isCorrect => {
-            showAnswer(1, isCorrect);
-        };
 
         const choiceButtons = document.querySelectorAll('.choice');
         const resetPart1 = () => {
@@ -119,7 +111,7 @@
             resetPart1();
             const isCorrect = checkAnswer1(input.value);
             addAnswerClass(e.target, isCorrect);
-            showAnswer1(isCorrect);
+            showAnswer(1, isCorrect);
         };
 
         for (button of choiceButtons) {
