@@ -48,9 +48,14 @@
             return true;
         };
 
-        document.querySelector('#choice1').addEventListner('click', e => {
-            alert(e.target.value);
-        })
+        const choiceButtons = document.querySelectorAll('.choice');
+        for (button of choiceButtons) {
+            button.addEventListener('click', e => {
+                alert(e.target.value);
+            })
+        }
+
+
 
     </script>
 </body>
