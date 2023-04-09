@@ -48,18 +48,24 @@
     </div>
     <script>
 
-        // part2
-        const hideAnswers2 = () => {
-            const answers = document.getElementById('answer-area-2').children;
+        // common
+        const hideAnswers = area => {
+            const answers = document.getElementById(`answer-area-${area}`).children;
             for (answer of answers) {
                 answer.style.display = 'none';
             }
         }
-        hideAnswers2();
+
+        const removeAnswerClass = dom => {
+            dom.classList.remove('correct', 'incorrect');
+        }
+
+        // part2
+        hideAnswers(2);
 
         const resetPart2 = () => {
-            hideAnswers2();
-            document.getElementById('input').classList.remove('correct', 'incorrect');
+            hideAnswers(2);
+            removeAnswerClass(document.getElementById('input'));
         }
 
         const showAnswer2 = isCorrect => {
