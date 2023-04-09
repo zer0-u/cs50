@@ -338,3 +338,5 @@ HTML, CSS, JavaScript
 - 動画を見る
 - やっぱり気になるので似たような処理は関数に切り出した
   - 引数2つまでならセーフ
+- VSCodeが突然止まるなどしたがリファクタリングに成功
+- 正解はCorrect/IncorrectをInnerTextで行っているっぽい
