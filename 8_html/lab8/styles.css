@@ -72,10 +72,3 @@ input[type="text"]:hover {
     color: white;
 }
 
-.answer {
-    visibility: hidden;
-}
-
-.show {
-    visibility: visible;
-}
