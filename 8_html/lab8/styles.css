@@ -71,3 +71,7 @@ input[type="text"]:hover {
     background-color: red;
     color: white;
 }
+
+.yet{
+    visibility:false;
+}
