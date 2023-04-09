@@ -40,7 +40,7 @@
                 <span id="incorrect-answer-2">Incorrect</span>
             </div>
             <form>
-                <input id="input" type="text" autofocus autocomplete="false" placeholder="answer?"  />
+                <input id="input" type="text" autofocus autocomplete="false" placeholder="answer?" />
                 <input type="submit" />
             </form>
         </div>
@@ -57,9 +57,9 @@
         }
         hideAnswers2();
 
-        const resetPart2 = ()=>{
+        const resetPart2 = () => {
             hideAnswers2();
-            document.getElementById('input').classList.remove('correct','incorrect');
+            document.getElementById('input').classList.remove('correct', 'incorrect');
         }
 
         const showAnswer2 = isCorrect => {

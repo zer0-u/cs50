@@ -283,7 +283,9 @@ HTML, CSS, JavaScript
 
 # 0409
 
-## lab(思い出し)
+## lab
+
+### part1(思い出し)
 - 途中までメモするの忘れていたので今覚えている範囲のこと
 - hello2.htmlを実行しなかったからかtypoが目立つ
   - そして気づかなかった
@@ -296,7 +298,7 @@ HTML, CSS, JavaScript
   - add, remove, toggleなどで変更可
 - ボタンの色はcolorではない(文字色が変わる)
 
-## lab
+### part1
 - ボタンの色はどう変えるんだったか
 - https://getbootstrap.com/docs/5.3/components/buttons/
 - btn-successをつければ緑色になる
@@ -324,8 +326,11 @@ HTML, CSS, JavaScript
   - ChatGPTくんはelem.style.displayをnoneとblockにするのが好みらしいので倣った
 - 一応完成したということにしよう
 
-## lab part2
+### part2
 - 思ったより時間がかかっている
 - part1と干渉するのでpart1で作った関数などには1とつけておいた
 - すごください
 - でもpart1とpart2を連動させる訳にもいかないしな……
+- greenとredだとちょっと目にきついのでlightgreenとsalmonにした
+
+### solution
