@@ -280,3 +280,25 @@ HTML, CSS, JavaScript
   - jsで再現できる
 - DOMの理解については次の週
 - おわり！
+
+# 0409
+
+## lab(思い出し)
+- 途中までメモするの忘れていたので今覚えている範囲のこと
+- hello2.htmlを実行しなかったからかtypoが目立つ
+  - そして気づかなかった
+- querySelectorAllを覚えた
+- 要素ごとに取り出す時はfor of
+  - 言語が違うと頭が混乱する
+- e.target.valueは文字列で来る
+  - 数値と比較してもfalseになる
+- e.target.classListで対象DOMに適用されたクラス名の一覧が取れる
+  - add, remove, toggleなどで変更可
+- ボタンの色はcolorではない(文字色が変わる)
+
+## lab
+- ボタンの色はどう変えるんだったか
+- https://getbootstrap.com/docs/5.3/components/buttons/
+- btn-successをつければ緑色になる
+  - ならん
+- 何らかのCSSで上書きされているような気がする

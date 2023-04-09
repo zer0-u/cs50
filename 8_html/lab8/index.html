@@ -45,8 +45,9 @@
         const buttonClicked = e => {
             const target = e.target;
             const isCorrect = checkChooseAnswer(target.value);
-            const answerClass = isCorrect ? 'correct' : 'incorrect';
+            const answerClass = isCorrect ? 'btn-success' : 'btn-danger';
             target.classList.add(answerClass);
+            console.log(target);
         };
 
         const choiceButtons = document.querySelectorAll('.choice');
