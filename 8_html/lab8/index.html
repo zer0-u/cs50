@@ -35,6 +35,10 @@
             <h2>Part 2: Free Response</h2>
             <hr>
             <h3>問題文のサンプル(2)</h3>
+            <div id="answer-area-2">
+                <span id="correct-answer-2">Correct!</span>
+                <span id="incorrect-answer-2">Incorrect</span>
+            </div>
             <form>
                 <input id="input" type="text" autofocus autocomplete="false" placeholder="answer?" />
                 <input type="submit" />
@@ -45,14 +49,29 @@
     <script>
 
         // part2
-        const checkAnswer2 = input => {
-            return input === '1';
+        const hideAnswers2 = () => {
+            const answers = document.getElementById('answer-area-2').children;
+            for (answer of answers) {
+                answer.style.display = 'none';
+            }
+        }
+        hideAnswers2();
+
+        const showAnswer2 = isCorrect => {
+            const id = isCorrect ? 'correct' : 'incorrect';
+            const elem = document.getElementById(`${id}-answer-2`);
+            elem.style.display = 'block';
         };
-        
+
+        const checkAnswer2 = input => {
+            return input === '2';
+        };
+
         document.querySelector('form').addEventListener('submit', e => {
             e.preventDefault();
             const input = document.getElementById('input');
             const isCorrect = checkAnswer2(input);
+            showAnswer2(isCorrect);
         });
 
         // part1
