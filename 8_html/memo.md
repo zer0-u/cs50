@@ -307,3 +307,6 @@ HTML, CSS, JavaScript
 - 正解/不正解を表示する必要がある
   - yet/doneで切り替えるか
   - display:noneが思い出せずググった
+  - noneの対はblock
+- なんか難しく考えすぎている気がするな
+- getElementByIdで細かく指定しても良いかもしれない
