@@ -43,25 +43,30 @@
     <script>
 
         // part1
-        const choiceButtons = document.querySelectorAll('.choice');
-        const resetPart1 = () => {
-            for (button of choiceButtons) {
-                button.classList.remove('correct', 'incorrect');
-            }
+        const hideAnswers = () => {
             const answers = document.getElementById('answer-area').children;
             for (answer of answers) {
                 answer.style.display = 'none';
             }
         }
-
-        const checkChooseAnswer = choose => {
-            return choose === '1';
-        };
+        hideAnswers();
 
         const showAnswer = isCorrect => {
             const id = isCorrect ? 'correct-answer' : 'incorrect-answer';
             const elem = document.getElementById(id);
             elem.style.display = 'block';
+        };
+
+        const choiceButtons = document.querySelectorAll('.choice');
+        const resetPart1 = () => {
+            for (button of choiceButtons) {
+                button.classList.remove('correct', 'incorrect');
+            }
+            hideAnswers();
+        }
+
+        const checkChooseAnswer = choose => {
+            return choose === '1';
         };
 
         const buttonClicked = e => {
