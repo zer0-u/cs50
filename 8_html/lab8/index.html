@@ -49,16 +49,25 @@
     <script>
 
         // common
-        const hideAnswers = area => {
-            const answers = document.getElementById(`answer-area-${area}`).children;
+        const hideAnswers = areaNum => {
+            const answers = document.getElementById(`answer-area-${areaNum}`).children;
             for (answer of answers) {
                 answer.style.display = 'none';
             }
-        }
+        };
+
+        const showAnswer = (areaNum, isCorrect) => {
+
+        };
 
         const removeAnswerClass = dom => {
             dom.classList.remove('correct', 'incorrect');
-        }
+        };
+
+        const addAnswerClass = (dom, isCorrect) => {
+            const answerClass = isCorrect ? 'correct' : 'incorrect';
+            dom.classList.add(answerClass);
+        };
 
         // part2
         hideAnswers(2);
