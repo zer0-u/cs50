@@ -306,3 +306,4 @@ HTML, CSS, JavaScript
 - background-colorでボタンの色が変えられた
 - 正解/不正解を表示する必要がある
   - yet/doneで切り替えるか
+  - display:noneが思い出せずググった

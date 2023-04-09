@@ -72,6 +72,6 @@ input[type="text"]:hover {
     color: white;
 }
 
-.yet{
-    visibility:false;
+.yet {
+    display: none;
 }
