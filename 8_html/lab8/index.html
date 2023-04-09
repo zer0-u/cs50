@@ -71,27 +71,6 @@
             dom.classList.add(answerClass);
         };
 
-        // part2
-        hideAnswers(2);
-
-        const resetPart2 = () => {
-            hideAnswers(2);
-            removeAnswerClass(document.getElementById('input'));
-        }
-
-        const checkAnswer2 = input => {
-            return input === '2';
-        };
-
-        document.querySelector('form').addEventListener('submit', e => {
-            e.preventDefault();
-            resetPart2();
-            const input = document.getElementById('input');
-            const isCorrect = checkAnswer2(input.value);
-            addAnswerClass(input, isCorrect);
-            showAnswer(2, isCorrect);
-        });
-
         // part1
         hideAnswers(1);
 
@@ -118,6 +97,27 @@
             button.addEventListener('click', buttonClicked1);
         }
 
+
+        // part2
+        hideAnswers(2);
+
+        const resetPart2 = () => {
+            hideAnswers(2);
+            removeAnswerClass(document.getElementById('input'));
+        };
+
+        const checkAnswer2 = input => {
+            return input === '2';
+        };
+
+        document.querySelector('form').addEventListener('submit', e => {
+            e.preventDefault();
+            resetPart2();
+            const input = document.getElementById('input');
+            const isCorrect = checkAnswer2(input.value);
+            addAnswerClass(input, isCorrect);
+            showAnswer(2, isCorrect);
+        });
     </script>
 </body>
 
