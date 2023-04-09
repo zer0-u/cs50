@@ -339,6 +339,8 @@ HTML, CSS, JavaScript
 - やっぱり気になるので似たような処理は関数に切り出した
   - 引数2つまでならセーフ
 - VSCodeが突然止まるなどしたがリファクタリングに成功
-- 正解はCorrect/IncorrectをInnerTextで行っているっぽい
+- 正解はCorrect/IncorrectをInnerHTMLに挿入している
 - 突然のDOMContentLoaded
   - 恐らくscriptタグをhead内に置いたからこれが必要になった
+  - 素直にbody最後尾に持っていく方がよかったのでは
+- 正解はクラス名で持っている形式
