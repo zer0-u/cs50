@@ -52,14 +52,14 @@
         const hideAnswers = areaNum => {
             const answers = document.getElementById(`answer-area-${areaNum}`).children;
             for (answer of answers) {
-                answer.style.display = 'none';
+                answer.classList.replace('show', 'hide');
             }
         };
 
         const showAnswer = (areaNum, isCorrect) => {
             const id = isCorrect ? 'correct' : 'incorrect';
             const elem = document.getElementById(`${id}-answer-${areaNum}`);
-            elem.style.display = 'block';
+            elem.classList.replace('hide', 'show');
         };
 
         const removeAnswerClass = dom => {
@@ -117,7 +117,7 @@
             addAnswerClass(input, isCorrect);
             showAnswer(2, isCorrect);
         });
-        
+
     </script>
 </body>
 

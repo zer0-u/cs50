@@ -70,3 +70,10 @@ input[type="text"]:hover {
     background-color: salmon;
 }
 
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
