@@ -48,7 +48,7 @@
             for (button of choiceButtons) {
                 button.classList.remove('correct', 'incorrect');
             }
-            const answers = document.querySelector('.answer').children;
+            const answers = document.getElementById('answer-area').children;
             for (answer of answers) {
                 answer.style.display = 'none';
             }
