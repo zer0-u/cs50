@@ -319,4 +319,5 @@ HTML, CSS, JavaScript
   - 個人的に気持ちが悪いのでリセットする
 - 調べた結果に振り回されている
   - 子要素そのものを取る時はchildNodesではなくchildren
-- 
+- CorrectとIncorrectの表示がズレる
+  - display要素の切り替えではなくappendとかinnerTextとかでやるべきかな
