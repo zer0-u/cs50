@@ -334,3 +334,5 @@ HTML, CSS, JavaScript
 - greenとredだとちょっと目にきついのでlightgreenとsalmonにした
 
 ### solution
+- check50は存在しない
+- 動画を見る
