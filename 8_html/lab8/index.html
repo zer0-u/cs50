@@ -57,7 +57,9 @@
         };
 
         const showAnswer = (areaNum, isCorrect) => {
-
+            const id = isCorrect ? 'correct' : 'incorrect';
+            const elem = document.getElementById(`${id}-answer-${areaNum}`);
+            elem.style.display = 'block';
         };
 
         const removeAnswerClass = dom => {
@@ -78,9 +80,7 @@
         }
 
         const showAnswer2 = isCorrect => {
-            const id = isCorrect ? 'correct' : 'incorrect';
-            const elem = document.getElementById(`${id}-answer-2`);
-            elem.style.display = 'block';
+            showAnswer(2, isCorrect);
         };
 
         const checkAnswer2 = input => {
@@ -92,32 +92,23 @@
             resetPart2();
             const input = document.getElementById('input');
             const isCorrect = checkAnswer2(input.value);
-            const answerClass = isCorrect ? 'correct' : 'incorrect';
-            input.classList.add(answerClass);
+            addAnswerClass(input, isCorrect);
             showAnswer2(isCorrect);
         });
 
         // part1
-        const hideAnswers1 = () => {
-            const answers = document.getElementById('answer-area-1').children;
-            for (answer of answers) {
-                answer.style.display = 'none';
-            }
-        }
-        hideAnswers1();
+        hideAnswers(1);
 
         const showAnswer1 = isCorrect => {
-            const id = isCorrect ? 'correct' : 'incorrect';
-            const elem = document.getElementById(`${id}-answer-1`);
-            elem.style.display = 'block';
+            showAnswer(1, isCorrect);
         };
 
         const choiceButtons = document.querySelectorAll('.choice');
         const resetPart1 = () => {
             for (button of choiceButtons) {
-                button.classList.remove('correct', 'incorrect');
+                removeAnswerClass(button);
             }
-            hideAnswers1();
+            hideAnswers(1);
         }
 
         const checkChooseAnswer1 = choose => {
@@ -126,9 +117,8 @@
 
         const buttonClicked1 = e => {
             resetPart1();
-            const isCorrect = checkChooseAnswer1(e.target.value);
-            const answerClass = isCorrect ? 'correct' : 'incorrect';
-            e.target.classList.add(answerClass);
+            const isCorrect = checkAnswer1(input.value);
+            addAnswerClass(e.target, isCorrect);
             showAnswer1(isCorrect);
         };
 
