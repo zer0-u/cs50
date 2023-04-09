@@ -36,7 +36,7 @@
             <hr>
             <h3>問題文のサンプル(2)</h3>
             <form>
-                <input type="text" autofocus autocomplete="false" placeholder="answer?" />
+                <input id="input" type="text" autofocus autocomplete="false" placeholder="answer?" />
                 <input type="submit" />
             </form>
         </div>
@@ -45,7 +45,15 @@
     <script>
 
         // part2
+        const checkAnswer2 = input => {
+            return input === '1';
+        };
         
+        document.querySelector('form').addEventListener('submit', e => {
+            e.preventDefault();
+            const input = document.getElementById('input');
+            const isCorrect = checkAnswer2(input);
+        });
 
         // part1
         const hideAnswers1 = () => {
