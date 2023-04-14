@@ -11,4 +11,9 @@ app = Flask(__name__)
 # /(アプリケーションルート)にアクセスしたときの挙動を定義
 @app.route("/")
 def index():
-    return render_template("index.html")
+    # クエリパラメータ内にある「name」というキーに紐づいた値を変数nameに代入する
+    name = request.args.get("name")
+    # render_template関数は複数の引数を取れる
+    # 2つ目以降は好きな変数を指定できる
+    # 変数nameを、テンプレート内で「name」として参照できるように指定した
+    return render_template("index.html", name=name)
