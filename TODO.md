@@ -21,3 +21,7 @@
 ## week6 python
 - pset(credit)
 - 正規表現をもっと活用したパターンを実装する
+
+## week8 HTML/CSS/JavaScript
+- pset(homepage)
+- キリがなさそうなので一旦飛ばした
