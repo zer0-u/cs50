@@ -34,4 +34,13 @@
 - Webアプリケーションを作ってみる(sampleフォルダ)
 - pythonのコメントは `//` でなく#だと忘れていた
 - app.py→index.html
--
+- 静的ファイルがないのでstaticsは不要
+- requirements.txtはシンプルなものでいいと言っているが具体的な手順は不明
+- 起動する
+  - http-serverはapp.pyの中身をそのまま表示する
+  - flask runで実行(必要なものは事前のインストール済)
+- requrements.txtは今のところつくらなくていいらしい
+- flaskはデフォルトでポート5000を使う
+- URLの末尾に「/?name=david」を足してみる
+  - /はChromeによって省略されたものを補完している
+- davidを取れるようにしたい
