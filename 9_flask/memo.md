@@ -44,3 +44,5 @@
 - URLの末尾に「/?name=david」を足してみる
   - /はChromeによって省略されたものを補完している
 - davidを取れるようにしたい
+  - request.args.getを使う
+- 今日はここまで(18:00)
