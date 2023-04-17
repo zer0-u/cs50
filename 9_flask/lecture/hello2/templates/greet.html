@@ -1,0 +1,10 @@
+<!-- layout.htmlを参照する旨をFlaskに伝える -->
+{% extends "layout.html" %}
+
+<!-- 挿入したいbodyブロックを定義する -->
+<!-- layout.htmlのプレースホルダがこの内容で置き換えられる -->
+{% block body %}
+
+hello, {{name}}
+
+{% endblock %}

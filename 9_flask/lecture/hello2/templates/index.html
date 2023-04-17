@@ -1,0 +1,13 @@
+<!-- layout.htmlを参照する旨をFlaskに伝える -->
+{% extends "layout.html" %}
+
+<!-- 挿入したいbodyブロックを定義する -->
+<!-- layout.htmlのプレースホルダがこの内容で置き換えられる -->
+{% block body %}
+
+<form method="post" action="/greet">
+    <input type="text" autocomplete="off" autofocus name="name" placeholder="name" required />
+    <input type="submit" />
+</form>
+
+{% endblock %}
