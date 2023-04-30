@@ -313,6 +313,8 @@
 
 ## pset
 - labが案外するっと終わったのでpsetに手を付ける
+
+### IEX Cloud
 - APIキーを登録する必要があるのか……
   - 無料だからやっておこう
   - ちょっと操作方法が違う
@@ -324,3 +326,6 @@
   - https://cs50.harvard.edu/x/2023/psets/9/finance/
   - 30日だけ有効って書いてある気がする
   - 怖いな～～～～！
+- とりあえず今はフリープランだと分かった
+  - https://iexcloud.io/console/account
+  -
