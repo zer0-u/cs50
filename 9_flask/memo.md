@@ -330,3 +330,7 @@
   - https://iexcloud.io/console/account
 - アカウントも消せない
 - 怖い！
+- https://www.reddit.com/r/cs50/comments/z2lmna/how_to_delete_iex_cloud_account_after_pset9/
+- 同じこと考えている人見つけた
+- 使わなければ払わなくていいよね……？
+- 怖いから実装はしても動作はさせないようにしよう
