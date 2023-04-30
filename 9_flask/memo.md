@@ -304,3 +304,4 @@
 - この環境にはpipがインストールされている可能性がある
   - pylanceとpythonの拡張がインストールされていた
 - ChatGPTも「なくても動作するけどあった方が便利」と言っている
+- https://www.m3tech.blog/entry/python-packaging
