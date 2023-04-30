@@ -292,3 +292,6 @@
 - importが過剰なのは発展的な要件に備えてかな？
 - そういえば配布されたプロジェクトにもrequirements.txtはない
 - こいつは一体なんなんだろう
+- requirements.txtはFlask独自の存在ではないらしい
+  - pythonにおけるpackage.jsonみたいな存在
+  - バージョン指定もできる
