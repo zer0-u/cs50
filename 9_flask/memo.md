@@ -305,3 +305,7 @@
   - pylanceとpythonの拡張がインストールされていた
 - ChatGPTも「なくても動作するけどあった方が便利」と言っている
 - https://www.m3tech.blog/entry/python-packaging
+- pip listでインストールされたライブラリを見るとFlaskとFlask-Sessionがある
+  - versions.txtに出力済み
+  - この間の講義で使ったからかもしれない
+  - 最初からインストールされていたからrequirements.txtがなくても動いた……かも？
