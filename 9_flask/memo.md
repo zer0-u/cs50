@@ -295,3 +295,4 @@
 - requirements.txtはFlask独自の存在ではないらしい
   - pythonにおけるpackage.jsonみたいな存在
   - バージョン指定もできる
+  - 他の環境において一括ダウンロードを行うために使う
