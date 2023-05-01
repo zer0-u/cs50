@@ -82,7 +82,8 @@ def login():
             return apology("must provide password", 403)
 
         # Query database for username
-        rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
+        rows = db.execute("SELECT * FROM users WHERE username = ?",
+                          request.form.get("username"))
 
         # Ensure username exists and password is correct
         if len(rows) != 1 or not check_password_hash(rows[0]["hash"], request.form.get("password")):
@@ -116,15 +117,27 @@ def quote():
     """Get stock quote."""
     return apology("TODO")
 
+
 @app.route("/register", methods=["GET"])
 def register_get():
     """show registration page"""
     return render_template("register.html")
 
+
 @app.route("/register", methods=["POST"])
 def register_post():
     """Register user"""
-
+    name = request.form.get("name")
+    password = request.form.get("password")
+    confirmation = request.form.get("confirmation")
+    if not name:
+        return apology("must input username", 403)
+    if not password:
+        return apology("must input password", 403)
+    if not confirmation:
+        return apology("must input confirmation", 403)
+    if password != confirmation:
+        return apology("input same password", 403)
 
     return apology("TODO")
 
