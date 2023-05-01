@@ -377,3 +377,4 @@
 - 株価が固定値なのはちょっと寂しい
 - random.uniformを使おう
   - https://it-ojisan.tokyo/python-random-range/
+  - https://docs.python.org/ja/3/library/random.html?highlight=random#random.uniform

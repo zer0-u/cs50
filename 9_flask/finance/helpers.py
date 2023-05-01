@@ -1,6 +1,7 @@
 import os
 import requests
 import urllib.parse
+import random
 
 from flask import redirect, render_template, request, session
 from functools import wraps
@@ -37,9 +38,10 @@ def login_required(f):
 
 def lookup(symbol):
     """Look up quote for symbol.(dummy)"""
+    price = random.uniform(0.00, 10000.00)
     return {
         "name": f"{symbol} Inc.",
-        "price": 1000.00,
+        "price": price,
         "symbol": symbol
     }
 
