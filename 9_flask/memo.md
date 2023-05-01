@@ -388,3 +388,6 @@
 - app.jinja_env.filters["usd"] = usd てなんだろう(application.py)
   - もしかしてjinja構文の中でusd関数が使えるようになっている？
   - 違った
+- ヒントに書いてあった
+  - {{ value | usd }} でusdフィルタ(関数)を適用できる
+- できた！
