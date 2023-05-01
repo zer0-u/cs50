@@ -118,14 +118,11 @@ def quote():
     return apology("TODO")
 
 
-@app.route("/register", methods=["GET"])
-def register_get():
-    """show registration page"""
-    return render_template("register.html")
+@app.route("/register", methods=["GET", "POST"])
+def register():
+    if request.method == "GET":
+        return render_template("register.html")
 
-
-@app.route("/register", methods=["POST"])
-def register_post():
     """Register user"""
     # 入力値を取得する
     name = request.form.get("username")
