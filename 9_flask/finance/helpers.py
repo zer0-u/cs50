@@ -35,6 +35,15 @@ def login_required(f):
     return decorated_function
 
 
+def lookup_dummy(symbol):
+    """Look up quote for symbol.(dummy)"""
+    return {
+        "name": f"{symbol} Inc.",
+        "price": 1000.00,
+        "symbol": symbol
+    }
+
+
 def lookup(symbol):
     """Look up quote for symbol."""
 
