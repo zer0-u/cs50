@@ -1,9 +1,16 @@
 {% extends "layout.html" %}
 
 {% block title %}
-    Apology
+Apology
 {% endblock %}
 
 {% block main %}
-    <img alt="{{ top }}" class="border" src="http://memegen.link/custom/{{ top | urlencode }}/{{ bottom | urlencode }}.jpg?alt=https://i.imgur.com/CsCgN7Ll.png" title="{{ top }}">
+<!-- <img alt="{{ top }}" class="border" src="http://memegen.link/custom/{{ top | urlencode }}/{{ bottom | urlencode }}.jpg?alt=https://i.imgur.com/CsCgN7Ll.png" title="{{ top }}"> -->
+<!-- 画像が重たいので文章のみ表示させる -->
+<h3>
+    {{ top }}
+</h3>
+<h4>
+    {{ bottom }}
+</h4>
 {% endblock %}

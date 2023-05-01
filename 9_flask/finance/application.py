@@ -127,7 +127,7 @@ def register_get():
 @app.route("/register", methods=["POST"])
 def register_post():
     """Register user"""
-    name = request.form.get("name")
+    name = request.form.get("username")
     password = request.form.get("password")
     confirmation = request.form.get("confirmation")
     if not name:
