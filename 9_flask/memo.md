@@ -374,3 +374,6 @@
   - helpers.pyのlookup関数は実装済
 - これと同じオブジェクトを返す関数を作って、そちらを参照しよう
 - APIアクセスを行う処理を呼び出さないので、そっちをlookup_api関数として隔離した
+- 株価が固定値なのはちょっと寂しい
+- random.uniformを使おう
+  - https://it-ojisan.tokyo/python-random-range/
