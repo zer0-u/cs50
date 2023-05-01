@@ -380,5 +380,6 @@
   - https://docs.python.org/ja/3/library/random.html?highlight=random#random.uniform
 - ランダムにはなったが小数点以下の桁数がおかしい
   - usd関数を噛ませたら直った
+  - lookup_apiではusd関数を呼び出していないので外側で噛ませる
 - quoteページを呼び出すために毎回ログインし直すのは面倒くさいな
   - 一旦デコレータ外そう
