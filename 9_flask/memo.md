@@ -383,3 +383,6 @@
   - lookup_apiではusd関数を呼び出していないので外側で噛ませる
 - quoteページを呼び出すために毎回ログインし直すのは面倒くさいな
   - 一旦デコレータ外そう
+- app.jinja_env.filters["usd"] = usd てなんだろう(application.py)
+  - もしかしてjinja構文の中でusd関数が使えるようになっている？
+  - 違った
