@@ -35,7 +35,7 @@ def login_required(f):
     return decorated_function
 
 
-def lookup_dummy(symbol):
+def lookup(symbol):
     """Look up quote for symbol.(dummy)"""
     return {
         "name": f"{symbol} Inc.",
@@ -44,7 +44,7 @@ def lookup_dummy(symbol):
     }
 
 
-def lookup(symbol):
+def lookup_api(symbol):
     """Look up quote for symbol."""
 
     # Contact API

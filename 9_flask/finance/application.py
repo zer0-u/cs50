@@ -7,7 +7,7 @@ from tempfile import mkdtemp
 from werkzeug.exceptions import default_exceptions, HTTPException, InternalServerError
 from werkzeug.security import check_password_hash, generate_password_hash
 
-from helpers import apology, login_required, lookup_dummy, usd
+from helpers import apology, login_required, lookup, usd
 
 # Configure application
 app = Flask(__name__)
@@ -120,7 +120,7 @@ def quote():
     symbol = request.form.get("symbol")
     if not symbol:
         return apology("must input symbol",403)
-    result = lookup_dummy(symbol)
+    result = lookup(symbol)
     return render_template("quoted.html",result=result)
 
 
