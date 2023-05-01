@@ -38,7 +38,7 @@ def login_required(f):
 
 def lookup(symbol):
     """Look up quote for symbol.(dummy)"""
-    price = random.uniform(0.00, 10000.00)
+    price = usd(random.uniform(0.00, 10000.00))
     return {
         "name": f"{symbol} Inc.",
         "price": price,
