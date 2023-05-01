@@ -381,6 +381,8 @@
 - ランダムにはなったが小数点以下の桁数がおかしい
   - usd関数を噛ませたら直った
   - lookup_apiではusd関数を呼び出していないので外側で噛ませる
+
+### quote(再び)
 - quoteページを呼び出すために毎回ログインし直すのは面倒くさいな
   - 一旦デコレータ外そう
 - app.jinja_env.filters["usd"] = usd てなんだろう(application.py)
