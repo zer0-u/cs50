@@ -127,9 +127,11 @@ def register_get():
 @app.route("/register", methods=["POST"])
 def register_post():
     """Register user"""
+    # 入力値を取得する
     name = request.form.get("username")
     password = request.form.get("password")
     confirmation = request.form.get("confirmation")
+    # 入力値を検証する
     if not name:
         return apology("must input username", 403)
     if not password:
@@ -138,8 +140,12 @@ def register_post():
         return apology("must input confirmation", 403)
     if password != confirmation:
         return apology("input same password", 403)
-
-    return apology("TODO")
+    # パスワードはハッシュ化したものを保存する
+    hash = generate_password_hash(password)
+    # DBに保存する
+    db.execute("INSERT INTO users(username, hash) VALUES(?, ?)", name, hash)
+    # TODO 自動的にログインできないか？
+    return redirect("/login")
 
 
 @app.route("/sell", methods=["GET", "POST"])
