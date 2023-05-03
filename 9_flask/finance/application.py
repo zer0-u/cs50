@@ -41,11 +41,13 @@ db = SQL("sqlite:///finance.db")
 if not os.environ.get("API_KEY"):
     raise RuntimeError("API_KEY not set")
 
+
 def search(symbol):
     quote = lookup(symbol)
     if not quote:
-        return apology(f"存在しない銘柄です:{symbol}",400)
+        return apology(f"存在しない銘柄です:{symbol}", 400)
     return quote
+
 
 def get_user_id():
     return session["user_id"]
@@ -56,7 +58,10 @@ def fetch_cash(id):
 
 
 def fetch_price(symbol):
-    return int(search(symbol)["price"])
+    quote = lookup(symbol)
+    if not quote:
+        return None
+    return int(quote["price"])
 
 
 def update_cash(user_id, cash):
@@ -195,7 +200,9 @@ def quote():
     symbol = request.form.get("symbol")
     if not symbol:
         return apology("銘柄を入力してください", 400)
-    result = search(symbol)
+    result = lookup(symbol)
+    if not result:
+        return apology(f"存在しない銘柄です:{symbol}", 400)
     return render_template("quoted.html", result=result)
 
 
