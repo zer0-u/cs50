@@ -50,10 +50,40 @@ def index():
 
 
 @app.route("/buy", methods=["GET", "POST"])
-@login_required
+# @login_required # TODO 後で戻す
 def buy():
     """Buy shares of stock"""
-    return apology("TODO")
+    if(request.method=="GET"):
+        return render_template("buy.html")
+
+    # user_id = session["user_id"] # TODO login_requiredを戻したらこっちも置き換える
+    user_id = 1
+    symbol = request.form.get("symbol")
+    shares = request.form.get("shares")
+
+    if not symbol:
+        return apology("Symbolを入力してください")
+    if not shares or not shares.isdigit():
+        return apology("整数を入力してください")
+
+    shares = int(shares)
+
+    cash = int(db.execute("SELECT cash FROM users WHERE id = ?",user_id)[0]["cash"])
+
+    require = lookup(symbol)["price"] * shares
+
+    remain = cash-require
+    if remain<0:
+        return apology("残高が足りません")
+
+
+    db.execute("UPDATE users SET cash = ? WHERE id = ?", remain,user_id)
+    db.execute(
+        "INSERT INTO transactions(user_id,symbol,shares) VALUES(?,?,?)",
+        user_id,symbol,shares)
+
+
+    return apology("DONE!")
 
 
 @app.route("/history")
@@ -112,7 +142,7 @@ def logout():
 
 
 @app.route("/quote", methods=["GET", "POST"])
-# @login_required # TODO あとで戻す
+@login_required
 def quote():
     """Get stock quote."""
     if request.method=="GET":
