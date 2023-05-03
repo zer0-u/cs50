@@ -45,6 +45,8 @@ def lookup(symbol):
 def lookup_dummy(symbol):
     """Look up quote for symbol.(dummy)"""
     # APIアクセスの料金体系が不安なのでダミーデータで実装する
+    if symbol == "None":
+        return None
     price = random.uniform(0.00, 100.00)
     return {
         "name": f"{symbol} Inc.",
