@@ -118,6 +118,8 @@ def buy():
 
     cash = fetch_cash(user_id)
     price = fetch_price(symbol)
+    if not price:
+        return apology(f"存在しない銘柄です:{symbol}", 400)
 
     remain = cash - (price * shares)
     if remain < 0:
