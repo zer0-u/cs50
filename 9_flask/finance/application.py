@@ -225,7 +225,7 @@ def sell():
 
     shares = int(shares)
 
-
+    current_shares = db.execute("SELECT ")
     return apology("TODO")
 
 
