@@ -38,8 +38,8 @@ def login_required(f):
 
 def lookup(symbol):
     """切り替え用"""
-    # return lookup_dummy(symbol)
-    return lookup_api(symbol)
+    return lookup_dummy(symbol)
+    # return lookup_api(symbol)
 
 
 def lookup_dummy(symbol):
