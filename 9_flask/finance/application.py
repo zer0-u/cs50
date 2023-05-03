@@ -82,8 +82,6 @@ def index():
     stock_total = 0
     for stock in stocks:
         quote = lookup(stock["symbol"])
-        if not quote:
-            return apology(f"存在しない銘柄です:")
         total = quote["price"] * int(stock["shares"])
         stock["name"] = quote["name"]
         stock["price"] = quote["price"]
