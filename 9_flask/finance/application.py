@@ -219,7 +219,8 @@ def sell():
     shares = request.form.get("shares")
     if not symbol or symbol not in symbols:
         return apology("銘柄を選択してください")
-    if 
+    if not shares.isdigit() or int(shares) < 1:
+        return apology("1以上の整数を入力してください")
     return apology("TODO")
 
 
