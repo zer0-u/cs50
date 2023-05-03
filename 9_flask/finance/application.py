@@ -51,7 +51,7 @@ def fetch_price(symbol):
 
 
 def update_cash(user_id, cash):
-    db.execute("UPDATE users SET cash = ? WHERE user_id = ?", cash, user_id)
+    db.execute("UPDATE users SET cash = ? WHERE id = ?", cash, user_id)
 
 
 @app.route("/")
@@ -221,6 +221,7 @@ def sell():
     symbols = []
     for row in rows:
         symbols.append(row["symbol"])
+        
     if request.method == "GET":
         return render_template("sell.html", symbols=symbols)
 
@@ -244,8 +245,10 @@ def sell():
     updated_cash = current_cash + (price * shares)
     update_cash(user_id, updated_cash)
 
-    db.execute("INSERT INTO transactions(user_id, symbol, shares) VALUES(?, ?, ?)",user_id,symbol,)
-    return apology("TODO")
+    db.execute(
+        "INSERT INTO transactions(user_id, symbol, shares) VALUES(?, ?, ?)",
+        user_id, symbol, -shares)
+    return redirect("/")
 
 
 def errorhandler(e):
