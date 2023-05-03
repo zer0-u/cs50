@@ -36,7 +36,7 @@ def login_required(f):
     return decorated_function
 
 
-def lookup(symbol):
+def lookup_dummy(symbol):
     """Look up quote for symbol.(dummy)"""
     # APIアクセスの料金体系が不安なのでダミーデータで実装する
     price = random.uniform(0.00, 100.00)
@@ -47,7 +47,7 @@ def lookup(symbol):
     }
 
 
-def lookup_api(symbol):
+def lookup(symbol):
     """Look up quote for symbol."""
 
     # Contact API
