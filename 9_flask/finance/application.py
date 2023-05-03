@@ -225,7 +225,12 @@ def sell():
 
     shares = int(shares)
 
-    current_shares = db.execute("SELECT ")
+    current_shares = int(db.execute(
+        "SELECT SUM(shares) AS shares FROM transactions WHERE user_id = ? AND symbol = ?",
+        user_id, symbol)[0]["shares"])
+    if shares > current_shares:
+        return apology(f"所持数({current_shares})以下の整数を入力してください")
+
     return apology("TODO")
 
 
