@@ -18,7 +18,7 @@ CREATE TABLE transactions (
     user_id INTEGER NOT NULL,
     symbol TEXT NOT NULL,
     shares INTEGER NOT NULL,
-    prices REAL NOT NULL,
+    price REAL NOT NULL,
     transacted TEXT DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY(id)
 );

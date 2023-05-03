@@ -221,7 +221,7 @@ def register():
 
 
 @app.route("/sell", methods=["GET", "POST"])
-# @login_required
+@login_required
 def sell():
     """Sell shares of stock"""
     user_id = get_user_id()
@@ -253,10 +253,7 @@ def sell():
     price = fetch_price(symbol)
     updated_cash = current_cash + (price * shares)
     update_cash(user_id, updated_cash)
-
-    db.execute(
-        "INSERT INTO transactions(user_id, symbol, shares) VALUES(?, ?, ?)",
-        user_id, symbol, -shares)
+    insert_transactions(user_id, symbol, -shares, price)
     return redirect("/")
 
 
