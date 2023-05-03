@@ -611,3 +611,4 @@
 - quoteがログイン限定の意味が分からない
   - login_requiredを外した
 - 例外を発生させても駄目だった
+- お手本では400/invalid symbolが返ってくる
