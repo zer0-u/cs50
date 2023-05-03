@@ -25,3 +25,7 @@
 ## week8 HTML/CSS/JavaScript
 - pset(homepage)
 - キリがなさそうなので一旦飛ばした
+
+## week9 flask
+- pset(finance)
+  - 独自機能をつけていない
