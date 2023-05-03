@@ -217,6 +217,9 @@ def sell():
         return render_template("sell.html", symbols=symbols)
     symbol = request.form.get("symbol")
     shares = request.form.get("shares")
+    if not symbol or symbol not in symbols:
+        return apology("銘柄を選択してください")
+    if 
     return apology("TODO")
 
 
