@@ -215,12 +215,17 @@ def sell():
         symbols.append(row["symbol"])
     if request.method == "GET":
         return render_template("sell.html", symbols=symbols)
+
     symbol = request.form.get("symbol")
     shares = request.form.get("shares")
     if not symbol or symbol not in symbols:
         return apology("銘柄を選択してください")
     if not shares.isdigit() or int(shares) < 1:
         return apology("1以上の整数を入力してください")
+
+    shares = int(shares)
+
+
     return apology("TODO")
 
 
