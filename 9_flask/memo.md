@@ -588,3 +588,5 @@
 :( sell handles invalid number of shares
     expected status code 400, but got 403
 :) sell handles valid sale
+
+- 未入力の場合のステータスコードは403ではなく400

@@ -105,9 +105,9 @@ def buy():
     shares = request.form.get("shares")
 
     if not symbol:
-        return apology("Symbolを入力してください", 403)
+        return apology("Symbolを入力してください", 400)
     if not shares or not shares.isdigit():
-        return apology("整数を入力してください", 403)
+        return apology("整数を入力してください", 400)
 
     shares = int(shares)
 
@@ -189,7 +189,7 @@ def quote():
         return render_template("quote.html")
     symbol = request.form.get("symbol")
     if not symbol:
-        return apology("銘柄を入力してください", 403)
+        return apology("銘柄を入力してください", 400)
     result = lookup(symbol)
     return render_template("quoted.html", result=result)
 
@@ -206,13 +206,13 @@ def register():
     confirmation = request.form.get("confirmation")
     # 入力値を検証する
     if not name:
-        return apology("ユーザ名を入力してください", 403)
+        return apology("ユーザ名を入力してください", 400)
     if not password:
-        return apology("パスワードを入力してください", 403)
+        return apology("パスワードを入力してください", 400)
     if not confirmation:
-        return apology("パスワード(確認)を入力してください", 403)
+        return apology("パスワード(確認)を入力してください", 400)
     if password != confirmation:
-        return apology("パスワードが一致しません", 403)
+        return apology("パスワードが一致しません", 400)
     # パスワードはハッシュ化したものを保存する
     hash = generate_password_hash(password)
     # DBに保存する
@@ -238,9 +238,9 @@ def sell():
     symbol = request.form.get("symbol")
     shares = request.form.get("shares")
     if not symbol or symbol not in symbols:
-        return apology("銘柄を選択してください", 403)
+        return apology("銘柄を選択してください", 400)
     if not shares.isdigit() or int(shares) < 1:
-        return apology("1以上の整数を入力してください", 403)
+        return apology("1以上の整数を入力してください", 400)
 
     shares = int(shares)
 
@@ -248,7 +248,7 @@ def sell():
         "SELECT SUM(shares) AS shares FROM transactions WHERE user_id = ? AND symbol = ?",
         user_id, symbol)[0]["shares"])
     if shares > current_shares:
-        return apology(f"1以上所持数({current_shares})以下の整数を入力してください", 403)
+        return apology(f"1以上所持数({current_shares})以下の整数を入力してください", 400)
 
     current_cash = fetch_cash(user_id)
     price = fetch_price(symbol)
