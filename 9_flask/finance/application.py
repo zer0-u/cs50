@@ -60,8 +60,8 @@ def update_cash(user_id, cash):
 
 
 def insert_transactions(user_id, symbol, shares, price):
-    db.execute("INSERT INTO transactions(user_id, symbol, shares, price)" +
-               "VALUES(?, ?, ?, ?)",
+    db.execute("INSERT INTO transactions(user_id, symbol, shares, price) \
+               VALUES(?, ?, ?, ?)",
                user_id, symbol, shares, price)
 
 
@@ -73,7 +73,8 @@ def index():
     user_id = get_user_id()
     cash = fetch_cash(user_id)
     stocks = db.execute(
-        "SELECT symbol, SUM(shares) AS shares FROM transactions WHERE user_id = ? GROUP BY symbol",
+        "SELECT symbol, SUM(shares) AS shares FROM transactions \
+            WHERE user_id = ? GROUP BY symbol",
         user_id)
 
     stock_total = 0
@@ -112,17 +113,14 @@ def buy():
     shares = int(shares)
 
     cash = fetch_cash(user_id)
+    price = fetch_price(symbol)
 
-    require = fetch_price(symbol) * shares
-
-    remain = cash - require
+    remain = cash - (price * shares)
     if remain < 0:
         return apology("残高が足りません", 403)
 
     update_cash(user_id, remain)
-    db.execute(
-        "INSERT INTO transactions(user_id, symbol, shares) VALUES(?, ?, ?)",
-        user_id, symbol, shares)
+    insert_transactions(user_id, symbol, shares, price)
 
     return redirect("/")
 
