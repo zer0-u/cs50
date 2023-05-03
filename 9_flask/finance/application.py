@@ -191,10 +191,10 @@ def quote():
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
+     """Register user"""
     if request.method == "GET":
         return render_template("register.html")
 
-    """Register user"""
     # 入力値を取得する
     name = request.form.get("username")
     password = request.form.get("password")
