@@ -44,7 +44,6 @@ if not os.environ.get("API_KEY"):
 
 def get_user_id():
     return session["user_id"]
-    # return 1  # TODO 完成したら戻す
 
 
 def fetch_cash(id):
