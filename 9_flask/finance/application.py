@@ -45,8 +45,14 @@ if not os.environ.get("API_KEY"):
 def fetch_cash(id):
     return int(db.execute("SELECT cash FROM users WHERE id = ?", id)[0]["cash"])
 
+
 def fetch_price(symbol):
     return int(lookup(symbol)["price"])
+
+
+def update_cash(user_id, cash):
+    db.execute("UPDATE users SET cash = ? WHERE user_id = ?", cash, user_id)
+
 
 @app.route("/")
 @login_required
@@ -101,7 +107,7 @@ def buy():
     if remain < 0:
         return apology("残高が足りません")
 
-    db.execute("UPDATE users SET cash = ? WHERE id = ?", remain, user_id)
+    update_cash(user_id, remain)
     db.execute(
         "INSERT INTO transactions(user_id, symbol, shares) VALUES(?, ?, ?)",
         user_id, symbol, shares)
@@ -236,8 +242,8 @@ def sell():
     current_cash = fetch_cash(user_id)
     price = fetch_price(symbol)
     updated_cash = current_cash + (price * shares)
+    update_cash(user_id, updated_cash)
 
-    
 
     return apology("TODO")
 
