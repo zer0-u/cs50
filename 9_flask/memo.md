@@ -558,3 +558,33 @@
 - それにしてもデザインが若干違うのが気になる
   - layout.htmlでmainにクラスを足してもなんか違う
 - できたのではなかろうか
+
+### check50
+:) application.py exists
+:) application starts up
+:) register page has all required elements
+:) registering user succeeds
+:( registration with an empty field fails
+    expected status code 400, but got 403
+:( registration with password mismatch fails
+    expected status code 400, but got 403
+:( registration rejects duplicate username
+    application raised an exception (see the log for more details)
+:) login page has all required elements
+:) logging in as registered user succceeds
+:) quote page has all required elements
+:( quote handles invalid ticker symbol
+    application raised an exception (see the log for more details)
+:( quote handles blank ticker symbol
+    expected status code 400, but got 403
+:) quote handles valid ticker symbol
+:) buy page has all required elements
+:( buy handles invalid ticker symbol
+    application raised an exception (see the log for more details)
+:( buy handles fractional, negative, and non-numeric shares
+    expected status code 400, but got 403
+:) buy handles valid purchase
+:) sell page has all required elements
+:( sell handles invalid number of shares
+    expected status code 400, but got 403
+:) sell handles valid sale
