@@ -45,6 +45,8 @@ if not os.environ.get("API_KEY"):
 def fetch_cash(id):
     return int(db.execute("SELECT cash FROM users WHERE id = ?", id)[0]["cash"])
 
+def fetch_price(symbol):
+    return int(lookup(symbol)["price"])
 
 @app.route("/")
 @login_required
@@ -93,7 +95,7 @@ def buy():
 
     cash = fetch_cash(user_id)
 
-    require = lookup(symbol)["price"] * shares
+    require = fetch_price(symbol) * shares
 
     remain = cash - require
     if remain < 0:
@@ -170,7 +172,7 @@ def quote():
         return render_template("quote.html")
     symbol = request.form.get("symbol")
     if not symbol:
-        return apology("must input symbol", 403)
+        return apology("銘柄を入力してください", 403)
     result = lookup(symbol)
     return render_template("quoted.html", result=result)
 
@@ -187,13 +189,13 @@ def register():
     confirmation = request.form.get("confirmation")
     # 入力値を検証する
     if not name:
-        return apology("must input username", 403)
+        return apology("ユーザ名を入力してください", 403)
     if not password:
-        return apology("must input password", 403)
+        return apology("パスワードを入力してください", 403)
     if not confirmation:
-        return apology("must input confirmation", 403)
+        return apology("パスワード(確認)を入力してください", 403)
     if password != confirmation:
-        return apology("input same password", 403)
+        return apology("パスワードが一致しません", 403)
     # パスワードはハッシュ化したものを保存する
     hash = generate_password_hash(password)
     # DBに保存する
@@ -229,7 +231,13 @@ def sell():
         "SELECT SUM(shares) AS shares FROM transactions WHERE user_id = ? AND symbol = ?",
         user_id, symbol)[0]["shares"])
     if shares > current_shares:
-        return apology(f"所持数({current_shares})以下の整数を入力してください")
+        return apology(f"1以上所持数({current_shares})以下の整数を入力してください")
+
+    current_cash = fetch_cash(user_id)
+    price = fetch_price(symbol)
+    updated_cash = current_cash + (price * shares)
+
+    
 
     return apology("TODO")
 
