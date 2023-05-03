@@ -244,7 +244,7 @@ def sell():
     updated_cash = current_cash + (price * shares)
     update_cash(user_id, updated_cash)
 
-
+    db.execute("INSERT INTO transactions(user_id, symbol, shares) VALUES(?, ?, ?)",user_id,symbol,)
     return apology("TODO")
 
 
