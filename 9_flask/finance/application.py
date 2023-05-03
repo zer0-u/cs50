@@ -42,13 +42,6 @@ if not os.environ.get("API_KEY"):
     raise RuntimeError("API_KEY not set")
 
 
-def search(symbol):
-    quote = lookup(symbol)
-    if not quote:
-        return apology(f"存在しない銘柄です:{symbol}", 400)
-    return quote
-
-
 def get_user_id():
     return session["user_id"]
 
