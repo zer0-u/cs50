@@ -207,14 +207,16 @@ def register():
 def sell():
     """Sell shares of stock"""
     # user_id = session["user_id"]
-    user_id=1
+    user_id = 1
+    rows = db.execute(
+        "SELECT DISTINCT symbol AS symbol FROM transactions WHERE user_id = ?", user_id)
+    symbols = []
+    for row in rows:
+        symbols.append(row["symbol"])
     if request.method == "GET":
-        rows = db.execute(
-            "SELECT DISTINCT symbol AS symbol FROM transactions WHERE user_id = ?", user_id)
-        symbols = []
-        for row in rows:
-            symbols.append(row["symbol"])
         return render_template("sell.html", symbols=symbols)
+    symbol = request.form.get("symbol")
+    shares = request.form.get("shares")
     return apology("TODO")
 
 
