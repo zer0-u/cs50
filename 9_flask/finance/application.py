@@ -42,6 +42,11 @@ if not os.environ.get("API_KEY"):
     raise RuntimeError("API_KEY not set")
 
 
+def get_user_id():
+    # return session["user_id"]
+    return 1  # TODO 完成したら戻す
+
+
 def fetch_cash(id):
     return int(db.execute("SELECT cash FROM users WHERE id = ?", id)[0]["cash"])
 
@@ -59,7 +64,7 @@ def update_cash(user_id, cash):
 def index():
     """Show portfolio of stocks"""
 
-    user_id = session["user_id"]
+    user_id = get_user_id()
     cash = fetch_cash(user_id)
     stocks = db.execute(
         "SELECT symbol, SUM(shares) AS shares FROM transactions WHERE user_id = ? GROUP BY symbol",
@@ -88,7 +93,7 @@ def buy():
     if (request.method == "GET"):
         return render_template("buy.html")
 
-    user_id = session["user_id"]
+    user_id = get_user_id()
     symbol = request.form.get("symbol")
     shares = request.form.get("shares")
 
@@ -214,14 +219,13 @@ def register():
 # @login_required
 def sell():
     """Sell shares of stock"""
-    # user_id = session["user_id"]
-    user_id = 1
+    user_id = get_user_id()
     rows = db.execute(
-        "SELECT DISTINCT symbol AS symbol FROM transactions WHERE user_id = ?", user_id)
+        "SELECT DISTINCT symbol FROM transactions WHERE user_id = ?", user_id)
     symbols = []
     for row in rows:
         symbols.append(row["symbol"])
-        
+
     if request.method == "GET":
         return render_template("sell.html", symbols=symbols)
 
