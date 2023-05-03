@@ -213,6 +213,9 @@ def register():
         return apology("パスワード(確認)を入力してください", 400)
     if password != confirmation:
         return apology("パスワードが一致しません", 400)
+    check = db.execute("SELECT username FROM users WHERE username = ?", name)
+    if check:
+        return apology(f"{name}はすでに登録されています", 400)
     # パスワードはハッシュ化したものを保存する
     hash = generate_password_hash(password)
     # DBに保存する
