@@ -99,9 +99,9 @@ def buy():
     shares = request.form.get("shares")
 
     if not symbol:
-        return apology("Symbolを入力してください")
+        return apology("Symbolを入力してください", 403)
     if not shares or not shares.isdigit():
-        return apology("整数を入力してください")
+        return apology("整数を入力してください", 403)
 
     shares = int(shares)
 
@@ -111,7 +111,7 @@ def buy():
 
     remain = cash - require
     if remain < 0:
-        return apology("残高が足りません")
+        return apology("残高が足りません", 403)
 
     update_cash(user_id, remain)
     db.execute(
@@ -233,9 +233,9 @@ def sell():
     symbol = request.form.get("symbol")
     shares = request.form.get("shares")
     if not symbol or symbol not in symbols:
-        return apology("銘柄を選択してください")
+        return apology("銘柄を選択してください", 403)
     if not shares.isdigit() or int(shares) < 1:
-        return apology("1以上の整数を入力してください")
+        return apology("1以上の整数を入力してください", 403)
 
     shares = int(shares)
 
@@ -243,7 +243,7 @@ def sell():
         "SELECT SUM(shares) AS shares FROM transactions WHERE user_id = ? AND symbol = ?",
         user_id, symbol)[0]["shares"])
     if shares > current_shares:
-        return apology(f"1以上所持数({current_shares})以下の整数を入力してください")
+        return apology(f"1以上所持数({current_shares})以下の整数を入力してください", 403)
 
     current_cash = fetch_cash(user_id)
     price = fetch_price(symbol)
