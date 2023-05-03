@@ -44,7 +44,7 @@ if not os.environ.get("API_KEY"):
 def search(symbol):
     quote = lookup(symbol)
     if not quote:
-        raise RuntimeError(f"存在しない銘柄です : {symbol}")
+        return apology(f"存在しない銘柄です:{symbol}",400)
     return quote
 
 def get_user_id():
