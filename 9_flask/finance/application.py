@@ -59,6 +59,12 @@ def update_cash(user_id, cash):
     db.execute("UPDATE users SET cash = ? WHERE id = ?", cash, user_id)
 
 
+def insert_transactions(user_id, symbol, shares, price):
+    db.execute("INSERT INTO transactions(user_id, symbol, shares, price)" +
+               "VALUES(?, ?, ?, ?)",
+               user_id, symbol, shares, price)
+
+
 @app.route("/")
 @login_required
 def index():
