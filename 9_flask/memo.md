@@ -604,3 +604,4 @@
 ### 修正2 不正なsymbol
 - そもそも何が返ってくるんだろう？ None？
 - エラーメッセージを見ると TypeError: 'NoneType' object とある
+- 恐らくNoneが返ってくるはず
