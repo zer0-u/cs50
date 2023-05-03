@@ -590,3 +590,6 @@
 :) sell handles valid sale
 
 - 未入力の場合のステータスコードは403ではなく400
+  - 403はForbidden(閲覧権限がない)
+  - 400はBad Request
+- 他のエラー

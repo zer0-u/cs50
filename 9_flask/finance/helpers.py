@@ -36,6 +36,12 @@ def login_required(f):
     return decorated_function
 
 
+def lookup(symbol):
+    """切り替え用"""
+    # return lookup_dummy(symbol)
+    return lookup_api(symbol)
+
+
 def lookup_dummy(symbol):
     """Look up quote for symbol.(dummy)"""
     # APIアクセスの料金体系が不安なのでダミーデータで実装する
@@ -47,7 +53,7 @@ def lookup_dummy(symbol):
     }
 
 
-def lookup(symbol):
+def lookup_api(symbol):
     """Look up quote for symbol."""
 
     # Contact API
