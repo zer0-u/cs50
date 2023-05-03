@@ -15,14 +15,14 @@ History
         </tr>
     </thead>
     <tbody>
-
-            <tr>
-                <td class="text-start">NFLX</td>
-                <td class="text-end">1</td>
-                <td class="text-end">$324.12</td>
-                <td class="text-end">2023-05-02 11:53:20</td>
-            </tr>
-
+        {% for row in history %}
+        <tr>
+            <td class="text-start">{{row.symbol}}</td>
+            <td class="text-end">{{row.shares}}</td>
+            <td class="text-end">{{row.price | usd}}</td>
+            <td class="text-end">{{row.transacted}}</td>
+        </tr>
+        {% endfor %}
     </tbody>
 </table>
 {% endblock %}
