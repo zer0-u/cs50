@@ -39,7 +39,7 @@ def login_required(f):
 def lookup(symbol):
     """Look up quote for symbol.(dummy)"""
     # APIアクセスの料金体系が不安なのでダミーデータで実装する
-    price = random.uniform(0.00, 10000.00)
+    price = random.uniform(0.00, 100.00)
     return {
         "name": f"{symbol} Inc.",
         "price": price,

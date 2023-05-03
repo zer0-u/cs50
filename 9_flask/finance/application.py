@@ -42,22 +42,45 @@ if not os.environ.get("API_KEY"):
     raise RuntimeError("API_KEY not set")
 
 
+def fetch_cash(id):
+    return int(db.execute("SELECT cash FROM users WHERE id = ?", id)[0]["cash"])
+
+
 @app.route("/")
 @login_required
 def index():
     """Show portfolio of stocks"""
-    return apology("TODO")
+
+    user_id = session["user_id"]
+    cash = fetch_cash(user_id)
+    stocks = db.execute(
+        "SELECT symbol, SUM(shares) AS shares FROM transactions WHERE user_id = ? GROUP BY symbol",
+        user_id)
+
+    stock_total = 0
+    for stock in stocks:
+        quote = lookup(stock["symbol"])
+        total = quote["price"] * int(stock["shares"])
+        stock["price"] = quote["price"]
+        stock["total"] = total
+        stock_total += total
+
+    portfolio = {
+        "stocks": stocks,
+        "cash": cash,
+        "total": stock_total + cash
+    }
+    return render_template("index.html", portfolio=portfolio)
 
 
 @app.route("/buy", methods=["GET", "POST"])
-# @login_required # TODO 後で戻す
+@login_required
 def buy():
     """Buy shares of stock"""
-    if(request.method=="GET"):
+    if (request.method == "GET"):
         return render_template("buy.html")
 
-    # user_id = session["user_id"] # TODO login_requiredを戻したらこっちも置き換える
-    user_id = 1
+    user_id = session["user_id"]
     symbol = request.form.get("symbol")
     shares = request.form.get("shares")
 
@@ -68,20 +91,18 @@ def buy():
 
     shares = int(shares)
 
-    cash = int(db.execute("SELECT cash FROM users WHERE id = ?",user_id)[0]["cash"])
+    cash = fetch_cash(user_id)
 
     require = lookup(symbol)["price"] * shares
 
-    remain = cash-require
-    if remain<0:
+    remain = cash - require
+    if remain < 0:
         return apology("残高が足りません")
 
-
-    db.execute("UPDATE users SET cash = ? WHERE id = ?", remain,user_id)
+    db.execute("UPDATE users SET cash = ? WHERE id = ?", remain, user_id)
     db.execute(
-        "INSERT INTO transactions(user_id,symbol,shares) VALUES(?,?,?)",
-        user_id,symbol,shares)
-
+        "INSERT INTO transactions(user_id, symbol, shares) VALUES(?, ?, ?)",
+        user_id, symbol, shares)
 
     return apology("DONE!")
 
@@ -145,13 +166,13 @@ def logout():
 @login_required
 def quote():
     """Get stock quote."""
-    if request.method=="GET":
+    if request.method == "GET":
         return render_template("quote.html")
     symbol = request.form.get("symbol")
     if not symbol:
-        return apology("must input symbol",403)
+        return apology("must input symbol", 403)
     result = lookup(symbol)
-    return render_template("quoted.html",result=result)
+    return render_template("quoted.html", result=result)
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -182,9 +203,18 @@ def register():
 
 
 @app.route("/sell", methods=["GET", "POST"])
-@login_required
+# @login_required
 def sell():
     """Sell shares of stock"""
+    # user_id = session["user_id"]
+    user_id=1
+    if request.method == "GET":
+        rows = db.execute(
+            "SELECT DISTINCT symbol AS symbol FROM transactions WHERE user_id = ?", user_id)
+        symbols = []
+        for row in rows:
+            symbols.append(row["symbol"])
+        return render_template("sell.html", symbols=symbols)
     return apology("TODO")
 
 
