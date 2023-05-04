@@ -36,5 +36,13 @@
 - VSCodeを入れよう
 - そういえば装飾がハロウィンからクリスマスに変わっている
 - Webサイトを公開しよう
-  - GitHub Pages, netlifyなどを使う
-  - 
+  - GitHub Pages, netlify, herokuなどを使う
+  - クラウドサービスを使う(azure, aws)
+  - 学割羨ましいなぁ
+- 最新情報を知ろう
+  - reddit, stackoverflowなど
+
+## これまでのまとめ 28:45
+- cs50.ly/poll
+  - 外部からはアクセスできない
+- 
